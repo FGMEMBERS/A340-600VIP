@@ -1,0 +1,102 @@
+<?xml version="1.0"?>
+<PropertyList>
+
+  <path>gear_lever.ac</path> 
+  <!--texture-path>../../../Textures/Instruments/</texture-path-->  
+  <offsets>
+    <z-m>-0.01</z-m>
+  </offsets>
+
+
+<animation>
+  <type>material</type>
+    <object-name>GearLeverBezel_1</object-name>
+    <object-name>GearLeverBezel_0</object-name> 
+    <object-name>backlight_down</object-name>
+    <object-name>backlight_up</object-name>
+    <object-name>GearLever</object-name>
+    <object-name>GearLever_1</object-name>
+  <emission>
+    <red>0.3</red>
+    <green>0.3</green>
+    <blue>0.3</blue>
+	<factor-prop>controls/lighting/instruments-norm</factor-prop>
+  </emission>
+</animation>
+
+  
+<animation>
+  <type>scale</type>
+  <x-offset>1</x-offset>
+  <y-offset>1</y-offset>
+  <z-offset>1</z-offset>
+ </animation>
+
+
+  <animation>
+    <name>Landing gear lever rotate</name>
+    <type>rotate</type>
+    <object-name>GearLever</object-name>
+    <property>controls/gear/gear-down</property>
+    <factor>-80</factor>   <!-- was 78 -->
+    <center>
+      <x-m>0.025000</x-m>
+      <y-m>0.006600</y-m>
+      <z-m>0.000000</z-m>
+    </center>
+    <axis>
+      <x>0.000000</x>
+      <y>-1.000000</y>
+      <z>0.000000</z>
+    </axis>
+  </animation>
+
+   <animation>
+       <type>material</type>
+       <object-name>backlight</object-name>
+       <emission>
+         <red>0.878</red>
+         <green>0.694</green>
+         <blue>0.594</blue>
+         <factor-prop>/controls/lighting/panel-norm</factor-prop>
+       </emission>
+    </animation>
+
+<animation>
+        <type>pick</type>
+        <object-name>GearLever</object-name>
+        <action>
+            <button>1</button>
+            <binding>
+                <command>nasal</command>
+                <script>controls.gearDown(-1)</script>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.gearDown(0)</script>
+                </binding>
+            </mod-up>
+        </action>
+    </animation>
+
+    <animation>
+        <type>pick</type>
+        <object-name>GearLever</object-name>
+        <action>
+            <button>0</button>
+            <binding>
+                <command>nasal</command>
+                <script>controls.gearDown(1)</script>
+            </binding>
+            <mod-up>
+                <binding>
+                    <command>nasal</command>
+                    <script>controls.gearDown(0)</script>
+                </binding>
+            </mod-up>
+        </action>
+    </animation>
+
+
+</PropertyList>

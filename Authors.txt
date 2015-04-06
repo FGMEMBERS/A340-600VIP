@@ -1,0 +1,23 @@
+Based on Liam Gathercole's A340-600 Model.
+
+Systems and EICAS mainly taken from Syd Adams, Justin Smithies, and Thorsten Brehm's 777.
+
+MCP and MFD taken from A320family.
+
+Other Instruments from A380 and 747.
+
+Liveries from Liam Gathercole, Emmanuel Savage, MT-Jun, Patrick Quaedackers, Simbabeat, Andino.
+
+Light positions by Benny DLH130
+
+Andino did the new moving parts for the Model (reversers, gear doors, flaps, spoilers, rudder, stabilizator, etc.), lights.
+
+Andino installed the instruments and some moving parts (throttle, joystick) in the cockpit.
+
+Yasim rewritten by Andino.
+
+Deice truck and Fuel truck from the A330.
+
+
+
+

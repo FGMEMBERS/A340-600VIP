@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+
+<PropertyList>
+<sim>
+    <model>
+        <livery>
+            <name type="string">Philippine Airlines</name>
+            <texture>Liveries/Liveries/PAL.png</texture>
+        </livery>
+    </model>
+</sim>
+</PropertyList>

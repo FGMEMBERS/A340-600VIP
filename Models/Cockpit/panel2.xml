@@ -1,0 +1,112 @@
+<!-- A340-600HGW
+Justin Smithies
+Syd Adams
+-->
+
+<PropertyList>
+
+    <model>
+        <name>PFD1</name>
+        <path>Aircraft/A340-600HGW/Models/Instruments/PFD/PFD3d.xml</path>
+        <offsets>
+            <x-m>-1.84</x-m>
+            <y-m>-0.589</y-m>
+            <z-m>0.384</z-m>
+            <pitch-deg>-10</pitch-deg>
+        </offsets>
+    </model>
+
+      <model>
+        <name>ND1</name>
+        <path>Aircraft/A340-600HGW/Models/Instruments/MFD/ND.xml</path>
+        <offsets>
+            <x-m>-1.84</x-m>
+            <y-m>-0.364</y-m>
+            <z-m>0.385</z-m>
+            <pitch-deg>-10</pitch-deg>
+        </offsets>
+    </model>
+
+
+    <model>
+        <name>PFD2</name>
+        <path>Aircraft/A340-600HGW/Models/Instruments/PFD/PFD3d.xml</path>
+        <offsets>
+            <x-m>-1.84</x-m>
+            <y-m>0.622</y-m>
+            <z-m>0.384</z-m>
+            <pitch-deg>-10</pitch-deg>
+        </offsets>
+    </model>
+
+  
+
+    <model>
+        <name>ND2</name>
+        <path>Aircraft/A340-600HGW/Models/Instruments/MFD/ND.xml</path>
+        <offsets>
+            <x-m>-1.84</x-m>
+            <y-m>0.396</y-m>
+            <z-m>0.385</z-m>
+            <pitch-deg>-10</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>AI</name>
+        <path>Aircraft/A340-600HGW/Models/Instruments/AI/ai.xml</path>
+        <offsets>
+            <x-m>-1.846</x-m>
+            <y-m>-0.119</y-m>
+            <z-m>0.440</z-m>
+            <pitch-deg>-8</pitch-deg>
+        </offsets>
+    </model>
+
+    <model>
+        <name>AI</name>
+        <path>Aircraft/A340-600HGW/Models/Instruments/NAV/nav.xml</path>
+        <offsets>
+            <x-m>-1.830</x-m>
+            <y-m>-0.119</y-m>
+            <z-m>0.350</z-m>
+            <pitch-deg>-5</pitch-deg>
+        </offsets>
+    </model>
+
+ <model>
+        <name>EICAS</name>
+        <path>Aircraft/A340-600HGW/Models/Instruments/EICAS/eicas-3d.xml</path>
+        <offsets>
+            <x-m>-1.83</x-m>
+            <y-m>0.017</y-m>
+            <z-m>0.411</z-m>
+            <pitch-deg>-10</pitch-deg>
+        </offsets>
+    </model>
+
+
+<model>
+        <name>MFD2</name>
+        <path>Aircraft/A340-600HGW/Models/Instruments/MFD2/mfd2.xml</path>
+        <offsets>
+            <x-m>-1.80</x-m>
+            <y-m>0.017</y-m>
+            <z-m>0.242</z-m>
+            <pitch-deg>-10</pitch-deg>
+        </offsets>
+    </model>
+
+<model>
+        <name>Gearlever</name>
+        <path>Aircraft/A340-600HGW/Models/Cockpit/gear_lever.xml</path>
+        <offsets>
+            <x-m>-1.82</x-m>
+            <y-m>0.198</y-m>
+            <z-m>0.308</z-m>
+            <pitch-deg>115</pitch-deg>
+        </offsets>
+    </model>
+
+
+</PropertyList>
