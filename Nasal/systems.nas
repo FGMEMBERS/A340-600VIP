@@ -1,5 +1,5 @@
 #A340-600HGW systems
-#Syd Adams
+#Syd Adams adapted by Andino
 #
 var SndOut = props.globals.getNode("/sim/sound/Ovolume",1);
 var chronometer = aircraft.timer.new("/instrumentation/clock/ET-sec",1);
@@ -569,7 +569,9 @@ var Wiper = {
 
 var Efis = EFIS.new("instrumentation/efis");
 var LHeng=Engine.new(0);
-var RHeng=Engine.new(1);
+var LHeng1=Engine.new(1);
+var RHeng=Engine.new(2);
+var RHeng1=Engine.new(3);
 var wiper = Wiper.new("controls/electric/wipers","systems/electrical/bus-volts");
 
 setlistener("/sim/signals/fdm-initialized", func {
@@ -672,15 +674,6 @@ setlistener("/sim/signals/reinit", func {
     Shutdown();
 });
 
-#setlistener("/autopilot/route-manager/route/num", func(wp){
-#    var wpt= wp.getValue() -1;
-#
-#    if(wpt>-1){
-#    setprop("instrumentation/groundradar/id",getprop("autopilot/route-manager/route/wp["~wpt~"]/id"));
-#    }else{
-#    setprop("instrumentation/groundradar/id",getprop("sim/tower/airport-id"));
-#    }
-#},1,0);
 
 
 setlistener("/sim/current-view/internal", func(vw){
@@ -887,10 +880,10 @@ var Shutdown = func{
     setprop("/engines/engine[1]/run",0);
     setprop("/engines/engine[2]/run",0);
     setprop("/engines/engine[3]/run",0);
-    setprop("/engines/engine[0]/rpm",0);
-    setprop("/engines/engine[1]/rpm",0);
-    setprop("/engines/engine[2]/rpm",0);
-    setprop("/engines/engine[3]/rpm",0);
+#    setprop("/engines/engine[0]/rpm",0);
+#    setprop("/engines/engine[1]/rpm",0);
+#    setprop("/engines/engine[2]/rpm",0);
+#    setprop("/engines/engine[3]/rpm",0);
     setprop("/engines/engine[0]/n2rpm",0);
     setprop("/engines/engine[1]/n2rpm",0);
     setprop("/engines/engine[2]/n2rpm",0);
@@ -922,6 +915,8 @@ var update_systems = func {
     Efis.update_temp();
     LHeng.update();
     RHeng.update();
+    LHeng1.update();
+    RHeng1.update();
     #wiper.active(); # not implemented yet!
     if(getprop("controls/gear/gear-down")){
         setprop("sim/multiplay/generic/float[0]",getprop("gear/gear[0]/compression-m"));

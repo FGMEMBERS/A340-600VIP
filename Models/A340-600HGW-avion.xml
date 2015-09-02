@@ -1470,7 +1470,7 @@ Liam Gathercole, Andino
         <type>spin</type>
         <object-name>fan0.001</object-name>
 	<object-name>fan.cone0.001</object-name>
-        <property>engines/engine[0]/thrust-lbs</property>
+        <property>engines/engine[0]/rpm</property>
         <factor>10</factor>
         <center>
             <x-m>-3.3164</x-m>
@@ -1488,7 +1488,7 @@ Liam Gathercole, Andino
         <type>spin</type>
        <object-name>fan0.003</object-name>
 	<object-name>fan.cone0.003</object-name>
-        <property>engines/engine[1]/thrust-lbs</property>
+        <property>engines/engine[1]/rpm</property>
         <factor>10</factor>
         <center>
             <x-m>-10.1647</x-m>
@@ -1506,7 +1506,7 @@ Liam Gathercole, Andino
         <type>spin</type>
         <object-name>fan0.002</object-name>
 	<object-name>fan.cone0.002</object-name>
-        <property>engines/engine[2]/thrust-lbs</property>
+        <property>engines/engine[2]/rpm</property>
         <factor>10</factor>
         <center>
             <x-m>-10.2082</x-m>
@@ -1524,7 +1524,7 @@ Liam Gathercole, Andino
         <type>spin</type>
         <object-name>fan0</object-name>
 	<object-name>fan.cone0</object-name>
-        <property>engines/engine[3]/thrust-lbs</property>
+        <property>engines/engine[3]/rpm</property>
         <factor>10</factor>
         <center>
             <x-m>-3.7413</x-m>
