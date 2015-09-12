@@ -110,7 +110,7 @@
         </rating>
         <aircraft-version>20130501</aircraft-version>
         <flight-model>yasim</flight-model>
-        <fuel-fraction type="double">0.6</fuel-fraction>
+        <fuel-fraction type="double">0.55</fuel-fraction>
         <model n="0">
             <armrest type="double">0</armrest>
         </model>
@@ -238,6 +238,7 @@
 		        <x-offset-m type="double">0.45</x-offset-m>
 		        <y-offset-m type="double">0.28</y-offset-m>
 		        <z-offset-m type="double">-34.54</z-offset-m>
+
 
 
 

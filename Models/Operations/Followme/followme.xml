@@ -18,7 +18,26 @@
    <z>1.0</z>
 </axis>
 </animation>
- 
+
+
+  <!--animation>
+    <type>material</type>
+    <object-name>Mesh76.006</object-name>
+    <object-name>Mesh76.002</object-name>
+    <object-name>Mesh76.001</object-name>
+    <object-name>Mesh76.004</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red>0.9</red>
+      <green>0.9</green>
+      <blue>0.9</blue>
+    </emission>
+  </animation-->
 
 </PropertyList>
  

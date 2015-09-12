@@ -56,7 +56,8 @@
             </transformations>
         </layer>
 
-        <layer>
+       
+		<layer>
             <condition>
                 <greater-than>
                     <property>autopilot/route-manager/route/num</property>
@@ -74,9 +75,8 @@
             </color>
             <chunks>
                 <chunk>
-                    <type>number-value</type>
-					<property>instrumentation/afds/inputs/estimated-time-arrival</property>
-                    <format>%04.0fz</format>
+                    <type>text-value</type>
+                    <property>autopilot/route-manager/wp/eta</property>
                 </chunk>
             </chunks>
             <transformations>

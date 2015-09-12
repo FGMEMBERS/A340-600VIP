@@ -4,6 +4,13 @@
 
 	<path>nav.ac</path>
 
+ <animation>
+  <type>scale</type>
+  <x-offset>1</x-offset>
+  <y-offset>0.9</y-offset>
+  <z-offset>1</z-offset>
+ </animation>
+
 	<!-- PARAMETERS -->
 	<params>
 		<indicated-heading-deg>instrumentation/heading-indicator/heading-magnetic-deg</indicated-heading-deg>

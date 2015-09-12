@@ -14,12 +14,12 @@ Liam Gathercole, Andino
 
 <model>
         <name>Cockpit</name>
-        <path>Aircraft/A340-600HGW/Models/Cockpit/cockpit.xml</path>
+        <path>Aircraft/A340-600HGW/Models/FlightDeck/flightdeck.xml</path>
         <offsets>
-            <x-m>-49.56</x-m>
-            <y-m>-4.09</y-m>
-            <z-m>-9.356</z-m>
-            <pitch-deg>-10</pitch-deg>
+            <x-m>-34.65</x-m>
+            <y-m>-0.085</y-m>
+            <z-m>0.8</z-m>
+            <pitch-deg>1</pitch-deg><!-- -10 -->
         </offsets>
 </model>
 
@@ -2184,6 +2184,7 @@ Liam Gathercole, Andino
   <object-name>Mesh55.001</object-name>
   <object-name>Mesh52.001</object-name>
   <object-name>Mesh03.001</object-name>
+	 <object-name>_DarkGra.004</object-name>
   <emission>
     <red>0.05</red>
     <green>0.05</green>

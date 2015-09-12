@@ -490,18 +490,29 @@
 		</condition>
 </animation-->
 
-<!-- dont show the light model during day-->
-<animation>
-	<type>select</type> 
-	<object-name>Lights_all</object-name>
-	<object-name>Lights_deicing</object-name>
-	<condition>		
-		<greater-than>		
-			<property>/sim/time/sun-angle-rad</property>
-			<value>1.45</value>
-		</greater-than>
-	</condition>
-</animation>
+
+
+  <animation>
+    <type>material</type>
+    <object-name>Lights_all</object-name>
+    <object-name>Lights_deicing</object-name>
+    <object-name>Cube.005</object-name>
+    <object-name>Cube.030</object-name>
+    <object-name>Lift_06</object-name>
+    <object-name>Cube.003</object-name>
+    <object-name>Cube.017</object-name>
+    <condition>
+      <greater-than>
+        <property>/sim/time/sun-angle-rad</property>
+        <value>1.57</value>
+      </greater-than>
+    </condition>
+    <emission>
+      <red>0.9</red>
+      <green>0.9</green>
+      <blue>0.9</blue>
+    </emission>
+  </animation>
 
 <!-- Sounds
 <fx>

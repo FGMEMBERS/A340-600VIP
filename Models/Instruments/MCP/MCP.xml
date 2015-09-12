@@ -10,10 +10,12 @@
 
  <animation>
   <type>scale</type>
-  <x-offset>1.67</x-offset><!--x-offset>1.75</x-offset-->
-  <y-offset>1.67</y-offset><!--y-offset>1.75</y-offset-->
-  <z-offset>1.67</z-offset><!--z-offset>1.75</z-offset-->
+  <x-offset>1.29</x-offset><!--x-offset>1.75</x-offset-->
+  <y-offset>1.29</y-offset><!--y-offset>1.75</y-offset-->
+  <z-offset>1.29</z-offset><!--z-offset>1.75</z-offset-->
  </animation>
+
+
 
   
 <animation>
@@ -79,7 +81,16 @@
 
 <!-- Altimeter pressure setting -->
 	
-
+<animation>
+  <type>select</type>
+    <object-name>AltPressure.</object-name>
+	<condition>
+			<equals>
+				<property>autopilot/settings/pressure-mode</property>
+				<value>1</value>
+			</equals>
+	</condition>
+</animation>
 
 	<animation>
 		<name>Pressure mode</name>
@@ -1308,6 +1319,26 @@
 				<command>nasal</command>
 				<script>controls.click(3);a340.afds.input(2,5);</script>
 			</binding>
+				<binding>
+				<command>property-assign</command>
+				<property>instrumentation/afds/inputs/at-armed</property>
+				<value>1</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>instrumentation/afds/inputs/at-armed[1]</property>
+				<value>1</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>instrumentation/afds/inputs/at-armed[2]</property>
+				<value>1</value>
+			</binding>
+			<binding>
+				<command>property-assign</command>
+				<property>instrumentation/afds/inputs/at-armed[3]</property>
+				<value>1</value>
+			</binding>
 		</action>
 	</animation>
 	<animation>
@@ -2275,7 +2306,7 @@
 
 <!-- Warning-->
 
- <animation>
+ <!--animation>
         <type>pick</type>
         <object-name>Mstr.Warning</object-name>
         <action>
@@ -2306,7 +2337,7 @@
         <condition>
             <property>instrumentation/weu/light/master-caution</property>
         </condition>
-    </animation>
+    </animation-->
 
 
 <!-- LoD -->

@@ -46,6 +46,8 @@ The A340-600HGW (High Gross Weight) version first flew on 18 November 2005 and w
 <cruise speed="500" alt="35000" fuel="0.7">
   <control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.75"/>
   <control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.75"/>
+<control-setting axis="/controls/engines/engine[2]/throttle-lever" value="0.75"/>
+<control-setting axis="/controls/engines/engine[3]/throttle-lever" value="0.75"/>
   <control-setting axis="/controls/flight/flaps" value="0.0"/>
   <control-setting axis="/controls/gear/gear-down" value="0"/>
 <solve-weight idx="0" weight="350"/>
@@ -142,7 +144,7 @@ The A340-600HGW (High Gross Weight) version first flew on 18 November 2005 and w
 </vstab>
 
 
-<!-- Outer Engines -->
+<!-- Engines -->
 
 <jet x="2.16" y="19.89"  z="-1.995" mass="10660" thrust="60000" spool-time="3"
 egt="840" tsfc="0.245" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
@@ -154,37 +156,38 @@ egt="840" tsfc="0.245" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
 <actionpt x="-2.7" y="9.89" z="-2.995"/>
 </jet>
 
-<jet x="2.16" y="-19.89"  z="-1.995" mass="10660" thrust="60000"  spool-time="3"
-egt="840" tsfc="0.245" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
-  <control-input axis="/controls/engines/engine[1]/throttle-lever" control="THROTTLE"/>
-  <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
-  <control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
-    <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[1]"/>
-    <control-speed control="REVERSE_THRUST" transition-time="1.5"/>
-<actionpt x="-2.7" y="-9.89" z="-2.995"/>
-</jet>
-
-<!-- Inner Engines -->
 
 <jet x="8.16" y="9.89"  z="-2.995" mass="10660" thrust="60000" spool-time="3"
 egt="840" tsfc="0.245" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
-  <control-input axis="/controls/engines/engine[0]/throttle-lever" control="THROTTLE"/>
-  <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
-  <control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST"/>
-    <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[0]"/>
+  <control-input axis="/controls/engines/engine[1]/throttle-lever" control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
+  <control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
+    <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[1]"/>
     <control-speed control="REVERSE_THRUST" transition-time="1.5"/>
 <actionpt x="-2.7" y="9.89" z="-2.995"/>
 </jet>
 
 <jet x="8.16" y="-9.89"  z="-2.995" mass="10660" thrust="60000"  spool-time="3"
 egt="840" tsfc="0.245" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
-  <control-input axis="/controls/engines/engine[1]/throttle-lever" control="THROTTLE"/>
-  <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
-  <control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
-    <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[1]"/>
+  <control-input axis="/controls/engines/engine[2]/throttle-lever" control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[2]/mixture" control="MIXTURE"/>
+  <control-input axis="/controls/engines/engine[2]/reverser" control="REVERSE_THRUST"/>
+    <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[2]"/>
     <control-speed control="REVERSE_THRUST" transition-time="1.5"/>
 <actionpt x="-2.7" y="-9.89" z="-2.995"/>
 </jet>
+
+
+<jet x="2.16" y="-19.89"  z="-1.995" mass="10660" thrust="60000"  spool-time="3"
+egt="840" tsfc="0.245" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
+  <control-input axis="/controls/engines/engine[3]/throttle-lever" control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[3]/mixture" control="MIXTURE"/>
+  <control-input axis="/controls/engines/engine[3]/reverser" control="REVERSE_THRUST"/>
+    <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[3]"/>
+    <control-speed control="REVERSE_THRUST" transition-time="1.5"/>
+<actionpt x="-2.7" y="-9.89" z="-2.995"/>
+</jet>
+
 
  <thruster x="19.28"  y="0.00" z="-5.55" vx="1" vy="0" vz="0" thrust="20000">
  <control-input axis="/sim/model/pushback/target-speed-fps" control="THROTTLE" src0="-1" src1="1" dst0="-1" dst1="1"/>

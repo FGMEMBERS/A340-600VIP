@@ -574,6 +574,54 @@ var RHeng=Engine.new(2);
 var RHeng1=Engine.new(3);
 var wiper = Wiper.new("controls/electric/wipers","systems/electrical/bus-volts");
 
+setlistener("engines/engine[0]/egt-degf", func(degf) {
+        var degf = degf.getValue();
+        var degc = (degf - 32) * (5 / 9);
+        setprop("/engines/engine[0]/egt-degc", degc);
+});
+setlistener("engines/engine[1]/egt-degf", func(degf) {
+        var degf = degf.getValue();
+        var degc = (degf - 32) * (5 / 9);
+        setprop("/engines/engine[1]/egt-degc", degc);
+});
+setlistener("engines/engine[2]/egt-degf", func(degf) {
+        var degf = degf.getValue();
+        var degc = (degf - 32) * (5 / 9);
+        setprop("/engines/engine[2]/egt-degc", degc);
+});
+setlistener("engines/engine[3]/egt-degf", func(degf) {
+        var degf = degf.getValue();
+        var degc = (degf - 32) * (5 / 9);
+        setprop("/engines/engine[3]/egt-degc", degc);
+});
+
+setlistener("engines/engine[0]/fuel-flow_pph", func(pph) {
+        var pph = pph.getValue();
+        var kgph = pph * 0.45359237;
+        setprop("/engines/engine[0]/fuel-flow-kgph", kgph);
+});
+
+setlistener("engines/engine[1]/fuel-flow_pph", func(pph) {
+        var pph = pph.getValue();
+        var kgph = pph * 0.45359237;
+        setprop("/engines/engine[1]/fuel-flow-kgph", kgph);
+});
+
+setlistener("engines/engine[2]/fuel-flow_pph", func(pph) {
+        var pph = pph.getValue();
+        var kgph = pph * 0.45359237;
+        setprop("/engines/engine[2]/fuel-flow-kgph", kgph);
+});
+
+setlistener("engines/engine[3]/fuel-flow_pph", func(pph) {
+        var pph = pph.getValue();
+        var kgph = pph * 0.45359237;
+        setprop("/engines/engine[3]/fuel-flow-kgph", kgph);
+});
+
+#setprop("/engines/engine/fuel-flow-kgph", getprop("/engines/engine/fuel-flow_pph") * 0.45359237);
+#setprop("/engines/engine[1]/fuel-flow-kgph", getprop("/engines/engine[1]/fuel-flow_pph") * 0.45359237);
+
 setlistener("/sim/signals/fdm-initialized", func {
     SndOut.setDoubleValue(0.15);
     chronometer.stop();
@@ -786,7 +834,7 @@ var Startup = func{
     setprop("controls/electric/engine[3]/bus-tie",1);
     setprop("/systems/electrical/outputs/avionics",1);
     setprop("controls/electric/inverter-switch",1);
-    setprop("controls/lighting/instrument-norm",0.8);
+#    setprop("controls/lighting/instrument-norm",0.8);
     setprop("controls/lighting/nav-lights",1);
     setprop("controls/lighting/beacon",1);
     setprop("controls/lighting/wing-lights",1);
@@ -805,6 +853,9 @@ var Startup = func{
     setprop("engines/engine[1]/out-of-fuel",0);
     setprop("engines/engine[2]/out-of-fuel",0);
     setprop("engines/engine[3]/out-of-fuel",0);
+    setprop("consumables/fuel/tank[0]/selected",1);
+    setprop("consumables/fuel/tank[1]/selected",1);
+    setprop("consumables/fuel/tank[2]/selected",1);
     setprop("controls/flight/elevator-trim",0);
     setprop("controls/flight/aileron-trim",0);
     setprop("controls/flight/rudder-trim",0);
@@ -876,6 +927,8 @@ var Shutdown = func{
     setprop("instrumentation/transponder/mode-switch",0); # transponder mode: off
     setprop("controls/engines/StartIgnition-knob[0]",0);
     setprop("controls/engines/StartIgnition-knob[1]",0);
+    setprop("controls/engines/StartIgnition-knob[2]",0);
+    setprop("controls/engines/StartIgnition-knob[3]",0);
     setprop("/engines/engine[0]/run",0);
     setprop("/engines/engine[1]/run",0);
     setprop("/engines/engine[2]/run",0);

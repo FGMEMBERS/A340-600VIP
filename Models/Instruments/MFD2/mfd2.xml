@@ -16,7 +16,7 @@ A340-600HGW Navigation display
 
 <animation>
         <type>pick</type>
-        <object-name>EFIS.bezel</object-name>
+        <object-name>EFIS.screen</object-name>
         <action>
             <button>0</button>
             <repeatable>false</repeatable>

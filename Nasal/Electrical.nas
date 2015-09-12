@@ -217,10 +217,10 @@ var init_switches = func{
     append(rbus_output,props.globals.initNode("systems/electrical/outputs/starter[1]",0,"DOUBLE"));
     append(rbus_load,1);
     append(rbus_input,props.globals.initNode("controls/engines/engine[2]/starter",0,"BOOL"));
-    append(rbus_output,props.globals.initNode("systems/electrical/outputs/starter",0,"DOUBLE"));
+    append(rbus_output,props.globals.initNode("systems/electrical/outputs/starter[2]",0,"DOUBLE"));
     append(rbus_load,1);
     append(rbus_input,props.globals.initNode("controls/engines/engine[3]/starter",0,"BOOL"));
-    append(rbus_output,props.globals.initNode("systems/electrical/outputs/starter[1]",0,"DOUBLE"));
+    append(rbus_output,props.globals.initNode("systems/electrical/outputs/starter[3]",0,"DOUBLE"));
     append(rbus_load,1);
     append(rbus_input,AVswitch);
     append(rbus_output,props.globals.initNode("systems/electrical/outputs/KNS80",0,"DOUBLE"));
