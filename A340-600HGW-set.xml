@@ -78,10 +78,17 @@
 
     <instrumentation n="0">
         <cdu n="0">
-            <ident>
-                <model>A340-600HGW</model>
-                <engines>RollsRoyceTrent560</engines>
-            </ident>
+			<!--config>
+				<texture>boeing_brown.png</texture>
+			</config-->
+			<display>IDENT</display>
+			<ident>
+				 <model>A340-600HGW</model>
+				<engines>RR Trent560</engines>
+			</ident>
+			<input type="string"/>
+			<serviceable>true</serviceable>
+
         </cdu>
     </instrumentation>
 
@@ -110,7 +117,7 @@
         </rating>
         <aircraft-version>20130501</aircraft-version>
         <flight-model>yasim</flight-model>
-        <fuel-fraction type="double">0.55</fuel-fraction>
+        <fuel-fraction type="double">0.10</fuel-fraction>
         <model n="0">
             <armrest type="double">0</armrest>
         </model>
@@ -1065,6 +1072,22 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
     </autopilot>
 
     <nasal n="0">
+
+		<mcdu>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/init_A.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/init_B.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/radios.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/select_SID.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/select_STAR.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/f-pln.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/lat_rev.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/common.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/perf.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/loop.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/parse_DB.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/user.nas</file>
+		</mcdu>
+
         <a340>
             <file>Aircraft/A340-600HGW/Nasal/Electrical.nas</file>
             <file>Aircraft/A340-600HGW/Nasal/systems.nas</file>
@@ -1076,14 +1099,16 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
             <file>Aircraft/A340-600HGW/Nasal/ground_steering.nas</file>
 			<file>Aircraft/A340-600HGW/Nasal/ground-services.nas</file>
 			<file>Aircraft/A340-600HGW/Nasal/fuel-dump.nas</file>
+			<!--file>Aircraft/A340-600HGW/Nasal/terrainmap.nas</file-->
+			<!--file>Aircraft/A340-600HGW/Nasal/terrain-map.nas</file-->
             <file>Aircraft/Generic/limits.nas</file>
         </a340>
         <dialogs>
             <file>Aircraft/A340-600HGW/Nasal/dialogs.nas</file>
         </dialogs>
-        <cdu>
+        <!--cdu>
             <file>Aircraft/Instruments-3d/cdu/boeing.nas</file>
-        </cdu>
+        </cdu-->
     </nasal>
 
     <limits n="0">

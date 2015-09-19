@@ -27,6 +27,22 @@
   </emission>
 </animation>
 
+<animation>
+  <type>material</type>
+	<object-name>dome</object-name>
+	<object-name>landing</object-name>
+	<object-name>nav</object-name>
+	<object-name>strobe</object-name>
+	<object-name>beacon</object-name>
+	<object-name>seatbelts</object-name>
+  <emission>
+    <red>0.3</red>
+    <green>0.3</green>
+    <blue>0.3</blue>
+	<!--factor-prop>controls/lighting/instruments-norm</factor-prop-->
+  </emission>
+</animation>
+
 
 <!--Boton de la APU BAT -->
 
@@ -1206,7 +1222,41 @@
 	</axis>
 </animation>
 
+<!--seatbelts-->
 
+<animation>
+	<type>pick</type>
+	<object-name>seatbelts</object-name>
+	<action>
+		<button>0</button>
+		<repeatable>false</repeatable>	
+		<binding>
+			<command>property-toggle</command>
+			<property>/controls/switches/seatbelt-sign</property>
+		</binding>
+		<binding>
+			<command>nasal</command>
+			<script>controls.click(1);</script>
+		</binding>
+	</action>
+</animation>
+
+   <animation>
+	<type>rotate</type>
+	<object-name>seatbelts</object-name>
+	<property>/controls/switches/seatbelt-sign</property>
+	<factor>-25</factor>
+	<center>
+		<x-m>-0.84</x-m>
+		<y-m>-0.11</y-m>
+		<z-m>0.19</z-m>
+	</center>
+	<axis>
+		<x>0</x>
+		<y>1</y>
+		<z>0</z>
+	</axis>
+</animation>
 
 
 </PropertyList>

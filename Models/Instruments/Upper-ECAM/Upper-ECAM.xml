@@ -666,7 +666,7 @@
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-		<format type="string">%4.0f</format>
+		<format type="string">%4.2f</format>
 		<property>engines/engine/fuel-flow-kgph</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
@@ -690,7 +690,7 @@
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-		<format type="string">%4.0f</format>
+		<format type="string">%4.2f</format>
 		<property>engines/engine[1]/fuel-flow-kgph</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
@@ -714,7 +714,7 @@
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-		<format type="string">%4.0f</format>
+		<format type="string">%4.2f</format>
 		<property>engines/engine[2]/fuel-flow-kgph</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>
@@ -738,7 +738,7 @@
 		<alignment>center-center</alignment>
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
-		<format type="string">%4.0f</format>
+		<format type="string">%4.2f</format>
 		<property>engines/engine[3]/fuel-flow-kgph</property>
 		<truncate type="bool">false</truncate>
 		<font type="string">helvetica_bold.txf</font>

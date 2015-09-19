@@ -17,8 +17,8 @@
                 </not>
             </condition>
             <name>hdg</name>
-            <w>360</w>
-            <h>360</h>
+            <w>390</w>
+            <h>390</h>
             <texture>
                 <path>Aircraft/A340-600HGW/Models/Instruments/MFD/hsiarc.png</path>
                 <x1>0.0</x1>
@@ -414,8 +414,8 @@
                 <property>instrumentation/efis/inputs/nd-centered</property>
             </condition>
             <name>hdg1</name>
-            <w>220</w>
-            <h>220</h>
+            <w>200</w>
+            <h>200</h>
             <texture>
                 <path>Aircraft/A340-600HGW/Models/Instruments/MFD/hsi.png</path>
                 <x1>0</x1>

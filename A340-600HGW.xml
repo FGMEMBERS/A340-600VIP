@@ -34,6 +34,8 @@ The A340-600HGW (High Gross Weight) version first flew on 18 November 2005 and w
 <approach speed="132" alt="0.0" aoa="5.0" fuel="0.2" glide-angle="0.0">
       <control-setting axis="/controls/engines/engine[0]/throttle-act" value="0.25"/>
       <control-setting axis="/controls/engines/engine[1]/throttle-act" value="0.25"/>
+	  <control-setting axis="/controls/engines/engine[2]/throttle-act" value="0.25"/>
+      <control-setting axis="/controls/engines/engine[3]/throttle-act" value="0.25"/>
       <control-setting axis="/controls/flight/flaps" value="1"/>
       <control-setting axis="/surface-positions/slats" value="1"/>
       <control-setting axis="/controls/gear/gear-down" value="1"/>

@@ -6,6 +6,24 @@ A340-600HGW Navigation display
 <PropertyList>
 
  <!--path>EFIS.ac</path-->
+<!--model>
+		<path>Aircraft/A340-600HGW/Models/Instruments/MFD/terrain-map-pixel.xml</path>
+		<condition>
+			<and>
+				<greater-than>
+					<property>systems/electrical/outputs/efis</property>
+					<value>15</value>
+				</greater-than>
+
+				<property>/instrumentation/efis/nd/terrain-on-nd</property>
+
+			</and>
+		</condition>
+
+		<offsets>
+			<x-m>0.01</x-m>
+		</offsets>
+	</model-->
 
  <animation>
   <type>scale</type>

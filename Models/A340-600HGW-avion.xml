@@ -469,7 +469,7 @@ Liam Gathercole, Andino
         <type>material</type>
         <object-name>fuselage</object-name>
         <object-name>tail</object-name>
-	  <object-name>engines</object-name>
+	  <object-name>engines0</object-name>
 	  <object-name>winglets</object-name>
 	  <object-name>Mesh01</object-name>
 	  <!--object-name>pw.nacelle0.001</object-name-->
@@ -804,6 +804,10 @@ Liam Gathercole, Andino
                 <ind>0</ind>
                 <dep>80</dep>
             </entry>
+			<entry>
+                <ind>0.8</ind>
+                <dep>0</dep>
+			</entry>
             <entry>
                 <ind>1.0</ind>
                 <dep>0</dep>
@@ -1948,6 +1952,10 @@ Liam Gathercole, Andino
 	<object-name>_LightGr.020</object-name>
         <property>gear/gear[1]/rollspeed-ms</property>
         <factor>10</factor>
+	<condition>
+		<property>/gear/gear[1]/wow</property>
+		<value>true</value>
+	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -1970,6 +1978,10 @@ Liam Gathercole, Andino
 	<object-name>_LightGr.021</object-name>
         <property>gear/gear[1]/rollspeed-ms</property>
         <factor>10</factor>
+	<condition>
+		<property>/gear/gear[1]/wow</property>
+		<value>true</value>
+	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -1996,6 +2008,10 @@ Liam Gathercole, Andino
 	<object-name>_LightGr.011</object-name>
         <property>gear/gear[2]/rollspeed-ms</property>
         <factor>10</factor>
+	<condition>
+		<property>/gear/gear[2]/wow</property>
+		<value>true</value>
+	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -2019,6 +2035,10 @@ Liam Gathercole, Andino
 	<object-name>_LightGr.012</object-name>
         <property>gear/gear[2]/rollspeed-ms</property>
         <factor>10</factor>
+	<condition>
+		<property>/gear/gear[2]/wow</property>
+		<value>true</value>
+	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -2042,6 +2062,12 @@ Liam Gathercole, Andino
 	<object-name>_LightGr.014</object-name>
         <property>gear/gear[3]/rollspeed-ms</property>
         <factor>10</factor>
+	<condition>
+		<less-than>
+		<property>/position/altitude-agl-ft</property>
+		<value>20</value>
+		</less-than>
+	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -2065,6 +2091,12 @@ Liam Gathercole, Andino
 	<object-name>_LightGr.015</object-name>
         <property>gear/gear[3]/rollspeed-ms</property>
         <factor>10</factor>
+	<condition>
+		<less-than>
+		<property>/position/altitude-agl-ft</property>
+		<value>20</value>
+		</less-than>
+	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -2192,6 +2224,112 @@ Liam Gathercole, Andino
     <!--factor-prop>/controls/lighting/digital-norm</factor-prop-->
   </emission>
 </animation>
+
+<!--Movimiento ruedas en el aire-->
+
+<!--Right Gear-->
+
+	<animation>
+	<name>rhaxle</name>
+	<object-name>_Black_.010</object-name>
+	<object-name>_Black_.011</object-name>
+	<object-name>_Black_.012</object-name>
+	<object-name>_Black_.009</object-name>
+	<object-name>Mesh56.001</object-name>
+	<object-name>_Gainsbo.013</object-name>
+	<object-name>_Gainsbo.014</object-name>
+	<object-name>_Gainsbo.016</object-name>
+	<object-name>_Gainsbo.015</object-name>	
+	<object-name>_Gainsbo.017</object-name>
+	<object-name>_LightGr.016</object-name>
+	<object-name>_LightGr.021</object-name>
+	<object-name>_LightGr.020</object-name>
+	<object-name>_LightGr.017</object-name>
+</animation>	
+	
+
+
+    <!--animation>
+      <type>rotate</type>
+      <object-name>rhaxle</object-name>
+      <property>/position/altitude-agl-ft</property>
+		<factor>0.2</factor>
+      <min-deg>0</min-deg>
+      <max-deg>25</max-deg>
+		<offset-deg>0</offset-deg>
+	<condition>
+		<greater-than>
+		<property>/position/altitude-agl-ft</property>
+		<value>24</value>
+		</greater-than>
+	</condition>
+     <center>
+            <x-m>-1.03</x-m>
+            <y-m>0</y-m>
+            <z-m>-4.32</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+     </animation>
+
+
+
+
+<animation>
+      <type>rotate</type>
+      <object-name>rhaxle</object-name>
+      <property>/position/altitude-agl-ft</property>
+		<factor>-250</factor>
+      <min-deg>0</min-deg>
+      <max-deg>25</max-deg>
+		<offset-deg>0</offset-deg>
+		<condition>
+		<property>/gear/gear[1]/wow</property>
+		<value>1</value>
+	</condition>
+
+     <center>
+            <x-m>-1.03</x-m>
+            <y-m>0</y-m>
+            <z-m>-4.32</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+     </animation-->
+
+
+
+
+<!-- Left Gear-->
+
+	<animation>
+	<name>lhaxle</name>
+	<object-name>_Black_.005</object-name>
+	<object-name>_Black_.006</object-name>
+	<object-name>_Black_.008</object-name>
+	<object-name>_Black_.007</object-name>
+	<object-name>Mesh36</object-name>
+	<object-name>_Gainsbo.011</object-name>
+	<object-name>_Gainsbo.010</object-name>
+	<object-name>_Gainsbo.008</object-name>
+	<object-name>_Gainsbo.009</object-name>	
+	<object-name>_LightGr.007</object-name>
+	<object-name>_LightGr.012</object-name>
+	<object-name>_LightGr.010</object-name>
+	<object-name>_LightGr.011</object-name>
+</animation>	
+
+
+
+
+
+
 
 </PropertyList>
 
