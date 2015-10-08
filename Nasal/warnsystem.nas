@@ -64,6 +64,7 @@ var WEU =
         m.speed         = 0;
         m.reverser      = 0;
         m.apu_running   = 0;
+        m.landing		= 0;
         m.gear_down     = 0;
         m.gear_override = 0;
         m.flap_override = 0;
@@ -84,6 +85,7 @@ var WEU =
         setlistener("controls/gear/brake-parking",      func { Weu.update_listener_inputs() } );
         setlistener("controls/engines/engine/reverser", func { Weu.update_listener_inputs() } );
         setlistener("controls/electric/APU-generator",  func { Weu.update_listener_inputs() } );
+		setlistener("controls/lighting/landing-light",  func { Weu.update_listener_inputs() } );
         setlistener("controls/electric/avionics-switch",func { Weu.update_listener_inputs() } );
         setlistener("controls/flight/rudder-trim",      func { Weu.update_listener_inputs() } );
         setlistener("controls/flight/elevator-trim",    func { Weu.update_listener_inputs() } );
@@ -188,6 +190,8 @@ var WEU =
             append(me.msgs_info,">SPEEDBRAKE ARMED");
         if (me.apu_running)
             append(me.msgs_info,">APU RUNNING");
+		if (me.landing)
+            append(me.msgs_info,">LND LIGHT ON");
     },
 
 #### stall warnings and other sounds ####
@@ -254,6 +258,7 @@ var WEU =
         me.parkbrake     = getprop("controls/gear/brake-parking");
         me.gear_override = getprop("instrumentation/mk-viii/inputs/discretes/gear-override");
         me.apu_running   = getprop("controls/electric/APU-generator");
+		me.landing   	= getprop("controls/lighting/landing-light");
         me.rudder_trim   = getprop("controls/flight/rudder-trim");
         me.elev_trim     = getprop("controls/flight/elevator-trim");
     },
@@ -316,16 +321,22 @@ var WEU =
              if (getprop("/controls/engines/engine[3]/starter"))
                 append(me.msgs_info,">R ENG STARTER");
 
-            if (getprop("/aaa/jettison"))
-                append(me.msgs_info,">FUEL JETTISON");
+#            if (getprop("/aaa/jettison"))
+#                append(me.msgs_info,">FUEL JETTISON");
+
+			if (getprop("/services/fuel-dump/clean"))
+                append(me.msgs_caution,">FUEL JETTISON");
+
+			if (getprop("/controls/switches/seatbelt-sign"))
+                append(me.msgs_info,">SEAT BELT SIGN");
 
 #if (getprop("/gear/brake-thermal-energy")>1.2)
 #setprop("/aaa/brakes-fucked", 1);
 #if (getprop("/aaa/brakes-fucked")==1)
 #    append(me.msgs_warning,">MASTER BRAKES FAILURE");
 
-            if (getprop("/aaa/xfeed_progr")==1)
-                append(me.msgs_info,">FUEL X-FEED");				
+#            if (getprop("/aaa/xfeed_progr")==1)
+#                append(me.msgs_info,">FUEL X-FEED");				
 				
         }
 

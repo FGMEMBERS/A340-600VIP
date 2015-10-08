@@ -185,7 +185,7 @@
 		<axis-alignment>yz-plane</axis-alignment>
 		<type type="string">number-value</type>
 		<format type="string">%5.1f</format>
-		<property>fdm/jsbsim/propulsion/total-fuel-lbs</property>
+		<!--property>fdm/jsbsim/propulsion/total-fuel-lbs</property-->
 		<font>lcd.txf</font>
 		<character-size>0.007</character-size>
 		<character-aspect-ratio type="double">1.5</character-aspect-ratio>
@@ -405,5 +405,13 @@
 	</animation>
 </layer>
 	</layers>
+
+
+<!-- LoD -->
+ <animation>
+   <type>range</type>
+   <min-m>0</min-m>
+   <max-m>20</max-m>
+ </animation>
 
 </PropertyList>

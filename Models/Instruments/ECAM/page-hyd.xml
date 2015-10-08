@@ -151,7 +151,7 @@
 				<chunk>
 					<alignment>left-center</alignment>
 					<type>number-value</type>
-					<property>fdm/jsbsim/inertia/weight-lbs</property>
+					<!--property>fdm/jsbsim/inertia/weight-lbs</property-->
 					<scale>0.45359237</scale>
 					<format type="string">%5.0f</format>
 				</chunk>
@@ -168,6 +168,13 @@
 			</transformations>
 		</layer>
 	</layers>
+
+<!-- LoD -->
+ <animation>
+   <type>range</type>
+   <min-m>0</min-m>
+   <max-m>20</max-m>
+ </animation>
 
 
 </PropertyList>

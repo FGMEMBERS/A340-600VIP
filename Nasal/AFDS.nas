@@ -308,7 +308,7 @@ setlistener("/sim/signals/fdm-initialized", func {
 var lim=30;
 var max_wpt=1;
 var atm_wpt=1;
-setprop("/aaa/jettison", 0);
+## setprop("/aaa/jettison", 0);
 var update_afds = func {
     afds.ap_update();
 

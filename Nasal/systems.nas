@@ -619,6 +619,14 @@ setlistener("engines/engine[3]/fuel-flow_pph", func(pph) {
         setprop("/engines/engine[3]/fuel-flow-kgph", kgph);
 });
 
+#setlistener("yasim/gross-weight-lbs", func(lbs) {
+#        var lbs = lbs.getValue();
+#        var kgs = lbs * 0.45359237;
+#        setprop("/sim/model/gross-weight-kgs", kgs);
+#});
+
+
+
 #setprop("/engines/engine/fuel-flow-kgph", getprop("/engines/engine/fuel-flow_pph") * 0.45359237);
 #setprop("/engines/engine[1]/fuel-flow-kgph", getprop("/engines/engine[1]/fuel-flow_pph") * 0.45359237);
 

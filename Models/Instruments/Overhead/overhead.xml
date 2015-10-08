@@ -1025,6 +1025,57 @@
    </action>
  </animation>
 
+
+<!-- Dump Fuel -->
+
+
+<animation>
+  <type>select</type>
+    <object-name>botona.020</object-name>
+	<object-name>botona.021</object-name>
+	<condition>
+		<equals>
+	<property>/services/fuel-dump/clean</property>
+	<value>1</value>
+	</equals>
+	</condition>
+</animation>
+
+
+ <animation>
+  <type>pick</type>
+   <object-name>botonb.020</object-name>
+	<object-name>botonb.021</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <interval-sec>0.2</interval-sec>
+    <binding>
+		<command>property-assign</command>
+      <property>/services/fuel-dump/clean</property>
+	<value>1</value>
+    </binding>
+   </action>
+ </animation>
+
+ <animation>
+  <type>pick</type>
+   <object-name>botona.021</object-name>
+	<object-name>botona.020</object-name>
+   <action>
+    <button>0</button>
+    <repeatable>false</repeatable>
+    <interval-sec>0.2</interval-sec>
+	<binding>
+		<command>property-assign</command>
+      <property>/services/fuel-dump/clean</property>
+	<value>0</value>
+	</binding>
+   </action>
+ </animation>
+
+
+
 <!-- Landing Lights-->
 
 <animation>
@@ -1258,5 +1309,11 @@
 	</axis>
 </animation>
 
+<!-- LoD -->
+ <animation>
+   <type>range</type>
+   <min-m>0</min-m>
+   <max-m>20</max-m>
+ </animation>
 
 </PropertyList>

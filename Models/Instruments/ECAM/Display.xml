@@ -286,10 +286,10 @@
 				</equals>
 			    </and>
 			</condition>
-			<x>128</x>                 <!-- required horizontal placement -->
-			<y>80</y>                 <!-- required vertical placement -->
+			<x>128</x>                
+			<y>80</y>                 
 			<w>60</w>
-			<h>60</h>                 <!-- optional height specification -->
+			<h>60</h>                 
 		</instrument>
 
 		<!--instrument include="page-all.xml">
@@ -315,5 +315,13 @@
     
 
 </instruments>
+
+
+<!-- LoD -->
+ <animation>
+   <type>range</type>
+   <min-m>0</min-m>
+   <max-m>20</max-m>
+ </animation>
 
 </PropertyList>

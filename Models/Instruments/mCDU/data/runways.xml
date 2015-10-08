@@ -603,5 +603,11 @@
 		</font-resolution>
 	</text-->
 
-    
+<!-- LoD -->
+ <animation>
+   <type>range</type>
+   <min-m>0</min-m>
+   <max-m>20</max-m>
+ </animation>
+
 </PropertyList>

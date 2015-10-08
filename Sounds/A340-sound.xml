@@ -2,11 +2,179 @@
     <!-- cockpit x=22.5 y=0 z=0.78 -->
     <fx>
 
-<!--Engines trent2 -->
+<!-- Reversers-->
+
+       <engines>
+            <name>1 reverse-thrust</name>
+            <mode>looped</mode>
+            <path>Aircraft/A340-600HGW/Sounds/reverser2.wav</path>
+            <condition>
+                <property>engines/engine[0]/run</property>
+            </condition>
+            <volume>
+                <property>surface-positions/reverser-norm[0]</property>
+            </volume>
+            <volume>
+                <property>sim/sound/Ovolume</property>
+            </volume>
+            <position>
+                <x>2.75</x>
+                <y>-10.8</y>
+                <z>-3</z>
+            </position>
+            <reference-dist>60.0</reference-dist>
+            <max-dist>6000.0</max-dist>
+        </engines>
+
+
+      <engines>
+            <name>2 reverse-thrust</name>
+            <mode>looped</mode>
+            <path>Aircraft/A340-600HGW/Sounds/reverser2.wav</path>
+            <condition>
+                <property>engines/engine[1]/run</property>
+            </condition>
+            <volume>
+                <property>surface-positions/reverser-norm[1]</property>
+            </volume>
+            <volume>
+                <property>sim/sound/Ovolume</property>
+            </volume>
+            <position>
+                <x>2.75</x>
+                <y>-5.8</y>
+                <z>-3</z>
+            </position>
+            <reference-dist>60.0</reference-dist>
+            <max-dist>6000.0</max-dist>
+        </engines>
+
+		  <engines>
+            <name>3 reverse-thrust</name>
+            <mode>looped</mode>
+            <path>Aircraft/A340-600HGW/Sounds/reverser2.wav</path>
+            <condition>
+                <property>engines/engine[2]/run</property>
+            </condition>
+            <volume>
+                <property>surface-positions/reverser-norm[2]</property>
+            </volume>
+            <volume>
+                <property>sim/sound/Ovolume</property>
+            </volume>
+            <position>
+                <x>2.75</x>
+                <y>5.8</y>
+                <z>-3</z>
+            </position>
+            <reference-dist>60.0</reference-dist>
+            <max-dist>6000.0</max-dist>
+        </engines>
+
+		<engines>
+            <name>3 reverse-thrust</name>
+            <mode>looped</mode>
+            <path>Aircraft/A340-600HGW/Sounds/reverser2.wav</path>
+            <condition>
+                <property>engines/engine[3]/run</property>
+            </condition>
+            <volume>
+                <property>surface-positions/reverser-norm[3]</property>
+            </volume>
+            <volume>
+                <property>sim/sound/Ovolume</property>
+            </volume>
+            <position>
+                <x>2.75</x>
+                <y>10.8</y>
+                <z>-3</z>
+            </position>
+            <reference-dist>60.0</reference-dist>
+            <max-dist>6000.0</max-dist>
+        </engines>
+
+<!--Wind-->
+
+       <wind>
+			<name>wind</name>
+			<mode>looped</mode>
+			<path>Aircraft/A340-600HGW/Sounds/wind.wav</path>
+			<property>/velocities/airspeed-kt</property>
+			<volume>
+				<property>/position/altitude-ft</property>
+				<factor>-0.000015</factor>
+				<offset>1.0</offset>
+				<min>0.1</min>
+				<max>1.0</max>
+			</volume>
+			<volume>
+				<property>/velocities/airspeed-kt</property>
+				<factor>0.0020</factor>
+				<min>0.03</min>
+				<max>0.25</max>
+			</volume>
+			<pitch>
+				<property>/velocities/airspeed-kt</property>
+				<factor>0.01</factor>
+				<offset>1.25</offset>
+			</pitch>
+			<!--position>
+				<x>-24</x>
+				<y>0</y>
+				<z>0.86</z>
+			</position>
+			<reference-dist>1.0</reference-dist>
+			<max-dist>2.0</max-dist-->
+		</wind>
+
+<!--Roll-->
+
+		<roll>
+			<name>Roll</name>
+			<path>Aircraft/A340-600HGW/Sounds/roll.wav</path>
+			<mode>looped</mode>
+			<type>avionics</type>
+			<condition>
+				<property>sim/current-view/internal</property>
+				<or>
+					<!-- While on ground -->
+					<property>/gear/gear[0]/wow</property>
+					<property>/gear/gear[1]/wow</property>
+					<property>/gear/gear[2]/wow</property>
+					<property>/gear/gear[3]/wow</property>
+				</or>
+			</condition>
+			<!--volume>
+				<property>/sim/sound/effects/volume</property>
+				<factor>1.5</factor>
+			</volume-->
+			<volume>
+				<property>/velocities/groundspeed-kt</property>
+				<type>log</type>
+				<factor>0.20</factor>
+				<!--max>0.9</max-->
+
+			</volume>
+			<pitch>
+				<property>/velocities/groundspeed-kt</property>
+				<offset>0</offset>
+				<type>log</type>
+				<factor>0.28</factor>
+				<min>0.1</min>
+				<max>1.5</max>
+			</pitch>			
+			<!--position>
+				<x>22.5</x>
+				<y>0</y>
+				<z>0.78</z>
+			</position-->
+		</roll>
+
+<!--Engines jet -->
 
         <engine>
-            <name>left engine</name>
-            <path>/Aircraft/A340-600HGW/Sounds/jet-trent2.wav</path>
+            <name>1 engine</name>
+            <path>/Aircraft/A340-600HGW/Sounds/jet.wav</path>
             <mode>looped</mode>
             <condition>
                 <property>engines/engine[0]/run</property>
@@ -14,7 +182,7 @@
             <volume>
                 <property>engines/engine[0]/thrust-lbs</property>
                 <offset>-0.75</offset>
-                <factor>0.0125</factor>
+               <factor>0.000028571</factor>
                 <min>0.0</min>
                 <max>5.0</max>
             </volume>
@@ -28,34 +196,35 @@
             <reference-dist>600.0</reference-dist>
             <max-dist>6000.0</max-dist>
         </engine>
+
         <engine>
-            <name>right engine</name>
-            <path>/Aircraft/A340-600HGW/Sounds/jet-trent2.wav</path>
+            <name>2 engine</name>
+            <path>/Aircraft/A340-600HGW/Sounds/jet.wav</path>
             <mode>looped</mode>
-            <condition>
+             <condition>
                 <property>engines/engine[1]/run</property>
             </condition>
             <volume>
                 <property>engines/engine[1]/thrust-lbs</property>
                 <offset>-0.75</offset>
-                <factor>0.0125</factor>
+               <factor>0.000028571</factor>
                 <min>0.0</min>
                 <max>5.0</max>
             </volume>
-            <!-- <volume> <property>sim/sound/Ovolume</property> <min>0.8</min> 
-                </volume> -->
+            <!-- volume> <property>sim/sound/Ovolume</property> <min>0.8</min> 
+                </volume -->
             <position>
                 <x>0</x>
-                <y>-9.8</y>
+                <y>9.8</y>
                 <z>-3</z>
             </position>
             <reference-dist>600.0</reference-dist>
             <max-dist>6000.0</max-dist>
         </engine>
 
- <engine>
-            <name>right engine</name>
-            <path>/Aircraft/A340-600HGW/Sounds/jet-trent2.wav</path>
+		 <engine>
+            <name>3 engine</name>
+            <path>/Aircraft/A340-600HGW/Sounds/jet.wav</path>
             <mode>looped</mode>
             <condition>
                 <property>engines/engine[2]/run</property>
@@ -63,40 +232,41 @@
             <volume>
                 <property>engines/engine[2]/thrust-lbs</property>
                 <offset>-0.75</offset>
-                <factor>0.0125</factor>
+               <factor>0.000028571</factor>
                 <min>0.0</min>
                 <max>5.0</max>
             </volume>
-            <!-- <volume> <property>sim/sound/Ovolume</property> <min>0.8</min> 
-                </volume> -->
+            <!-- volume> <property>sim/sound/Ovolume</property> <min>0.8</min> 
+                </volume -->
             <position>
                 <x>0</x>
-                <y>-9.8</y>
+                <y>9.8</y>
                 <z>-3</z>
             </position>
             <reference-dist>600.0</reference-dist>
             <max-dist>6000.0</max-dist>
+			<max-dist>500.0</max-dist>
         </engine>
 
- <engine>
-            <name>right engine</name>
-            <path>/Aircraft/A340-600HGW/Sounds/jet-trent2.wav</path>
+ 		<engine>
+            <name>4 engine</name>
+            <path>/Aircraft/A340-600HGW/Sounds/jet.wav</path>
             <mode>looped</mode>
-            <condition>
+             <condition>
                 <property>engines/engine[3]/run</property>
             </condition>
             <volume>
                 <property>engines/engine[3]/thrust-lbs</property>
                 <offset>-0.75</offset>
-                <factor>0.0125</factor>
+                <factor>0.000028571</factor>
                 <min>0.0</min>
                 <max>5.0</max>
             </volume>
-            <!-- <volume> <property>sim/sound/Ovolume</property> <min>0.8</min> 
-                </volume> -->
+            <!-- volume> <property>sim/sound/Ovolume</property> <min>0.8</min> 
+                </volume -->
             <position>
                 <x>0</x>
-                <y>-9.8</y>
+                <y>9.8</y>
                 <z>-3</z>
             </position>
             <reference-dist>600.0</reference-dist>
@@ -104,11 +274,11 @@
         </engine>
 
 
-<!-- Engines trent 1 -->
+<!-- Engines turbine -->
 
         <engine>
             <name>left n1</name>
-            <path>/Aircraft/A340-600HGW/Sounds/jet-trent1.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/turbine.wav</path>
             <mode>looped</mode>
             <property>engines/engine[0]/rpm</property>
             <pitch>
@@ -137,7 +307,7 @@
         </engine>
         <engine>
             <name>right n1</name>
-            <path>/Aircraft/A340-600HGW/Sounds/jet-trent1.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/turbine.wav</path>
             <mode>looped</mode>
             <property>engines/engine[1]/rpm</property>
             <volume>
@@ -168,7 +338,7 @@
 
         <engine>
             <name>right n1</name>
-            <path>/Aircraft/A340-600HGW/Sounds/jet-trent1.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/turbine.wav</path>
             <mode>looped</mode>
             <property>engines/engine[2]/rpm</property>
             <volume>
@@ -198,7 +368,7 @@
 
        <engine>
             <name>right n1</name>
-            <path>/Aircraft/A340-600HGW/Sounds/jet-trent1.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/turbine.wav</path>
             <mode>looped</mode>
             <property>engines/engine[3]/rpm</property>
             <volume>
@@ -229,11 +399,12 @@
 <!-- Engines start -->
 
         <engine>
-            <name>left start</name>
+            <name>1 start</name>
             <path>/Sounds/starter_start.wav</path>
             <mode>once</mode>
             <condition>
-                <and>
+				<property>engines/engine[0]/run</property>
+                <!--and>
 					<equals>
 						<property>controls/engines/autostart-knob[0]</property>
 						<value>-1</value>
@@ -243,7 +414,7 @@
       		      		<property>engines/engine[1]/run</property>
         	    		<property>controls/electric/APU-generator</property>
 					</or>
-                </and>
+                </and-->
             </condition>
             <volume>0.5</volume>
             <volume>
@@ -257,22 +428,26 @@
             <reference-dist>600.0</reference-dist>
             <max-dist>6000.0</max-dist>
         </engine>
+
+       
+
         <engine>
-            <name>right start</name>
+            <name>2 start</name>
             <path>/Sounds/starter_start.wav</path>
             <mode>once</mode>
             <condition>
-                <and>
+				<property>engines/engine[1]/run</property>
+                <!--and>
 					<equals>
-						<property>controls/engines/autostart-knob[1]</property>
+						<property>controls/engines/autostart-knob[0]</property>
 						<value>-1</value>
 					</equals>
-					<not><property>engines/engine[1]/run</property></not>
+					<not><property>engines/engine[0]/run</property></not>
 					<or>
-            			<property>engines/engine[0]/run</property>
-						<property>controls/electric/APU-generator</property>
+      		      		<property>engines/engine[1]/run</property>
+        	    		<property>controls/electric/APU-generator</property>
 					</or>
-                </and>
+                </and-->
             </condition>
             <volume>0.5</volume>
             <volume>
@@ -280,7 +455,7 @@
             </volume>
             <position>
                 <x>0</x>
-                <y>9.8</y>
+                <y>-9.8</y>
                 <z>-3</z>
             </position>
             <reference-dist>600.0</reference-dist>
@@ -289,12 +464,75 @@
 
 
 
+        <engine>
+            <name>3 start</name>
+            <path>/Sounds/starter_start.wav</path>
+            <mode>once</mode>
+            <condition>
+				<property>engines/engine[2]/run</property>
+                <!--and>
+					<equals>
+						<property>controls/engines/autostart-knob[0]</property>
+						<value>-1</value>
+					</equals>
+					<not><property>engines/engine[0]/run</property></not>
+					<or>
+      		      		<property>engines/engine[1]/run</property>
+        	    		<property>controls/electric/APU-generator</property>
+					</or>
+                </and-->
+            </condition>
+            <volume>0.5</volume>
+            <volume>
+                <property>sim/sound/Ovolume</property>
+            </volume>
+            <position>
+                <x>0</x>
+                <y>-9.8</y>
+                <z>-3</z>
+            </position>
+            <reference-dist>600.0</reference-dist>
+            <max-dist>6000.0</max-dist>
+        </engine>
+
+
+
+        <engine>
+            <name>4 start</name>
+            <path>/Sounds/starter_start.wav</path>
+            <mode>once</mode>
+            <condition>
+				<property>engines/engine[3]/run</property>
+                <!--and>
+					<equals>
+						<property>controls/engines/autostart-knob[0]</property>
+						<value>-1</value>
+					</equals>
+					<not><property>engines/engine[0]/run</property></not>
+					<or>
+      		      		<property>engines/engine[1]/run</property>
+        	    		<property>controls/electric/APU-generator</property>
+					</or>
+                </and-->
+            </condition>
+            <volume>0.5</volume>
+            <volume>
+                <property>sim/sound/Ovolume</property>
+            </volume>
+            <position>
+                <x>0</x>
+                <y>-9.8</y>
+                <z>-3</z>
+            </position>
+            <reference-dist>600.0</reference-dist>
+            <max-dist>6000.0</max-dist>
+        </engine>
 
 
 <!-- nose wheel-->
 
 
-        <rumblefront>
+        <!--rumblefront>
             <name>nose wheel rumble</name>
             <mode>looped</mode>
             <path>Sounds/rumble.wav</path>
@@ -342,16 +580,24 @@
             </position>
             <reference-dist>60.0</reference-dist>
             <max-dist>6000.0</max-dist>
-        </rumblemain>
+        </rumblemain-->
+
+
+
+
         <gear1>
             <name>gear</name>
             <mode>in-transit</mode>
-            <path>Sounds/gear.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/gear.wav</path>
             <property>gear/gear[0]/position-norm</property>
-            <volume>
+            <!--volume>
                 <property>sim/sound/Ovolume</property>
                 <offset>0.3</offset>
-            </volume>
+            </volume-->
+			<volume>
+				<property>/sim/sound/effects/volume</property>
+				<offset>0.3</offset>
+			</volume>
             <pitch>
                 <internal>dt_play</internal>
                 <offset>0.7</offset>
@@ -395,9 +641,12 @@
             <condition>
                 <property>gear/gear[0]/tyre-smoke</property>
             </condition>
-            <volume>
+            <!--volume>
                 <property>sim/sound/Ovolume</property>
-            </volume>
+            </volume-->
+			<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
             <volume>
                 <property>velocities/groundspeed-kt</property>
                 <factor>0.01</factor>
@@ -426,9 +675,12 @@
             <condition>
                 <property>gear/gear[1]/tyre-smoke</property>
             </condition>
-            <volume>
+            <!--volume>
                 <property>sim/sound/Ovolume</property>
-            </volume>
+            </volume-->
+			<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
             <volume>
                 <property>velocities/groundspeed-kt</property>
                 <factor>0.01</factor>
@@ -457,9 +709,12 @@
             <condition>
                 <property>gear/gear[2]/tyre-smoke</property>
             </condition>
-            <volume>
+            <!--volume>
                 <property>sim/sound/Ovolume</property>
-            </volume>
+            </volume-->
+			<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
             <volume>
                 <property>velocities/groundspeed-kt</property>
                 <factor>0.01</factor>
@@ -488,12 +743,15 @@
             <mode>in-transit</mode>
             <path>Aircraft/A340-600HGW/Sounds/Flaps.wav</path>
             <property>surface-positions/flap-pos-norm</property>
-            <volume>
+            <!--volume>
                 <property>sim/sound/Ovolume</property>
                 <max>0.5</max>
                 <factor>0.6</factor>
-            </volume>
-            <position>
+            </volume-->
+			<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
+            <!--position>
                 <x>-9</x>
                 <y>0</y>
                 <z>0</z>
@@ -502,40 +760,10 @@
                 <offset>1.4</offset>
             </pitch>
             <reference-dist>60.0</reference-dist>
-            <max-dist>6000.0</max-dist>
+            <max-dist>6000.0</max-dist-->
         </flap>
 
-        <wind>
-            <name>wind</name>
-            <mode>looped</mode>
-            <path>Sounds/wind.wav</path>
-            <property>velocities/airspeed-kt</property>
-            <volume>
-                <property>position/altitude-ft</property>
-                <factor>-0.000015</factor>
-                <offset>1.0</offset>
-                <min>0.1</min>
-                <max>1.0</max>
-            </volume>
-            <volume>
-                <property>velocities/airspeed-kt</property>
-                <factor>0.0015</factor>
-                <min>0.0</min>
-                <max>0.375</max>
-            </volume>
-            <pitch>
-                <property>velocities/airspeed-kt</property>
-                <factor>0.01</factor>
-                <offset>1.25</offset>
-            </pitch>
-            <position>
-                <x>-24</x>
-                <y>0</y>
-                <z>0.86</z>
-            </position>
-            <reference-dist>60.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </wind>
+       
         <stall>
             <name>stall</name>
             <mode>looped</mode>
@@ -715,63 +943,28 @@
         <speedbrake>
             <name>speedbrake</name>
             <mode>in-transit</mode>
-            <path>Sounds/flaps.wav</path>
+            <path>/Aircraft/A340-600HGW/Sounds/Flaps.wav</path>
             <property>surface-positions/speedbrake-norm</property>
-            <volume>
+            <!--volume>
                 <property>sim/sound/Ovolume</property>
                 <max>0.8</max>
                 <offset>0.2</offset>
-            </volume>
-            <position>
+            </volume-->
+			<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
+            <!--position>
                 <x>-9</x>
                 <y>0</y>
                 <z>0</z>
             </position>
             <reference-dist>60.0</reference-dist>
-            <max-dist>6000.0</max-dist>
+            <max-dist>6000.0</max-dist-->
         </speedbrake>
-        <engines>
-            <name>left reverse-thrust</name>
-            <mode>looped</mode>
-            <path>Sounds/exhaust_loop.wav</path>
-            <condition>
-                <property>engines/engine[0]/running</property>
-            </condition>
-            <volume>
-                <property>surface-positions/reverser-norm[0]</property>
-            </volume>
-            <volume>
-                <property>sim/sound/Ovolume</property>
-            </volume>
-            <position>
-                <x>2.75</x>
-                <y>9.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>60.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engines>
-        <engines>
-            <name>right reverse-thrust</name>
-            <mode>looped</mode>
-            <path>Sounds/exhaust_loop.wav</path>
-            <condition>
-                <property>engines/engine[1]/running</property>
-            </condition>
-            <volume>
-                <property>surface-positions/reverser-norm[1]</property>
-            </volume>
-            <volume>
-                <property>sim/sound/Ovolume</property>
-            </volume>
-            <position>
-                <x>2.75</x>
-                <y>-9.8</y>
-                <z>-3</z>
-            </position>
-            <reference-dist>60.0</reference-dist>
-            <max-dist>6000.0</max-dist>
-        </engines>
+
+ 
+
+
         <warningsiren>
             <name>warning-siren</name>
             <mode>looped</mode>
@@ -794,7 +987,7 @@
             <name>autopilot disengage</name>
             <mode>once</mode>
             <type>avionics</type>
-            <path>Aircraft/A340-600HGW/Sounds/autopilot-disengage.wav</path>
+            <path>Aircraft/A340-600HGW/Sounds/airbus-warning.wav</path>
             <condition>
                 <property>instrumentation/weu/sound/autopilot-warning</property>
             </condition>
@@ -802,10 +995,7 @@
                 <factor>1</factor>
             </volume>
         </apdisengage>
-        <!-- <overspeed> <name>overspeed warning</name> <mode>looped</mode> 
-            <type>avionics</type> <path>Sounds/overspeed.wav</path> <condition> <greater-than> 
-            <property>velocities/airspeed-kt</property> <property>instrumentation/afds/max-airspeed-kts</property> 
-            </greater-than> </condition> <volume> <factor>1</factor> </volume> </overspeed> -->
+        
         <crash>
             <name>Crash</name>
             <mode>once</mode>
@@ -842,9 +1032,12 @@
   <property>controls/switches/music</property>
  </and>
  </condition>
-  <volume>
+  <!--volume>
    <property>sim/sound/Ovolume</property>
-  </volume>
+  </volume-->
+	<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
   <position>
       <x>0.00</x>
       <y>0.00</y>
@@ -863,9 +1056,12 @@
   <property>controls/switches/music2</property>
  </and>
  </condition>
-  <volume>
+  <!--volume>
    <property>sim/sound/Ovolume</property>
-  </volume>
+  </volume-->
+	<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
   <position>
       <x>0.00</x>
       <y>0.00</y>
@@ -884,14 +1080,17 @@
   <property>controls/switches/seatbelt-sign</property>
  </and>
  </condition>
-  <volume>
+  <!--volume>
    <property>sim/sound/Ovolume</property>
-  </volume>
-  <position>
+  </volume-->
+	<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
+  <!--position>
       <x>0.00</x>
       <y>0.00</y>
       <z>-0.00</z>
- </position>
+ </position-->
  <reference-dist>20.0</reference-dist>
  <max-dist>100.0</max-dist>
 </seatbelt>
@@ -905,9 +1104,12 @@
   <property>controls/switches/safety</property>
  </and>
  </condition>
-  <volume>
+  <!--volume>
    <property>sim/sound/Ovolume</property>
-  </volume>
+  </volume-->
+	<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
   <position>
       <x>0.00</x>
       <y>0.00</y>
@@ -926,9 +1128,12 @@
   <property>controls/switches/captain</property>
  </and>
  </condition>
-  <volume>
+  <!--volume>
    <property>sim/sound/Ovolume</property>
-  </volume>
+  </volume-->
+	<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
   <position>
       <x>0.00</x>
       <y>0.00</y>
@@ -947,9 +1152,12 @@
   <property>controls/switches/tenthousand</property>
  </and>
  </condition>
-  <volume>
+  <!--volume>
    <property>sim/sound/Ovolume</property>
-  </volume>
+  </volume-->
+	<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
   <position>
       <x>0.00</x>
       <y>0.00</y>
@@ -968,9 +1176,12 @@
   <property>controls/switches/cruisingalt</property>
  </and>
  </condition>
-  <volume>
+  <!--volume>
    <property>sim/sound/Ovolume</property>
-  </volume>
+  </volume-->
+	<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
   <position>
       <x>0.00</x>
       <y>0.00</y>
@@ -990,9 +1201,12 @@
   <property>controls/switches/decending</property>
  </and>
  </condition>
-  <volume>
+  <!--volume>
    <property>sim/sound/Ovolume</property>
-  </volume>
+  </volume-->
+	<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
   <position>
       <x>0.00</x>
       <y>0.00</y>
@@ -1011,9 +1225,12 @@
   <property>controls/switches/emergency</property>
  </and>
  </condition>
-  <volume>
+  <!--volume>
    <property>sim/sound/Ovolume</property>
-  </volume>
+  </volume-->
+	<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
   <position>
       <x>0.00</x>
       <y>0.00</y>
@@ -1042,13 +1259,13 @@
         <!--volume>
             <property>sim/sound/Ovolume</property>
         </volume-->
-        <position>
+        <!--position>
             <x-m>0.25</x-m>
      	 	<y-m>-1.0</y-m>
      		 <z-m>1.0</z-m>
         </position>
         <reference-dist>60.0</reference-dist>
-        <max-dist>50.0</max-dist>
+        <max-dist>50.0</max-dist-->
     </engine>
 
   <engine>
@@ -1068,13 +1285,13 @@
         <!--volume>
             <property>sim/sound/Ovolume</property>
         </volume-->
-        <position>
+        <!--position>
             <x-m>0.25</x-m>
      	 	<y-m>-1.0</y-m>
      		 <z-m>1.0</z-m>
         </position>
         <reference-dist>60.0</reference-dist>
-        <max-dist>50.0</max-dist>
+        <max-dist>50.0</max-dist-->
     </engine>
 
 <engine>
@@ -1094,14 +1311,228 @@
         <!--volume>
             <property>sim/sound/Ovolume</property>
         </volume-->
-        <position>
+        <!--position>
             <x-m>-15</x-m>
 		<y-m>9.5</y-m>
 		<z-m>-3.45</z-m>
         </position>
         <reference-dist>60.0</reference-dist>
-        <max-dist>50.0</max-dist>
+        <max-dist>50.0</max-dist-->
     </engine>
+
+<!-- Retard Warning -->
+
+	<retard>
+			<name>retard</name>
+			<path>Aircraft/A340-600HGW/Sounds/retard.wav</path>
+			<mode>looped</mode>
+			<condition>
+				<and>
+					<property>sim/current-view/internal</property>
+					<less-than>
+						<property>/position/altitude-agl-ft</property>
+						<value>20</value>
+					</less-than>
+
+					<greater-than>
+						<property>controls/engines/engine[0]/throttle</property>
+						<value>0.0</value>
+					</greater-than>
+					<greater-than>
+						<property>controls/engines/engine[1]/throttle</property>
+						<value>0.0</value>
+					</greater-than>
+					<greater-than>
+						<property>controls/engines/engine[2]/throttle</property>
+						<value>0.0</value>
+					</greater-than>
+					<greater-than>
+						<property>controls/engines/engine[3]/throttle</property>
+						<value>0.0</value>
+					</greater-than>
+					<less-than>
+						<property>controls/engines/engine[0]/throttle</property>
+						<value>0.6</value>
+					</less-than>
+					<less-than>
+						<property>controls/engines/engine[1]/throttle</property>
+						<value>0.6</value>
+					</less-than>
+					<less-than>
+						<property>controls/engines/engine[2]/throttle</property>
+						<value>0.6</value>
+					</less-than>
+					<less-than>
+						<property>controls/engines/engine[3]/throttle</property>
+						<value>0.6</value>
+					</less-than>
+					<not>
+						<property>/gear/gear[0]/wow</property>
+						<property>/gear/gear[1]/wow</property>
+						<property>/gear/gear[2]/wow</property>
+						<property>/gear/gear[3]/wow</property>
+					</not>
+					<less-than>
+						<property>velocities/airspeed-kt</property>
+						<value>150</value>
+					</less-than>
+				</and>
+			</condition>
+			<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
+			<!--volume>
+                <property>sim/sound/Ovolume</property>
+            </volume-->
+			<type>avionics</type>
+			<!--position>
+				<x>22.5</x>
+				<y>0</y>
+				<z>0.78</z>
+			</position-->
+		</retard>
+		
+
+		<!-- Overspeed warning -->
+		<overspeed>
+			<name>Overspeed warning</name>
+			<path>Sounds/overspeed2.wav</path>
+			<mode>looped</mode>
+			<type>avionics</type>
+			<condition>
+				<greater-than>
+					<property>velocities/airspeed-kt</property>
+					<value>350</value>
+				</greater-than>
+				<property>sim/current-view/internal</property>
+			</condition>
+			<volume>
+				<property>sim/sound/effects/volume</property>
+			</volume>
+			<!--reference-dist>10</reference-dist>
+			<max-dist>100</max-dist-->
+		</overspeed>
+
+
+		<!-- APU Sounds -->
+
+    <apustart>
+        <name>apustrt</name>
+        <mode>once</mode>
+        <path>Aircraft/A340-600HGW/Sounds/apu_strt.wav</path>
+        <condition>
+			<property>controls/APU/apu-gen-switch</property>
+			<and>
+			<less-than>
+				<property>engines/engine/rpm</property>
+				<value>100</value>
+			</less-than>
+			<less-than>
+				<property>engines/engine[1]/rpm</property>
+				<value>100</value>
+			</less-than>
+			<less-than>
+				<property>engines/engine[2]/rpm</property>
+				<value>100</value>
+			</less-than>
+			<less-than>
+				<property>engines/engine[3]/rpm</property>
+				<value>100</value>
+			</less-than>
+			</and>
+		</condition>
+		<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
+		<!--position>
+			<x>26</x>
+			<y>0</y>
+			<z>4</z>
+		</position>		
+		<reference-dist>10</reference-dist>	
+		<max-dist>30</max-dist>	
+		<volume>0.3</volume-->		
+    </apustart>
+
+	<apu-running2>
+        <name>apu-run2</name>
+        <mode>looped</mode>
+        <path>Aircraft/A340-600HGW/Sounds/apu_run.wav</path>
+        <condition>
+			<property>controls/APU/apu_status</property>
+			<value>1</value>
+			<!--equals>
+				<property>engines/engine/rpm</property>
+				<value>100</value>
+			</equals-->
+		</condition>
+		<position>
+			<x>26</x>
+			<y>0</y>
+			<z>4</z>
+		</position>	
+		<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
+		<!--reference-dist>10</reference-dist>
+		<max-dist>30</max-dist>
+		<volume>0.3</volume-->
+    </apu-running2>
+	
+	
+	<!--apu-running>
+        <name>apu-run</name>
+        <mode>looped</mode>
+        <path>Aircraft/A330-200/Sounds/res/apu_run.wav</path>
+        <condition>
+			<not>
+				<property>controls/APU/starter</property>
+			</not>
+			<greater-than-equals>
+				<property>engines/engine/rpm</property>
+				<value>80</value>
+			</greater-than-equals>
+		</condition>
+		<position>
+			<x>26</x>
+			<y>0</y>
+			<z>4</z>
+		</position>	
+		<reference-dist>10</reference-dist>
+		<max-dist>30</max-dist>
+		<volume>0.3</volume>
+    </apu-running-->
+
+	<apu-shutdown>
+        <name>apu-stop</name>
+        <mode>once</mode>
+        <path>Aircraft/A340-600HGW/Sounds/apu_stop.wav</path>
+        <condition>
+			<not>
+				<property>controls/APU/apu-gen-switch</property>
+			</not>
+			<less-than>
+				<property>engines/engine/rpm</property>
+				<value>100</value>
+			</less-than>		
+			<greater-than>
+				<property>engines/engine/rpm</property>
+				<value>0</value>
+			</greater-than>	
+		</condition>
+		<volume>
+				<property>/sim/sound/effects/volume</property>
+			</volume>
+		<!--position>
+			<x>26</x>
+			<y>0</y>
+			<z>4</z>
+		</position>	
+		<reference-dist>10</reference-dist>
+		<max-dist>30</max-dist>
+		<volume>0.5</volume-->
+    </apu-shutdown>	
+
 
 
     </fx>

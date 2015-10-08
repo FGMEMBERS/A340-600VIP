@@ -92,5 +92,12 @@
             </binding>
         </action>
 	</animation>
-	
+
+<!-- LoD -->
+ <animation>
+   <type>range</type>
+   <min-m>0</min-m>
+   <max-m>20</max-m>
+ </animation>
+
 </PropertyList>

@@ -795,7 +795,7 @@ Liam Gathercole, Andino
 
 
 <!-- Right Gear -->
-    <animation>
+       <animation>
         <type>rotate</type>
         <object-name>right_gear</object-name>
         <property>gear/gear[2]/position-norm</property>
@@ -804,10 +804,6 @@ Liam Gathercole, Andino
                 <ind>0</ind>
                 <dep>80</dep>
             </entry>
-			<entry>
-                <ind>0.8</ind>
-                <dep>0</dep>
-			</entry>
             <entry>
                 <ind>1.0</ind>
                 <dep>0</dep>
@@ -1449,7 +1445,7 @@ Liam Gathercole, Andino
       <heading-deg> 0 </heading-deg>
     </offsets>
 <condition>
-<property>controls/switches/reserve1</property>
+<property>/services/fuel-dump/clean</property>
 </condition>
   </model>
 
@@ -1464,7 +1460,7 @@ Liam Gathercole, Andino
       <heading-deg> 0 </heading-deg>
     </offsets>
 <condition>
-<property>controls/switches/reserve2</property>
+<property>/services/fuel-dump/clean</property>
 </condition>
   </model>
 
@@ -1570,7 +1566,10 @@ Liam Gathercole, Andino
         <object-name>mid_gear</object-name>
         <object-name>nose_gear</object-name>
         <condition>
+		<greater-than>
         <property>gear/gear[0]/position-norm</property>
+		<value>0.2</value>
+		</greater-than>
         </condition>
     </animation>
 
@@ -1916,198 +1915,7 @@ Liam Gathercole, Andino
 
 
 
-<!-- OSG hotspots -->
 
-
-<!-- Wheel Spin -->
-
-   <!-- front-->
-
-   <animation>
-        <type>spin</type>
-        <object-name>_Black_</object-name>
-	<object-name>_Gainsbo.003</object-name>
-        <property>gear/gear/rollspeed-ms</property>
-        <factor>10</factor>
-        <axis>
-            <x>0</x>
-            <y>-1</y>
-            <z>0</z>
-        </axis>
-        <center>
-            <x-m>-31.2413</x-m>
-            <y-m>0</y-m>
-            <z-m>-4.1187</z-m>
-        </center>
-    </animation>
-
-   <!--right-->
-    <animation>
-        <type>spin</type>
-        <object-name>_Black_.010</object-name>
-        <object-name>_Black_.011</object-name>
-	<!--object-name>_Gainsbo.014</object-name>
-	<object-name>_Gainsbo.015</object-name-->
-	<object-name>_LightGr.017</object-name>
-	<object-name>_LightGr.020</object-name>
-        <property>gear/gear[1]/rollspeed-ms</property>
-        <factor>10</factor>
-	<condition>
-		<property>/gear/gear[1]/wow</property>
-		<value>true</value>
-	</condition>
-        <axis>
-            <x>0</x>
-            <y>-1</y>
-            <z>0</z>
-        </axis>
-        <center>
-            <x-m>-2.06016</x-m><!--x-m>-2.06016</x-m-->
-            <y-m>0</y-m>
-            <z-m>-4.3277</z-m><!--z-m>-4.3277</z-m-->
-        </center>
-    </animation>
-
-   <animation>
-        <type>spin</type>
-        <object-name>_Black_.009</object-name>
-        <object-name>_Black_.012</object-name>
-	<!--object-name>_Gainsbo.013</object-name>
-	<object-name>_Gainsbo.016</object-name-->
-	<object-name>_LightGr.016</object-name>
-	<object-name>_LightGr.021</object-name>
-        <property>gear/gear[1]/rollspeed-ms</property>
-        <factor>10</factor>
-	<condition>
-		<property>/gear/gear[1]/wow</property>
-		<value>true</value>
-	</condition>
-        <axis>
-            <x>0</x>
-            <y>-1</y>
-            <z>0</z>
-        </axis>
-        <center>
-            <x-m>-0.004413</x-m>
-            <y-m>0</y-m>
-            <z-m>-4.3277</z-m>
-        </center>
-    </animation>
-
-
-    <!--left-->
-
-
-    <animation>
-        <type>spin</type>
-        <object-name>_Black_.005</object-name>
-        <object-name>_Black_.006</object-name>
-	<!--object-name>_Gainsbo.014</object-name>
-	<object-name>_Gainsbo.015</object-name-->
-	<object-name>_LightGr.010</object-name>
-	<object-name>_LightGr.011</object-name>
-        <property>gear/gear[2]/rollspeed-ms</property>
-        <factor>10</factor>
-	<condition>
-		<property>/gear/gear[2]/wow</property>
-		<value>true</value>
-	</condition>
-        <axis>
-            <x>0</x>
-            <y>-1</y>
-            <z>0</z>
-        </axis>
-        <center>
-            <x-m>-2.0796</x-m>
-            <y-m>0</y-m>
-            <z-m>-4.2808</z-m>
-        </center>
-    </animation>
-
-
-    <animation>
-        <type>spin</type>
-        <object-name>_Black_.008</object-name>
-        <object-name>_Black_.007</object-name>
-	<!--object-name>_Gainsbo.010</object-name>
-	<object-name>_Gainsbo.011</object-name-->
-	<object-name>_LightGr.007</object-name>
-	<object-name>_LightGr.012</object-name>
-        <property>gear/gear[2]/rollspeed-ms</property>
-        <factor>10</factor>
-	<condition>
-		<property>/gear/gear[2]/wow</property>
-		<value>true</value>
-	</condition>
-        <axis>
-            <x>0</x>
-            <y>-1</y>
-            <z>0</z>
-        </axis>
-        <center>
-            <x-m>0.003728</x-m>
-            <y-m>0</y-m>
-            <z-m>-4.2953</z-m>
-        </center>
-    </animation>
-
-	<!--middle-->
-     <animation>
-        <type>spin</type>
-        <object-name>_Black_.002</object-name>
-        <object-name>_Black_.003</object-name>
-	<!--object-name>_Gainsbo.005</object-name>
-	<object-name>_Gainsbo.006</object-name-->
-	<object-name>_LightGr.009</object-name>
-	<object-name>_LightGr.014</object-name>
-        <property>gear/gear[3]/rollspeed-ms</property>
-        <factor>10</factor>
-	<condition>
-		<less-than>
-		<property>/position/altitude-agl-ft</property>
-		<value>20</value>
-		</less-than>
-	</condition>
-        <axis>
-            <x>0</x>
-            <y>-1</y>
-            <z>0</z>
-        </axis>
-        <center>
-            <x-m>-1.89</x-m>
-            <y-m>0</y-m>
-            <z-m>-4.3031</z-m>
-        </center>
-    </animation>
-
-
-   <animation>
-        <type>spin</type>
-        <object-name>_Black_.001</object-name>
-        <object-name>_Black_.004</object-name>
-	<!--object-name>_Gainsbo.004</object-name>
-	<object-name>_Gainsbo.007</object-name-->
-	<object-name>_LightGr.008</object-name>
-	<object-name>_LightGr.015</object-name>
-        <property>gear/gear[3]/rollspeed-ms</property>
-        <factor>10</factor>
-	<condition>
-		<less-than>
-		<property>/position/altitude-agl-ft</property>
-		<value>20</value>
-		</less-than>
-	</condition>
-        <axis>
-            <x>0</x>
-            <y>-1</y>
-            <z>0</z>
-        </axis>
-        <center>
-            <x-m>0.20</x-m>
-            <y-m>0</y-m>
-            <z-m>-4.3031</z-m>
-        </center>
-    </animation>
 
 <!-- Trim -->
 
@@ -2225,7 +2033,7 @@ Liam Gathercole, Andino
   </emission>
 </animation>
 
-<!--Movimiento ruedas en el aire-->
+<!--Movimiento ruedas en el aire tilt-->
 
 <!--Right Gear-->
 
@@ -2248,60 +2056,29 @@ Liam Gathercole, Andino
 </animation>	
 	
 
-
-    <!--animation>
-      <type>rotate</type>
-      <object-name>rhaxle</object-name>
-      <property>/position/altitude-agl-ft</property>
-		<factor>0.2</factor>
-      <min-deg>0</min-deg>
-      <max-deg>25</max-deg>
-		<offset-deg>0</offset-deg>
-	<condition>
-		<greater-than>
-		<property>/position/altitude-agl-ft</property>
-		<value>24</value>
-		</greater-than>
-	</condition>
-     <center>
-            <x-m>-1.03</x-m>
-            <y-m>0</y-m>
-            <z-m>-4.32</z-m>
-        </center>
-        <axis>
-            <x>0</x>
-            <y>1</y>
-            <z>0</z>
-        </axis>
-     </animation>
-
-
-
-
 <animation>
-      <type>rotate</type>
-      <object-name>rhaxle</object-name>
-      <property>/position/altitude-agl-ft</property>
-		<factor>-250</factor>
-      <min-deg>0</min-deg>
-      <max-deg>25</max-deg>
-		<offset-deg>0</offset-deg>
-		<condition>
-		<property>/gear/gear[1]/wow</property>
-		<value>1</value>
-	</condition>
-
-     <center>
-            <x-m>-1.03</x-m>
+	<type>rotate</type>
+		<object-name>rhaxle</object-name>
+		<property>sim/multiplay/generic/float[2]</property>
+		<factor>100</factor>
+		<min-deg>-18</min-deg>
+      	<max-deg>0</max-deg>
+		<offset-deg>-18</offset-deg>
+		<center>
+            <x-m>-1.0322865</x-m>
             <y-m>0</y-m>
-            <z-m>-4.32</z-m>
+            <z-m>-4.3277</z-m>
         </center>
         <axis>
             <x>0</x>
-            <y>1</y>
+            <y>-1</y>
             <z>0</z>
         </axis>
-     </animation-->
+</animation>
+
+
+
+   
 
 
 
@@ -2326,10 +2103,253 @@ Liam Gathercole, Andino
 </animation>	
 
 
+<animation>
+	<type>rotate</type>
+		<object-name>lhaxle</object-name>
+		<property>sim/multiplay/generic/float[1]</property>
+		<factor>100</factor>
+		<min-deg>-18</min-deg>
+      	<max-deg>0</max-deg>
+		<offset-deg>-18</offset-deg>
+		<center>
+            <x-m>-1.0322865</x-m>
+            <y-m>0</y-m>
+            <z-m>-4.3277</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+</animation>
 
 
 
 
+
+
+
+
+<!-- Middle Gear-->
+
+	<animation>
+	<name>mhaxle</name>
+	<object-name>_Black_.002</object-name>
+	<object-name>_Black_.001</object-name>
+	<object-name>_Black_.003</object-name>
+	<object-name>_Black_.004</object-name>
+	<object-name>Mesh56</object-name>
+	<object-name>_Gainsbo.005</object-name>
+	<object-name>_Gainsbo.004</object-name>
+	<object-name>_Gainsbo.007</object-name>
+	<object-name>_Gainsbo.006</object-name>	
+	<object-name>_LightGr.014</object-name>
+	<object-name>_LightGr.015</object-name>
+	<object-name>_LightGr.008</object-name>
+	<object-name>_LightGr.009</object-name>
+</animation>	
+
+
+<animation>
+	<type>rotate</type>
+		<object-name>mhaxle</object-name>
+		<property>sim/multiplay/generic/float[3]</property>
+		<factor>100</factor>
+		<min-deg>-12</min-deg>
+      	<max-deg>0</max-deg>
+		<offset-deg>-12</offset-deg>
+		<center>
+            <x-m>-1.0322865</x-m>
+            <y-m>0</y-m>
+            <z-m>-4.3277</z-m>
+        </center>
+        <axis>
+            <x>0</x>
+            <y>1</y>
+            <z>0</z>
+        </axis>
+</animation>
+
+
+
+
+<!-- Wheel Spin -->
+
+   <!-- front-->
+
+   <animation>
+        <type>spin</type>
+        <object-name>_Black_</object-name>
+	<object-name>_Gainsbo.003</object-name>
+        <property>gear/gear/rollspeed-ms</property>
+        <factor>10</factor>
+		<offset-deg>0</offset-deg>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-31.2413</x-m>
+            <y-m>0</y-m>
+            <z-m>-4.1187</z-m>
+        </center>
+    </animation>
+
+   <!--right-->
+
+    <animation>
+                <type>spin</type>
+        <object-name>_Black_.010</object-name>
+        <object-name>_Black_.011</object-name>
+	
+	<object-name>_LightGr.017</object-name>
+	<object-name>_LightGr.020</object-name>
+        <property>gear/gear[2]/rollspeed-ms</property>
+        <factor>10</factor>
+	<condition>
+		<property>/gear/gear[2]/wow</property>
+	</condition>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-2.06016</x-m>
+            <y-m>0</y-m>
+            <z-m>-4.3277</z-m>
+        </center>
+    </animation>
+
+   <animation>
+               <type>spin</type>
+        <object-name>_Black_.009</object-name>
+        <object-name>_Black_.012</object-name>
+	
+	<object-name>_LightGr.016</object-name>
+	<object-name>_LightGr.021</object-name>
+        <property>gear/gear[2]/rollspeed-ms</property>
+        <factor>10</factor>
+	<condition>
+		<property>/gear/gear[2]/wow</property>
+	</condition>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-0.004413</x-m>
+            <y-m>0</y-m>
+            <z-m>-4.3277</z-m>
+        </center>
+    </animation>
+
+
+    <!--left-->
+
+
+    <animation>
+        <type>spin</type>
+        <object-name>_Black_.005</object-name>
+        <object-name>_Black_.006</object-name>
+	
+	<object-name>_LightGr.010</object-name>
+	<object-name>_LightGr.011</object-name>
+        <property>gear/gear[1]/rollspeed-ms</property>
+        <factor>10</factor>
+	<condition>
+		<property>/gear/gear[1]/wow</property>
+	</condition>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-2.0796</x-m>
+            <y-m>0</y-m>
+            <z-m>-4.2808</z-m>
+        </center>
+    </animation>
+
+
+    <animation>
+        <type>spin</type>
+        <object-name>_Black_.008</object-name>
+        <object-name>_Black_.007</object-name>
+	
+	<object-name>_LightGr.007</object-name>
+	<object-name>_LightGr.012</object-name>
+        <property>gear/gear[1]/rollspeed-ms</property>
+        <factor>10</factor>
+	<condition>
+		<property>/gear/gear[1]/wow</property>
+	</condition>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0.003728</x-m>
+            <y-m>0</y-m>
+            <z-m>-4.2953</z-m>
+        </center>
+    </animation>
+
+	<!--middle-->
+
+     <animation>
+        <type>spin</type>
+        <object-name>_Black_.002</object-name>
+        <object-name>_Black_.003</object-name>
+	
+	<object-name>_LightGr.009</object-name>
+	<object-name>_LightGr.014</object-name>
+        <property>gear/gear[3]/rollspeed-ms</property>
+        <factor>10</factor>
+	<condition>
+		<property>/gear/gear[3]/wow</property>
+	</condition>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>-1.89</x-m>
+            <y-m>0</y-m>
+            <z-m>-4.3031</z-m>
+        </center>
+    </animation>
+
+
+   <animation>
+        <type>spin</type>
+        <object-name>_Black_.001</object-name>
+        <object-name>_Black_.004</object-name>
+	
+	<object-name>_LightGr.008</object-name>
+	<object-name>_LightGr.015</object-name>
+        <property>gear/gear[3]/rollspeed-ms</property>
+        <factor>10</factor>
+	<condition>
+		<property>/gear/gear[3]/wow</property>
+		<value>true</value>
+	</condition>
+        <axis>
+            <x>0</x>
+            <y>-1</y>
+            <z>0</z>
+        </axis>
+        <center>
+            <x-m>0.20</x-m>
+            <y-m>0</y-m>
+            <z-m>-4.3031</z-m>
+        </center>
+    </animation>
 
 </PropertyList>
 

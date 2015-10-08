@@ -43,7 +43,8 @@
 				<transformation>
 					<type>y-shift</type>
 					<!--offset>-35</offset -->
-					<property>/fdm/jsbsim/fcs/aileron-fbw-output</property>
+					<!--property>/fdm/jsbsim/fcs/aileron-fbw-output</property-->
+					<property>/surface-positions/left-aileron-pos-norm</property>
 					<interpolation>
 					<entry><ind>0</ind><dep>45</dep></entry>
 					<entry><ind>-1</ind><dep>70</dep></entry>
@@ -72,7 +73,8 @@
 				<transformation>
 					<type>y-shift</type>
 					<!--offset>-35</offset -->
-					<property>/fdm/jsbsim/fcs/aileron-fbw-output</property>
+					<!--property>/fdm/jsbsim/fcs/aileron-fbw-output</property-->
+					<property>/surface-positions/right-aileron-pos-norm</property>
 					<interpolation>
 					<entry><ind>0</ind><dep>45</dep></entry>
 					<entry><ind>-1</ind><dep>27</dep></entry>
@@ -85,18 +87,6 @@
 				</transformation>
 			</transformations>
 		</layer>
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -116,7 +106,8 @@
 				<transformation>
 					<type>y-shift</type>
 					<!--offset>-35</offset -->
-					<property>/fdm/jsbsim/fcs/elevator-fbw-output</property>
+					<!--property>/fdm/jsbsim/fcs/elevator-fbw-output</property-->
+					<property>/surface-positions/elevator-pos-norm</property>
 					<interpolation>
 					<entry><ind>0</ind><dep>-50</dep></entry>
 					<entry><ind>-1</ind><dep>-19</dep></entry>
@@ -145,7 +136,8 @@
 				<transformation>
 					<type>y-shift</type>
 					<!--offset>-35</offset -->
-					<property>/fdm/jsbsim/fcs/elevator-fbw-output</property>
+					<!--property>/fdm/jsbsim/fcs/elevator-fbw-output</property-->
+					<property>/surface-positions/elevator-pos-norm</property>
 					<interpolation>
 					<entry><ind>0</ind><dep>-50</dep></entry>
 					<entry><ind>-1</ind><dep>-19</dep></entry>
@@ -288,7 +280,8 @@
 				<chunk>
 					<alignment>left-center</alignment>
 					<type>number-value</type>
-					<property>fdm/jsbsim/inertia/weight-lbs</property>
+					<!--property>fdm/jsbsim/inertia/weight-lbs</property-->
+					<property>/yasim/gross-weight-lbs</property>
 					<scale>0.45359237</scale>
 					<format type="string">%5.0f</format>
 				</chunk>
@@ -306,5 +299,11 @@
 		</layer>
 	</layers>
 
+<!-- LoD -->
+ <animation>
+   <type>range</type>
+   <min-m>0</min-m>
+   <max-m>20</max-m>
+ </animation>
 
 </PropertyList>

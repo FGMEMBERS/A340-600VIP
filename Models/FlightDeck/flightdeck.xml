@@ -59,7 +59,7 @@
 <!-- VOR -->
 
 	<model>
-		<path>Aircraft/A340-600HGW/Models/Instruments/NAV/nav.xml</path>
+		<path>Aircraft/A340-600HGW/Models/Instruments/VOR/VOR.xml</path>
 		<offsets>
 			<x-m>-0.5540</x-m>
 			<y-m>-0.1342</y-m>
@@ -243,8 +243,10 @@
 
 	
 	<!-- Lower ECAM -->
-	
-	<!--model>
+
+<!--Antiguo-->
+
+	<!---model>
 		<path>Aircraft/A340-600HGW/Models/Instruments/MFD2/mfd2.xml</path>
 		<offsets>
 			<x-m>-0.53631</x-m>
@@ -260,6 +262,9 @@
 		</condition>
 	</model-->
 
+
+
+<!-- Nuevo -->
 
 <model>
 		<path>Aircraft/A340-600HGW/Models/Instruments/ECAM/ECAM.xml</path>
@@ -1208,7 +1213,7 @@
 		<type>rotate</type>
 		<object-name>FlapsLever</object-name>
 		<property>controls/flight/flaps</property>
-		<factor>60</factor>
+		<factor>80</factor>
 		<center>
 			<x-m>-0.0020</x-m>
 			<y-m>0</y-m>
@@ -1230,8 +1235,8 @@
             <binding>
                 <command>property-cycle</command>
                 <property>controls/flight/flaps</property>
-                <value>0.00</value>
-                <value>0.29</value>
+                <value>0.0</value>
+                <value>0.129</value>
                 <value>0.596</value>
                 <value>0.745</value>
                 <value>1</value>
@@ -1368,10 +1373,37 @@
 
 <!-- Landing Gear Unlock and down Indicators -->
 
+	
+	
+
+
+
+
+	<animation>
+		<type>textranslate</type>
+		<object-name>ngear_down.001</object-name>
+		<condition>
+		<property>gear/gear[0]/position-norm</property>
+			<value>1</value>
+		</condition>
+		<property>controls/gear/gear-down</property>
+		<factor>0.125</factor>
+		<axis>
+			<x>0</x>
+			<y>-1</y>
+			<z>0</z>
+		</axis>
+	</animation>
+
+
 	<animation>
 		<type>textranslate</type>
 		<object-name>ngear_down</object-name>
-		<property>/controls/gear/gear-down</property>
+		<condition>
+		<property>gear/gear[3]/position-norm</property>
+			<value>1</value>
+		</condition>
+		<property>controls/gear/gear-down</property>
 		<factor>0.125</factor>
 		<axis>
 			<x>0</x>
@@ -1383,7 +1415,11 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>lgear_down</object-name>
-		<property>/controls/gear/gear-down</property>
+		<condition>
+		<property>gear/gear[1]/position-norm</property>
+			<value>1</value>
+		</condition>
+		<property>controls/gear/gear-down</property>
 		<factor>0.125</factor>
 		<axis>
 			<x>0</x>
@@ -1395,7 +1431,11 @@
 	<animation>
 		<type>textranslate</type>
 		<object-name>rgear_down</object-name>
-		<property>/controls/gear/gear-down</property>
+		<condition>
+		<property>gear/gear[2]/position-norm</property>
+			<value>1</value>
+		</condition>
+		<property>controls/gear/gear-down</property>
 		<factor>0.125</factor>
 		<axis>
 			<x>0</x>
@@ -1403,6 +1443,12 @@
 			<z>0</z>
 		</axis>
 	</animation>
+
+
+
+ 
+
+
 
 
 <!-- Standby Attitude Indicator -->
@@ -2712,6 +2758,7 @@
 			</binding>
 		</action>
 	</animation>
+
 		<animation>
 		<type>textranslate</type>
 		<object-name>fctl</object-name>
@@ -2747,7 +2794,7 @@
 	</animation>
 		<animation>
 		<type>textranslate</type>
-		<object-name>fctl</object-name>
+		<object-name>miapt</object-name>
 		<condition>
 			<equals>
 				<property>instrumentation/efis/ecam/display-mode</property>

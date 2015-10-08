@@ -10,13 +10,13 @@ Liveries from Liam Gathercole, Emmanuel Savage, MT-Jun, Patrick Quaedackers, Sim
 
 Light positions by Benny DLH130
 
-Andino did the new moving parts for the Model (reversers, gear doors, flaps, spoilers, rudder, stabilizator, etc.), lights.
+Andino did the new moving parts for the Model (reversers, gear tilt, gear doors, flaps, spoilers, rudder, stabilizator, etc.), lights.
 
 Andino ported the cockpit and some instruments from the A330, the 777 and other planes.
 
 Yasim rewritten by Andino.
 
-Deice truck and Fuel truck from the A330.
+De-ice truck and Fuel truck from the A330.
 
 
 
