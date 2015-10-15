@@ -4,8 +4,8 @@
 <sim>
     <model>
         <livery>
-            <name type="string">China Eastern</name>
-            <texture>Liveries/Liveries/CES.png</texture>
+            <name type="string">China Eastern Airlines</name>
+            <texture>/../Models/Liveries/CES.png</texture>
         </livery>
     </model>
 </sim>

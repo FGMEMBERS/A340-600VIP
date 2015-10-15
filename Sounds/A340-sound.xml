@@ -1032,17 +1032,15 @@
   <property>controls/switches/music</property>
  </and>
  </condition>
-  <!--volume>
-   <property>sim/sound/Ovolume</property>
-  </volume-->
+
 	<volume>
 				<property>/sim/sound/effects/volume</property>
 			</volume>
-  <position>
+  <!--position>
       <x>0.00</x>
       <y>0.00</y>
       <z>-0.00</z>
- </position>
+ </position-->
  <reference-dist>20.0</reference-dist>
  <max-dist>100.0</max-dist>
 </music>
@@ -1056,17 +1054,15 @@
   <property>controls/switches/music2</property>
  </and>
  </condition>
-  <!--volume>
-   <property>sim/sound/Ovolume</property>
-  </volume-->
+ 
 	<volume>
 				<property>/sim/sound/effects/volume</property>
 			</volume>
-  <position>
+  <!--position>
       <x>0.00</x>
       <y>0.00</y>
       <z>-0.00</z>
- </position>
+ </position-->
  <reference-dist>20.0</reference-dist>
  <max-dist>100.0</max-dist>
 </music2>
@@ -1110,11 +1106,11 @@
 	<volume>
 				<property>/sim/sound/effects/volume</property>
 			</volume>
-  <position>
+  <!--position>
       <x>0.00</x>
       <y>0.00</y>
       <z>-0.00</z>
- </position>
+ </position-->
  <reference-dist>20.0</reference-dist>
  <max-dist>100.0</max-dist>
 </safety>
@@ -1134,11 +1130,11 @@
 	<volume>
 				<property>/sim/sound/effects/volume</property>
 			</volume>
-  <position>
+  <!--position>
       <x>0.00</x>
       <y>0.00</y>
       <z>-0.00</z>
- </position>
+ </position-->
  <reference-dist>20.0</reference-dist>
  <max-dist>100.0</max-dist>
 </captain>
@@ -1158,11 +1154,11 @@
 	<volume>
 				<property>/sim/sound/effects/volume</property>
 			</volume>
-  <position>
+  <!--position>
       <x>0.00</x>
       <y>0.00</y>
       <z>-0.00</z>
- </position>
+ </position-->
  <reference-dist>20.0</reference-dist>
  <max-dist>100.0</max-dist>
 </tenthousand>
@@ -1182,11 +1178,11 @@
 	<volume>
 				<property>/sim/sound/effects/volume</property>
 			</volume>
-  <position>
+  <!--position>
       <x>0.00</x>
       <y>0.00</y>
       <z>-0.00</z>
- </position>
+ </position-->
  <reference-dist>20.0</reference-dist>
  <max-dist>100.0</max-dist>
 </cruisingalt>
@@ -1207,11 +1203,11 @@
 	<volume>
 				<property>/sim/sound/effects/volume</property>
 			</volume>
-  <position>
+  <!--position>
       <x>0.00</x>
       <y>0.00</y>
       <z>-0.00</z>
- </position>
+ </position-->
  <reference-dist>20.0</reference-dist>
  <max-dist>100.0</max-dist>
 </decending>
@@ -1231,11 +1227,11 @@
 	<volume>
 				<property>/sim/sound/effects/volume</property>
 			</volume>
-  <position>
+  <!--position>
       <x>0.00</x>
       <y>0.00</y>
       <z>-0.00</z>
- </position>
+ </position-->
  <reference-dist>20.0</reference-dist>
  <max-dist>100.0</max-dist>
 </Emergency>

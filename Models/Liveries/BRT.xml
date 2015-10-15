@@ -5,7 +5,7 @@
     <model>
         <livery>
             <name type="string">BRT Virtual Airlines</name>
-            <texture>Liveries/Liveries/BRT.png</texture>
+            <texture>/../Models/Liveries/BRT.png</texture>
         </livery>
     </model>
 </sim>

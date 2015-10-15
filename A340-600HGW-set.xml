@@ -127,12 +127,11 @@
 
         <view n="0">
             <name>Pilot View</name>
-            <type>lookfrom</type>
-            <internal type="bool">true</internal>
+            <internal archive="y">true</internal>
             <config>
-                <x-offset-m type="double">-0.65</x-offset-m>
-                <y-offset-m type="double">0.28</y-offset-m>
-                <z-offset-m type="double">-34.54</z-offset-m>
+                <x-offset-m type="double">-0.50</x-offset-m>
+                <y-offset-m type="double">0.25</y-offset-m>
+                <z-offset-m type="double">-34.60</z-offset-m>
                 <pitch-offset-deg>-13.5</pitch-offset-deg>
                 <limits>
                     <enabled type="bool">true</enabled> 
@@ -151,7 +150,7 @@
 	      <default-field-of-view-deg type="double">55</default-field-of-view-deg>
 	      <pitch-offset-deg>-8.0</pitch-offset-deg>
 	      <heading-offset-deg type="double">90</heading-offset-deg> <!-- parallel to the panel -->
-	      <x-offset-m archive="y"> -3.40 </x-offset-m> <!--Left/Right-->
+	      <x-offset-m archive="y"> -3.50 </x-offset-m> <!--Left/Right-->
 	      <y-offset-m archive="y"> 1.27 </y-offset-m> <!--Up/Down-->
 	      <z-offset-m archive="y"> 1.27 </z-offset-m> <!--Fdw/Back-->
 	    </config>
@@ -166,8 +165,8 @@
 	    <from-model-idx type="int">0</from-model-idx>
 	    <ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
 		        <x-offset-m type="double">-0.09</x-offset-m>
-		        <y-offset-m type="double">0.58</y-offset-m>
-		        <z-offset-m type="double">-33.59</z-offset-m>
+		        <y-offset-m type="double">0.48</y-offset-m>
+		        <z-offset-m type="double">-33.69</z-offset-m>
 	    <pitch-offset-deg>-10</pitch-offset-deg>
 	    <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
 	   </config>
@@ -197,21 +196,14 @@
 
 	  <view n="103">
 	   <name>Economy class view</name>
-	   <type>lookfrom</type>
-	   <internal type="bool">true</internal>
-	   <config>
-	    <from-model type="bool">true</from-model>
-	    <from-model-idx type="int">0</from-model-idx>
-	    <ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
-	    <x-offset-m type="double">-2.64</x-offset-m>
-	    <y-offset-m type="double">0.90</y-offset-m><!--y-offset-m type="double">1.08</y-offset-m-->
-	    <z-offset-m type="double">12.54</z-offset-m>
-	    <pitch-offset-deg>-10</pitch-offset-deg>
-	    <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
-	   </config>
-	   <dynamic>
-	    <enabled type="bool">false</enabled>
-	   </dynamic>
+        <type>lookfrom</type>
+        <internal archive="y">true</internal>
+        <config>
+            <from-model type="bool">true</from-model>
+            <x-offset-m archive="y">-1.77</x-offset-m>
+            <y-offset-m archive="y">0.70</y-offset-m>
+            <z-offset-m archive="y">14.66</z-offset-m>
+        </config>
 	  </view>
 
 	<view n="104">
@@ -1087,7 +1079,6 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 			<file>Aircraft/A340-600HGW/Nasal/mCDU/parse_DB.nas</file>
 			<file>Aircraft/A340-600HGW/Nasal/mCDU/user.nas</file>
 		</mcdu>
-
         <a340>
             <file>Aircraft/A340-600HGW/Nasal/Electrical.nas</file>
             <file>Aircraft/A340-600HGW/Nasal/systems.nas</file>

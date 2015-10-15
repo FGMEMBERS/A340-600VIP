@@ -16,9 +16,9 @@ Liam Gathercole, Andino
         <name>Cockpit</name>
         <path>Aircraft/A340-600HGW/Models/FlightDeck/flightdeck.xml</path>
         <offsets>
-            <x-m>-34.65</x-m>
-            <y-m>-0.085</y-m>
-            <z-m>0.8</z-m>
+            <x-m>-35.10</x-m>
+            <y-m>-0.0</y-m>
+            <z-m>0.65</z-m>
             <pitch-deg>1</pitch-deg><!-- -10 -->
         </offsets>
 </model>
@@ -32,6 +32,8 @@ Liam Gathercole, Andino
       <z-m>-0.3 </z-m>
     </offsets>
   </model>
+
+
 
 
 <!-- CONTRAIL -->
@@ -147,7 +149,7 @@ Liam Gathercole, Andino
 <!--landing-->
 
 	<model>
-	<path>Aircraft/A340-600HGW/Models/lights/landinglight.xml</path>
+	<path>Aircraft/A340-600HGW/Models/lights/landing-nose.xml</path>
 	<name>NoseGearLandinglight</name>     
 		<condition>
 			<and>
@@ -178,9 +180,9 @@ Liam Gathercole, Andino
 		 </equals>
 		  </condition>     
 		<offsets>
-		<x-m>-8.750</x-m>
-		<y-m>-4.00</y-m>
-		<z-m>-1.50</z-m>      
+			<x-m>-8.71</x-m>
+			<y-m>-3.70</y-m>
+			<z-m>-1.20</z-m>
 		</offsets>
 	</model>
 
@@ -193,11 +195,11 @@ Liam Gathercole, Andino
 					<value>1</value>
 			 </equals>
 		  </condition>     
-	<offsets>
-	<x-m>-8.750</x-m>
-	<y-m> 4.00</y-m>
-	<z-m>-1.50</z-m>       
-	</offsets>
+			<offsets>
+			<x-m>-8.71</x-m>
+			<y-m>3.70</y-m>
+			<z-m>-1.20</z-m>   
+			</offsets>
 	</model>
 
 
@@ -209,9 +211,9 @@ Liam Gathercole, Andino
     <path>Aircraft/A340-600HGW/Models/lights/GreenLight.xml</path>
     <name>Greenlight</name>     
     <offsets>
-    <x-m> 7.1</x-m>
-    <y-m> 29.5</y-m>
-    <z-m>  1</z-m>       
+   			 <x-m>8.63</x-m>
+			<y-m>30.43</y-m>
+			<z-m>0.95</z-m>     
     </offsets>
     </model>
 
@@ -219,9 +221,9 @@ Liam Gathercole, Andino
     <path>Aircraft/A340-600HGW/Models/lights/RedLight.xml</path>
     <name>Redlight</name>     
     <offsets>
-    <x-m> 7.1</x-m>
-    <y-m>-29.5</y-m>
-    <z-m>  1</z-m>     
+   			 <x-m>8.63</x-m>
+			<y-m>-30.43</y-m>
+			<z-m>0.95</z-m>    
     </offsets>
     </model>
 
@@ -232,9 +234,9 @@ Liam Gathercole, Andino
     <path>Aircraft/A340-600HGW/Models/lights/flash.xml</path>
     <name>flashright</name>     
     <offsets>
-    <x-m> 7.1</x-m>
-    <y-m> 29.7</y-m>
-    <z-m>  1</z-m>       
+    		<x-m>8.64</x-m>
+			<y-m>30.45</y-m>
+			<z-m>0.9</z-m>      
     </offsets>
     </model>
 
@@ -242,9 +244,9 @@ Liam Gathercole, Andino
     <path>Aircraft/A340-600HGW/Models/lights/flash.xml</path>
     <name>flashleft</name>     
     <offsets>
-    <x-m> 7.1</x-m>
-    <y-m>-29.7</y-m>
-    <z-m>  1</z-m>   
+    		<x-m>8.64</x-m>
+			<y-m>-30.45</y-m>
+			<z-m>0.9</z-m>  
     </offsets>
     </model>
 
@@ -252,33 +254,25 @@ Liam Gathercole, Andino
     <path>Aircraft/A340-600HGW/Models/lights/flash.xml</path>
     <name>flashtop</name>     
     <offsets>
-    <x-m>-28.40</x-m>
-    <y-m>0.000</y-m>
-    <z-m>3.250</z-m>   
+  			<x-m>-2.60</x-m>
+			<y-m>0</y-m>
+			<z-m>3.00</z-m>
     </offsets>
     </model>
 
 
 <!--beacon-->
 
-<model>
-<path>Aircraft/A340-600HGW/Models/lights/beacon.xml</path>
-<name>Beaconlight.top</name>     
-<offsets>
-<x-m>2.30</x-m>
-<y-m>0.000</y-m>
-<z-m>3.250</z-m>      
-</offsets>
-</model>
+
 
 <model>
 <path>Aircraft/A340-600HGW/Models/lights/beacon.xml</path>
-<name>Beaconlight.bottom</name>     
+<name>Beacon</name>     
 <offsets>
-<x-m>12.213</x-m>
-<y-m> 0.000</y-m>
-<z-m>-2.800</z-m>      
-</offsets>
+			<x-m>37.05</x-m>
+			<y-m>0</y-m>
+			<z-m>2.5</z-m>
+		</offsets>
 </model>
 
 <!-- Tyre Smoke -->
@@ -371,7 +365,7 @@ Liam Gathercole, Andino
   
   <offsets>
   <x-m>-10.0</x-m>
-  <y-m>-8.77</y-m>
+  <y-m>-9.77</y-m>
   <z-m>-2.4</z-m>
  </offsets>
 </model>
@@ -395,7 +389,7 @@ Liam Gathercole, Andino
   
   <offsets>
   <x-m>-10.0</x-m>
-  <y-m>8.77</y-m>
+  <y-m>9.77</y-m>
   <z-m>-2.4</z-m>
  </offsets>
 </model>
@@ -422,7 +416,7 @@ Liam Gathercole, Andino
   
   <offsets>
   <x-m>-4.0</x-m>
-  <y-m>-18.77</y-m>
+  <y-m>-20.77</y-m>
   <z-m>-1.4</z-m>
  </offsets>
 </model>
@@ -448,7 +442,7 @@ Liam Gathercole, Andino
   
   <offsets>
   <x-m>-4.0</x-m>
-  <y-m>18.77</y-m>
+  <y-m>20.77</y-m>
   <z-m>-1.4</z-m>
  </offsets>
 
@@ -467,15 +461,31 @@ Liam Gathercole, Andino
 
     <animation>
         <type>material</type>
-        <object-name>fuselage</object-name>
-        <object-name>tail</object-name>
-	  <object-name>engines0</object-name>
-	  <object-name>winglets</object-name>
-	  <object-name>Mesh01</object-name>
-	  <!--object-name>pw.nacelle0.001</object-name-->
-        <property-base>sim/model/livery</property-base>
-        <texture-prop>texture</texture-prop>
-        <texture>Liveries/Liveries/Default.png</texture>
+  <object-name>fuselageA</object-name>
+  <object-name>fuselageB</object-name>
+  <object-name>wingletl</object-name>
+  <object-name>wingletr</object-name>
+  <object-name>vstabp</object-name>
+  <object-name>vstabp.001</object-name>
+  <object-name>vstabs</object-name>
+  <object-name>vstabs.001</object-name>
+  <object-name>enginel1</object-name>
+   <object-name>enginel1.001</object-name>
+  <object-name>enginel2</object-name>
+  <object-name>enginel2.001</object-name>
+  <object-name>enginer1</object-name>
+  <object-name>enginer1.001</object-name>
+  <object-name>enginer2</object-name>
+  <object-name>enginer2.001</object-name>
+  <object-name>enginel1reverser</object-name>
+  <object-name>enginel2reverser</object-name>
+  <object-name>enginer1reverser</object-name>
+  <object-name>enginer2reverser</object-name>
+  <object-name>rudder</object-name>
+  <object-name>center</object-name>
+  <property-base>sim/model/livery</property-base>
+  <texture-prop>texture</texture-prop>
+  <texture>Default.png</texture>
     </animation>
 
 <!-- Takeoff Engine Moisture -->
@@ -1126,6 +1136,37 @@ Liam Gathercole, Andino
 
 <!-- front gear doors left-->
 
+<animation>
+		<type>rotate</type>
+		<object-name>trampilla.004</object-name>
+		<property>gear/gear[0]/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>0.2</ind>
+				<dep>90</dep>
+			</entry>
+			<entry>
+				<ind>0.8</ind>
+				<dep>90</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0.0</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>-33.86</x1-m>
+			<y1-m>-0.56</y1-m>
+			<z1-m>-2.50</z1-m>
+			<x2-m>-34.81</x2-m>
+			<y2-m>-0.49</y2-m>
+			<z2-m>-2.32</z2-m>
+		</axis>
+	</animation>
 
         <animation>
 		<type>rotate</type>
@@ -1150,111 +1191,14 @@ Liam Gathercole, Andino
 			</entry>
 		</interpolation>
 		<axis>
-			<x1-m>-31.9222</x1-m>
-			<y1-m>-0.5936</y1-m>
-			<z1-m>-2.3805</z1-m>
-			<x2-m>-32.8926</x2-m>
-			<y2-m>-0.5769</y2-m>
-			<z2-m>-2.2453</z2-m>
+			<x1-m>-32.93</x1-m>
+			<y1-m>-0.57</y1-m>
+			<z1-m>-2.64</z1-m>
+			<x2-m>-33.71</x2-m>
+			<y2-m>-0.56</y2-m>
+			<z2-m>-2.56</z2-m>
 		</axis>
 	</animation>
-
-<animation>
-		<type>rotate</type>
-		<object-name>trampilla.004</object-name>
-		<property>gear/gear[0]/position-norm</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>0.2</ind>
-				<dep>90</dep>
-			</entry>
-			<entry>
-				<ind>0.8</ind>
-				<dep>90</dep>
-			</entry>
-			<entry>
-				<ind>1.0</ind>
-				<dep>0.0</dep>
-			</entry>
-		</interpolation>
-		<axis>
-			<x1-m>-32.9021</x1-m>
-			<y1-m>-0.5819</y1-m>
-			<z1-m>-2.1866</z1-m>
-			<x2-m>-33.9673</x2-m>
-			<y2-m>-0.5329</y2-m>
-			<z2-m>-1.9485</z2-m>
-		</axis>
-	</animation>
-
-
-       <animation>
-		<type>rotate</type>
-		<object-name>trampilla.005</object-name>
-		<property>gear/gear[0]/position-norm</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>0.2</ind>
-				<dep>90</dep>
-			</entry>
-			<entry>
-				<ind>0.8</ind>
-				<dep>90</dep>
-			</entry>
-			<entry>
-				<ind>1.0</ind>
-				<dep>0.0</dep>
-			</entry>
-		</interpolation>
-		<axis>
-			<x1-m>-34.0397</x1-m>
-			<y1-m>-0.5713</y1-m>
-			<z1-m>-1.9815</z1-m>
-			<x2-m>-34.5596</x2-m>
-			<y2-m>-0.5324</y2-m>
-			<z2-m>-1.8061</z2-m>
-		</axis>
-	</animation>
-
-	<!--animation>
-		<type>rotate</type>
-		<object-name>trampilla.006</object-name>
-		<property>gear/gear[0]/position-norm</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>0.2</ind>
-				<dep>90</dep>
-			</entry>
-			<entry>
-				<ind>0.8</ind>
-				<dep>90</dep>
-			</entry>
-			<entry>
-				<ind>1.0</ind>
-				<dep>0.0</dep>
-			</entry>
-		</interpolation>
-		<axis>
-			<x1-m>-34.5665</x1-m>
-			<y1-m>-0.4808</y1-m>
-			<z1-m>-1.8188</z1-m>
-			<x2-m>-35.2139</x2-m>
-			<y2-m>-0.4665</y2-m>
-			<z2-m>-1.5812</z2-m>
-		</axis>
-	</animation-->
 
 <animation>
 		<type>rotate</type>
@@ -1275,12 +1219,12 @@ Liam Gathercole, Andino
 			</entry>
 		</interpolation>
 		<axis>
-			<x1-m>-30.0542</x1-m>
-			<y1-m>-0.6184</y1-m>
-			<z1-m>-2.6296</z1-m>
-			<x2-m>-31.8699</x2-m>
-			<y2-m>-0.6091</y2-m>
-			<z2-m>-2.3591</z2-m>
+			<x1-m>-31.58</x1-m>
+			<y1-m>-0.64</y1-m>
+			<z1-m>-2.75</z1-m>
+			<x2-m>-32.76</x2-m>
+			<y2-m>-0.56</y2-m>
+			<z2-m>-2.67</z2-m>
 		</axis>
 	</animation>
 
@@ -1288,6 +1232,39 @@ Liam Gathercole, Andino
 
 
 <!-- front gear doors right-->
+
+
+ <animation>
+		<type>rotate</type>
+		<object-name>trampilla.007</object-name>
+		<property>gear/gear[0]/position-norm</property>
+		<interpolation>
+			<entry>
+				<ind>0.0</ind>
+				<dep>0.0</dep>
+			</entry>
+			<entry>
+				<ind>0.2</ind>
+				<dep>-90</dep>
+			</entry>
+			<entry>
+				<ind>0.8</ind>
+				<dep>-90</dep>
+			</entry>
+			<entry>
+				<ind>1.0</ind>
+				<dep>0.0</dep>
+			</entry>
+		</interpolation>
+		<axis>
+			<x1-m>-33.86</x1-m>
+			<y1-m>0.56</y1-m>
+			<z1-m>-2.50</z1-m>
+			<x2-m>-34.81</x2-m>
+			<y2-m>0.49</y2-m>
+			<z2-m>-2.32</z2-m>
+		</axis>
+	</animation>
 
 
 	<animation>
@@ -1313,80 +1290,17 @@ Liam Gathercole, Andino
 			</entry>
 		</interpolation>
 		<axis>
-			<x1-m>-31.8966</x1-m>
-			<y1-m>0.3682</y1-m>
-			<z1-m>-2.3751</z1-m>
-			<x2-m>-32.9087</x2-m>
-			<y2-m>0.3903</y2-m>
-			<z2-m>-2.2190</z2-m>
+			<x1-m>-32.93</x1-m>
+			<y1-m>0.57</y1-m>
+			<z1-m>-2.64</z1-m>
+			<x2-m>-33.71</x2-m>
+			<y2-m>0.56</y2-m>
+			<z2-m>-2.56</z2-m>
 		</axis>
 	</animation>
 
 
-     <animation>
-		<type>rotate</type>
-		<object-name>trampilla.007</object-name>
-		<property>gear/gear[0]/position-norm</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>0.2</ind>
-				<dep>-90</dep>
-			</entry>
-			<entry>
-				<ind>0.8</ind>
-				<dep>-90</dep>
-			</entry>
-			<entry>
-				<ind>1.0</ind>
-				<dep>0.0</dep>
-			</entry>
-		</interpolation>
-		<axis>
-			<x1-m>-32.9468</x1-m>
-			<y1-m>0.3690</y1-m>
-			<z1-m>-2.2277</z1-m>
-			<x2-m>-33.9901</x2-m>
-			<y2-m>0.3867</y2-m>
-			<z2-m>-1.9716</z2-m>
-		</axis>
-	</animation>
-
-
-      <animation>
-		<type>rotate</type>
-		<object-name>trampilla.008</object-name>
-		<property>gear/gear[0]/position-norm</property>
-		<interpolation>
-			<entry>
-				<ind>0.0</ind>
-				<dep>0.0</dep>
-			</entry>
-			<entry>
-				<ind>0.2</ind>
-				<dep>-90</dep>
-			</entry>
-			<entry>
-				<ind>0.8</ind>
-				<dep>-90</dep>
-			</entry>
-			<entry>
-				<ind>1.0</ind>
-				<dep>0.0</dep>
-			</entry>
-		</interpolation>
-		<axis>
-			<x1-m>-34.0051</x1-m>
-			<y1-m>0.3867</y1-m>
-			<z1-m>-1.9716</z1-m>
-			<x2-m>-34.5744</x2-m>
-			<y2-m>0.3723</y2-m>
-			<z2-m>-1.8407</z2-m>
-		</axis>
-	</animation>
+    
 
 
         <animation>
@@ -1408,12 +1322,12 @@ Liam Gathercole, Andino
 			</entry>
 		</interpolation>
 		<axis>
-			<x1-m>-30.0590</x1-m>
-			<y1-m>0.3912</y1-m>
-			<z1-m>-2.6170</z1-m>
-			<x2-m>-31.8875</x2-m>
-			<y2-m>0.3920</y2-m>
-			<z2-m>-2.3517</z2-m>
+			<x1-m>-31.58</x1-m>
+			<y1-m>0.64</y1-m>
+			<z1-m>-2.75</z1-m>
+			<x2-m>-32.76</x2-m>
+			<y2-m>0.56</y2-m>
+			<z2-m>-2.67</z2-m>
 		</axis>
 	</animation>
 
@@ -1422,7 +1336,8 @@ Liam Gathercole, Andino
 
     <animation>
         <type>select</type>
-        <object-name>fuselage</object-name>
+        <object-name>fuselageA</object-name>
+	<object-name>fuselageB</object-name>
         <condition>
 <not>
             <property>sim/current-view/internal</property>
@@ -1468,14 +1383,13 @@ Liam Gathercole, Andino
 
     <animation>
         <type>spin</type>
-        <object-name>fan0.001</object-name>
-	<object-name>fan.cone0.001</object-name>
+        <object-name>blah.003</object-name>
         <property>engines/engine[0]/rpm</property>
         <factor>10</factor>
         <center>
-            <x-m>-3.3164</x-m>
-            <y-m>-20.0643</y-m>
-            <z-m>-2.0246</z-m>
+            <x-m>-2.19</x-m>
+            <y-m>-20.58</y-m>
+            <z-m>-1.93</z-m>
         </center>
         <axis>
             <x>-1.0</x>
@@ -1486,14 +1400,13 @@ Liam Gathercole, Andino
 
     <animation>
         <type>spin</type>
-       <object-name>fan0.003</object-name>
-	<object-name>fan.cone0.003</object-name>
+       <object-name>blah</object-name>
         <property>engines/engine[1]/rpm</property>
         <factor>10</factor>
         <center>
-            <x-m>-10.1647</x-m>
-            <y-m>-9.3916</y-m>
-            <z-m>-2.9354</z-m>
+            <x-m>-9.05</x-m>
+            <y-m>-9.53</y-m>
+            <z-m>-2.78</z-m>
         </center>
         <axis>
             <x>-1.0</x>
@@ -1504,14 +1417,13 @@ Liam Gathercole, Andino
 
     <animation>
         <type>spin</type>
-        <object-name>fan0.002</object-name>
-	<object-name>fan.cone0.002</object-name>
+        <object-name>blah.001</object-name>
         <property>engines/engine[2]/rpm</property>
         <factor>10</factor>
         <center>
-            <x-m>-10.2082</x-m>
-            <y-m>9.13.17</y-m>
-            <z-m>-2.9926</z-m>
+            <x-m>-9.06</x-m>
+            <y-m>9.51</y-m>
+            <z-m>-2.77</z-m>
         </center>
         <axis>
             <x>-1.0</x>
@@ -1522,14 +1434,13 @@ Liam Gathercole, Andino
 
     <animation>
         <type>spin</type>
-        <object-name>fan0</object-name>
-	<object-name>fan.cone0</object-name>
+        <object-name>blah.002</object-name>
         <property>engines/engine[3]/rpm</property>
         <factor>10</factor>
         <center>
-            <x-m>-3.7413</x-m>
-            <y-m>19.9070</y-m>
-            <z-m>-2.1180</z-m>
+            <x-m>-2.17</x-m>
+            <y-m>20.55</y-m>
+            <z-m>-1.94</z-m>
         </center>
         <axis>
             <x>-1.0</x>
@@ -1557,7 +1468,7 @@ Liam Gathercole, Andino
         </axis>
     </animation-->
 
-<!-- Gear disapears when raised -->
+<!-- Gear disapears when raised hide ocultar-->
 
 <animation>
         <type>select</type>
@@ -1565,6 +1476,10 @@ Liam Gathercole, Andino
         <object-name>left_gear</object-name>
         <object-name>mid_gear</object-name>
         <object-name>nose_gear</object-name>
+        <object-name>mitad</object-name>
+        <object-name>mitad.001</object-name>
+        <object-name>mitad.002</object-name>
+        <object-name>mitad.003</object-name>
         <condition>
 		<greater-than>
         <property>gear/gear[0]/position-norm</property>
@@ -1584,10 +1499,10 @@ Liam Gathercole, Andino
 		<property>surface-positions/left-aileron-pos-norm</property>
 		<factor>-25</factor>
 		<axis>
-			<x1-m>4.90</x1-m>
+			<x1-m>5.90</x1-m>
 			<y1-m>-20.72</y1-m>
 			<z1-m>0.17</z1-m>
-			<x2-m>9.31</x2-m>
+			<x2-m>10.31</x2-m>
 			<y2-m>-29.89</y2-m>
 			<z2-m>0.81</z2-m>
 		</axis>
@@ -1600,20 +1515,21 @@ Liam Gathercole, Andino
 		<property>surface-positions/right-aileron-pos-norm</property>
 		<factor>25</factor>
 		<axis>
-			<x1-m>4.90</x1-m>
+			<x1-m>5.90</x1-m>
 			<y1-m>20.72</y1-m>
 			<z1-m>0.17</z1-m>
-			<x2-m>9.31</x2-m>
+			<x2-m>10.31</x2-m>
 			<y2-m>29.89</y2-m>
 			<z2-m>0.81</z2-m>
 		</axis>
 	</animation>
 
-<!-- Tail Ailerons Animation -->
+<!-- HORIZONTAL STABILIZER -->
+<!-- RIGHT ELEVATOR-->
 
 <animation>
 	<type>rotate</type>
-	<object-name>Group13</object-name>
+	<object-name>relevator</object-name>
 	<property>surface-positions/elevator-pos-norm</property>
 	<factor>20</factor>
 	<axis>
@@ -1626,10 +1542,10 @@ Liam Gathercole, Andino
 	</axis>
 </animation>
 
-
+<!-- LEFT ELEVATOR-->
 <animation>
 	<type>rotate</type>
-	<object-name>Group15</object-name>
+	<object-name>lelevator</object-name>
 	<property>surface-positions/elevator-pos-norm</property>
 	<factor>-20</factor>
 	<axis>
@@ -1648,23 +1564,46 @@ Liam Gathercole, Andino
 	<animation>
 		<name>rudder</name>
 		<type>rotate</type>
-		<object-name>Mesh01</object-name>
+		<object-name>rudder</object-name>
 		<property>surface-positions/rudder-pos-norm</property>
 		<factor>25</factor>
         <center>
-            <x-m>33.52</x-m>
+            <x-m>34.52</x-m>
             <y-m>0.0</y-m>
             <z-m>7.13</z-m>
         </center>
 		<axis>
-			<x1-m>2.013</x1-m>
+			<x1-m>4.013</x1-m>
 			<y1-m>0</y1-m>
 			<z1-m>1.899</z1-m>
-			<x2-m>5.546</x2-m>
+			<x2-m>6.546</x2-m>
 			<y2-m>0</y2-m>
 			<z2-m>7.895</z2-m>
 		</axis>
 	</animation>
+
+	<!-- Animation for the logo light -->
+	<animation>
+		<name>Logo light illumination</name>
+		<type>material</type>
+		<object-name>rudder</object-name>
+		<object-name>vstabs</object-name>
+		<object-name>vstabp</object-name>
+		
+		<condition>
+			<equals>
+				<property>controls/lighting/nav-lights</property>
+				<value>true</value>
+			</equals>
+		</condition>
+		<emission>
+			<red>0.25</red>
+			<green>0.25</green>
+			<blue>0.25</blue>
+		</emission>
+	</animation>
+
+
 
 <!-- Flaps Animation -->
 
@@ -1675,10 +1614,10 @@ Liam Gathercole, Andino
 		<property>surface-positions/flap-pos-norm</property>
         <factor>25</factor>
 		<axis>
-			<x1-m>0.48</x1-m>
+			<x1-m>1.48</x1-m>
 			<y1-m>-8.62</y1-m>
 			<z1-m>-0.68</z1-m>
-			<x2-m>0.04</x2-m>
+			<x2-m>1.04</x2-m>
 			<y2-m>-2.96</y2-m>
 			<z2-m>-1.42</z2-m>
 		</axis>
@@ -1688,14 +1627,15 @@ Liam Gathercole, Andino
 		<name>Left outer flap</name>
 		<type>rotate</type>
 		<object-name>flapl1</object-name>
+		<object-name>flapl1.001</object-name>
 		<property>surface-positions/flap-pos-norm</property>
         <factor>25</factor>
 		<axis>
-			<x1-m>3.98</x1-m>
+			<x1-m>5.58</x1-m>
 			<y1-m>-20.08</y1-m>
 			<z1-m>0.13</z1-m>
-			<x2-m>-0.19</x2-m>
-			<y2-m>-9.04</y2-m>
+			<x2-m>1.49</x2-m>
+			<y2-m>-9.14</y2-m>
 			<z2-m>-0.80</z2-m>
 		</axis>
 	</animation>
@@ -1707,10 +1647,10 @@ Liam Gathercole, Andino
 		<property>surface-positions/flap-pos-norm</property>
         <factor>-25</factor>
 		<axis>
-			<x1-m>0.48</x1-m>
+			<x1-m>1.48</x1-m>
 			<y1-m>8.62</y1-m>
 			<z1-m>-0.68</z1-m>
-			<x2-m>0.04</x2-m>
+			<x2-m>1.04</x2-m>
 			<y2-m>2.96</y2-m>
 			<z2-m>-1.42</z2-m>
 		</axis>
@@ -1720,13 +1660,14 @@ Liam Gathercole, Andino
 		<name>Right outer flap</name>
 		<type>rotate</type>
 		<object-name>flapr2</object-name>
+		<object-name>flapr2.001</object-name>
 		<property>surface-positions/flap-pos-norm</property>
         <factor>-25</factor>
 		<axis>
-			<x1-m>3.98</x1-m>
+			<x1-m>5.58</x1-m>
 			<y1-m>20.08</y1-m>
 			<z1-m>0.13</z1-m>
-			<x2-m>-0.19</x2-m>
+			<x2-m>1.49</x2-m>
 			<y2-m>9.14</y2-m>
 			<z2-m>-0.80</z2-m>
 		</axis>
@@ -1736,7 +1677,7 @@ Liam Gathercole, Andino
 
 <animation>
 	<type>translate</type>
-	<object-name>pw.reverser0</object-name>
+	<object-name>enginel1reverser</object-name>
 	<property>surface-positions/reverser-norm</property>
 	<factor>0.6</factor>
 	<axis>
@@ -1748,7 +1689,7 @@ Liam Gathercole, Andino
 
 <animation>
 	<type>translate</type>
-	<object-name>pw.reverser0.001</object-name>
+	<object-name>enginel2reverser</object-name>
 	<property>surface-positions/reverser-norm</property>
 	<factor>0.6</factor>
 	<axis>
@@ -1760,7 +1701,7 @@ Liam Gathercole, Andino
 
 <animation>
 	<type>translate</type>
-	<object-name>pw.reverser0.002</object-name>
+	<object-name>enginer1reverser</object-name>
 	<property>surface-positions/reverser-norm</property>
 	<factor>0.6</factor>
 	<axis>
@@ -1772,7 +1713,7 @@ Liam Gathercole, Andino
 
 <animation>
 	<type>translate</type>
-	<object-name>pw.reverser0.003</object-name>
+	<object-name>enginer2reverser</object-name>
 	<property>surface-positions/reverser-norm</property>
 	<factor>0.6</factor>
 	<axis>
@@ -1913,52 +1854,64 @@ Liam Gathercole, Andino
     </animation>
 
 
-
+<animation>
+        <type>select</type>
+        <object-name>Rbrake</object-name>
+        <object-name>Rbrake1</object-name>
+        <object-name>Lbrake</object-name>
+        <object-name>Lbrake1</object-name>
+        <condition>
+		<greater-than>
+        <property>sim/multiplay/generic/float[5]</property>
+		<value>0</value>
+		</greater-than>
+        </condition>
+    </animation>
 
 
 
 <!-- Trim -->
 
- <animation>
-        <type>rotate</type>
-        <object-name>Group14</object-name>
-        <object-name>Group15</object-name>
-        <property>controls/flight/elevator-trim</property>
-        <factor>-15</factor>
-        <center>
-            <x-m>30</x-m>
-            <y-m>0</y-m>
-            <z-m>2.08</z-m>
-        </center>
-        <axis>
-            <x>0.206</x>
-            <y>-0.969</y>
-            <z>0.132</z>
-        </axis>
-    </animation>
+<!-- HORIZONTAL STABILIZER TRIM -->
 
- <animation>
-        <type>rotate</type>
-        <object-name>Group12</object-name>
-	<object-name>Group13</object-name>
-        <property>controls/flight/elevator-trim</property>
-        <factor>15</factor>
-        <center>
-            <x-m>30</x-m>
-            <y-m>0</y-m>
-            <z-m>2.08</z-m>
-        </center>
-        <axis>
-            <x>0.206</x>
-            <y>0.969</y>
-            <z>0.132</z>
-        </axis>
-    </animation>
+	<animation>
+		<object-name>tailhorizontalleft</object-name>
+		<type>rotate</type>
+		<property>controls/flight/elevator-trim</property>
+<factor>-20</factor>
+	<axis>
+		<x1-m>33.20</x1-m>
+		<y1-m>-0.98</y1-m>
+		<z1-m>1.80</z1-m>
+		<x2-m>37.53</x2-m>
+		<y2-m>-9.80</y2-m>
+		<z2-m>3.00</z2-m>
+	</axis>
+	</animation>
+
+	<animation>
+		<object-name>tailhorizontalright</object-name>
+		<type>rotate</type>
+		<property>controls/flight/elevator-trim</property>
+<factor>20</factor>
+	<axis>
+		<x1-m>33.20</x1-m>
+		<y1-m>0.98</y1-m>
+		<z1-m>1.80</z1-m>
+		<x2-m>37.53</x2-m>
+		<y2-m>9.80</y2-m>
+		<z2-m>3.00</z2-m>
+	</axis>
+	</animation>
+
+
+
 
 
 <animation>
   <type>material</type>
-  <object-name>fuselage</object-name>
+  <object-name>fuselageA</object-name>
+  <object-name>fuselageB</object-name>
   <object-name>Color_00.003</object-name>
   <object-name>Color_00.002</object-name>
   <object-name>blah.004</object-name>
@@ -2025,6 +1978,18 @@ Liam Gathercole, Andino
   <object-name>Mesh52.001</object-name>
   <object-name>Mesh03.001</object-name>
 	 <object-name>_DarkGra.004</object-name>
+	<object-name>vstabs</object-name>
+		<object-name>vstabp</object-name>
+	<object-name>rightwing.2</object-name>
+  <object-name>rightwing.3</object-name>
+	<object-name>leftwing.2</object-name>
+  <object-name>leftwing.3</object-name>
+  <object-name>aileronl</object-name>
+  <object-name>aileronr</object-name>
+  <object-name>Color_00.008</object-name>
+  <object-name>center</object-name>
+  <object-name>wingletr</object-name>
+  <object-name>wingletl</object-name>
   <emission>
     <red>0.05</red>
     <green>0.05</green>
@@ -2190,7 +2155,7 @@ Liam Gathercole, Andino
             <z>0</z>
         </axis>
         <center>
-            <x-m>-31.2413</x-m>
+            <x-m>-31.65</x-m>
             <y-m>0</y-m>
             <z-m>-4.1187</z-m>
         </center>
@@ -2350,6 +2315,154 @@ Liam Gathercole, Andino
             <z-m>-4.3031</z-m>
         </center>
     </animation>
+
+
+<!-- WingFlex animations -->
+<!-- Left -->
+
+
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>leftwing.2</object-name>
+  <object-name>leftwing.3</object-name>
+  <object-name>enginel1</object-name>
+   <object-name>enginel1.001</object-name>
+  <object-name>enginel2</object-name>
+  <object-name>enginel2.001</object-name>
+  <object-name>enginel1reverser</object-name>
+  <object-name>enginel2reverser</object-name>
+  <object-name>enginefixture1</object-name>
+  <object-name>enginefixture2</object-name>
+  <object-name>fan1</object-name>
+  <object-name>fanspin1</object-name>
+  <object-name>fan2</object-name>
+  <object-name>fanspin2</object-name>
+  <object-name>wingletl</object-name>
+  <object-name>flapl1</object-name>
+  <object-name>aileronl</object-name>
+	<object-name>Lbrake</object-name>
+	<object-name>Lbrake1</object-name>
+	<object-name>flapl1</object-name>
+	<object-name>flapl1.001</object-name>
+	<object-name>flapl2</object-name>
+	<object-name>Redlight</object-name>
+	<object-name>flashleft</object-name>
+  <property>accelerations/pilot-g</property>
+	<factor>-1</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+   <x-m> 0.00</x-m>
+   <y-m>-8.30</y-m>
+   <z-m>-1.50</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>leftwing.3</object-name>
+  <object-name>wingletl</object-name>
+  <object-name>enginel1</object-name>
+  <object-name>enginel1.001</object-name>
+  <object-name>enginel1reverser</object-name>
+  <object-name>fan1</object-name>
+  <object-name>fanspin1</object-name>
+  <object-name>enginefixture1</object-name>
+  <object-name>aileronl</object-name>
+	<object-name>Redlight</object-name>
+	<object-name>flashleft</object-name>
+  <property>accelerations/pilot-g</property>
+	<factor>-1</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m> 0.00</x-m>
+   <y-m>-20.00</y-m>
+   <z-m>-0.35</z-m>
+  </center>
+  <axis>
+   <x>1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+ <!-- Right -->
+
+<animation>
+  <type>rotate</type>
+  <object-name>rightwing.2</object-name>
+  <object-name>rightwing.3</object-name>
+  <object-name>enginer1</object-name>
+  <object-name>enginer1.001</object-name>
+  <object-name>enginer2</object-name>
+  <object-name>enginer2.001</object-name>
+  <object-name>enginer1reverser</object-name>
+  <object-name>enginer2reverser</object-name>
+  <object-name>enginefixture3</object-name>
+  <object-name>enginefixture4</object-name>
+  <object-name>fan4</object-name>
+  <object-name>fanspin4</object-name>
+  <object-name>fan3</object-name>
+  <object-name>fanspin3</object-name>
+  <object-name>wingletr</object-name>
+  <object-name>flapr2</object-name>
+  <object-name>aileronr</object-name>
+	<object-name>Rbrake</object-name>
+	<object-name>Rbrake1</object-name>
+	<object-name>flapr1</object-name>
+	<object-name>flapr2.001</object-name>
+	<object-name>flapr2</object-name>
+	<object-name>Greenlight</object-name>
+	<object-name>flashright</object-name>
+  <property>accelerations/pilot-g</property>
+	<factor>-1</factor>
+  <offset-deg>0</offset-deg>   
+  <center>
+   <x-m> 0.00</x-m>
+   <y-m> 8.30</y-m>
+   <z-m>-1.50</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+ 
+ <animation>
+  <type>rotate</type>
+  <object-name>rightwing.3</object-name>
+  <object-name>wingletr</object-name>
+  <object-name>enginer2</object-name>
+  <object-name>enginer2.001</object-name>
+  <object-name>enginer2reverser</object-name>
+  <object-name>fan4</object-name>
+  <object-name>fanspin4</object-name>
+  <object-name>enginefixture4</object-name>
+  <object-name>aileronr</object-name>
+	<object-name>Greenlight</object-name>
+	<object-name>flashright</object-name>
+  <property>accelerations/pilot-g</property>
+	<factor>-1</factor>
+  <offset-deg>0</offset-deg>
+  <center>
+   <x-m>  0.00</x-m>
+   <y-m> 20.00</y-m>
+   <z-m> -0.35</z-m>
+  </center>
+  <axis>
+   <x>-1.0</x>
+   <y>0.0</y>
+   <z>0.0</z>
+  </axis>
+ </animation>
+
+
 
 </PropertyList>
 

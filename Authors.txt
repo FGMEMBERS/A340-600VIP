@@ -16,6 +16,8 @@ Andino ported the cockpit and some instruments from the A330, the 777 and other 
 
 Yasim rewritten by Andino.
 
+Some of the work on the A340-600 by Simon. Ampere K. Hardraade & "Skyop", Isaias V Prestes and Gijs de Rooy (specially the fuselage and new interiors) has been incorporated into this project.
+
 De-ice truck and Fuel truck from the A330.
 
 
