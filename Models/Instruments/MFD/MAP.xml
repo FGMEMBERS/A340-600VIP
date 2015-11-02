@@ -216,7 +216,7 @@
                     </not>
                     <equals>
                         <property>instrumentation/efis/inputs/lh-vor-adf</property>
-                        <value>-1</value>
+                        <value>2</value>
                     </equals>
                 </and>
             </condition>
@@ -255,7 +255,7 @@
                     </not>
                     <equals>
                         <property>instrumentation/efis/inputs/lh-vor-adf</property>
-                        <value>-1</value>
+                        <value>2</value>
                     </equals>
                 </and>
             </condition>
@@ -386,7 +386,7 @@
                 </not>
                     <equals>
                         <property>instrumentation/efis/inputs/rh-vor-adf</property>
-                        <value>-1</value>
+                        <value>2</value>
                 </equals>
                 </and>
             </condition>
@@ -425,7 +425,7 @@
                 </not>
                     <equals>
                         <property>instrumentation/efis/inputs/rh-vor-adf</property>
-                        <value>-1</value>
+                        <value>2</value>
                 </equals>
                 </and>
             </condition>
@@ -722,7 +722,7 @@
                     <property>instrumentation/efis/inputs/nd-centered</property>
                     <equals>
                         <property>instrumentation/efis/inputs/lh-vor-adf</property>
-                        <value>-1</value>
+                        <value>2</value>
                 </equals>
                 </and>
             </condition>
@@ -759,7 +759,7 @@
                     <property>instrumentation/efis/inputs/nd-centered</property>
                     <equals>
                         <property>instrumentation/efis/inputs/lh-vor-adf</property>
-                        <value>-1</value>
+                        <value>2</value>
                 </equals>
                 </and>
             </condition>
@@ -884,7 +884,7 @@
                     <property>instrumentation/efis/inputs/nd-centered</property>
                     <equals>
                         <property>instrumentation/efis/inputs/rh-vor-adf</property>
-                        <value>-1</value>
+                        <value>2</value>
                 </equals>
                 </and>
             </condition>
@@ -921,7 +921,7 @@
                     <property>instrumentation/efis/inputs/nd-centered</property>
                     <equals>
                         <property>instrumentation/efis/inputs/rh-vor-adf</property>
-                        <value>-1</value>
+                        <value>2</value>
                     </equals>
                 </and>
             </condition>

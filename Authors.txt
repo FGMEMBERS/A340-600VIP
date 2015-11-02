@@ -10,7 +10,7 @@ Liveries from Liam Gathercole, Emmanuel Savage, MT-Jun, Patrick Quaedackers, Sim
 
 Light positions by Benny DLH130
 
-Andino did the new moving parts for the Model (reversers, gear tilt, gear doors, flaps, spoilers, rudder, stabilizator, etc.), lights.
+Andino did the new moving parts for the Model (reversers, gear tilt, gear doors, flaps, spoilers, rudder, stabilizator, etc.), lights. Later, a lot of similar work from the new A40-600 was incorporated to the A340-600HGW.
 
 Andino ported the cockpit and some instruments from the A330, the 777 and other planes.
 
