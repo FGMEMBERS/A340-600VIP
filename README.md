@@ -28,7 +28,6 @@ I have begun to work in a new version of the A340-600. What I would like to do i
 
 I have chosen the name A340-600HGW, because it is an actual version of the 340, which was developed by Airbus, although not many units where done. It had new engines, more efficient, and that will haver this FG model too. I hope not to collide with other efforts, and to have a download soon.
 
-Download link: <http://andinogonthaeler.wordpress.com/>
 
 Postscript: how to use the autopilot
 
