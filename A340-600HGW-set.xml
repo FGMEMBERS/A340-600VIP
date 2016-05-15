@@ -535,6 +535,9 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
             <property-rule n="101">
                 <path>Aircraft/A340-600HGW/Systems/A340-PFD.xml</path>
             </property-rule>
+			<property-rule n="102">	
+				<path>Systems/fl2070_sound.xml</path>
+			</property-rule>
         </systems>
 
         <instrumentation>
