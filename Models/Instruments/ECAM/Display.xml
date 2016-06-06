@@ -2,7 +2,7 @@
 <PropertyList>
 
 <name>ECAM Display</name>
-<background>Aircraft/A340-600HGW/Models/Instruments/ECAM/res/black.png</background>
+<background>Aircraft/411Workshop/Models/Instruments/ECAM/res/black.png</background>
 <w>256</w>
 <h>256</h>
 

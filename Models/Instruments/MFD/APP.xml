@@ -20,7 +20,7 @@
             <w>390</w>
             <h>390</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/hsiarc.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/hsiarc.png</path>
                 <x1>0.0</x1>
                 <y1>0.0</y1>
                 <x2>1</x2>
@@ -54,7 +54,7 @@
             <w>12</w>
             <h>170</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.391</x1>
                 <y1>0.385</y1>
                 <x2>0.440</x2>
@@ -88,7 +88,7 @@
             <w>12</w>
             <h>170</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.077</x1>
                 <y1>0.174</y1>
                 <x2>0.126</x2>
@@ -120,7 +120,7 @@
             <w>4</w>
             <h>178</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.016</x1>
                 <y1>0.024</y1>
                 <x2>0.039</x2>
@@ -145,7 +145,7 @@
             <w>90</w>
             <h>7</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.215</x1>
                 <y1>0.488</y1>
                 <x2>0.566</x2>
@@ -185,7 +185,7 @@
             <w>7</w>
             <h>50</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.731</x1>
                 <y1>0.019</y1>
                 <x2>0.788</x2>
@@ -227,7 +227,7 @@
             <w>12</w>
             <h>90</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.528</x1>
                 <y1>0.470</y1>
                 <x2>0.579</x2>
@@ -259,7 +259,7 @@
             <w>10</w>
             <h>16</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.686</x1>
                 <y1>0.833</y1>
                 <x2>0.761</x2>
@@ -297,7 +297,7 @@
             <w>7</w>
             <h>130</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.582</x1>
                 <y1>0.026</y1>
                 <x2>0.623</x2>
@@ -335,7 +335,7 @@
             <w>7</w>
             <h>130</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.911</x1>
                 <y1>0.024</y1>
                 <x2>0.952</x2>
@@ -374,7 +374,7 @@
             <w>256</w>
             <h>256</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/mask.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/mask.png</path>
                 <x1>0.0</x1>
                 <y1>0.0</y1>
                 <x2>1.0</x2>
@@ -392,7 +392,7 @@
             <w>20</w>
             <h>20</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.654</x1>
                 <y1>0.286</y1>
                 <x2>0.790</x2>
@@ -417,7 +417,7 @@
             <w>200</w>
             <h>200</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/hsi.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/hsi.png</path>
                 <x1>0</x1>
                 <y1>0</y1>
                 <x2>1</x2>
@@ -445,7 +445,7 @@
             <w>78</w>
             <h>6</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.215</x1>
                 <y1>0.488</y1>
                 <x2>0.566</x2>
@@ -483,7 +483,7 @@
             <w>5</w>
             <h>50</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.731</x1>
                 <y1>0.019</y1>
                 <x2>0.788</x2>
@@ -520,7 +520,7 @@
             <w>14</w>
             <h>58</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.787</x1>
                 <y1>0.406</y1>
                 <x2>0.879</x2>
@@ -556,7 +556,7 @@
             <w>5</w>
             <h>56</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.816</x1>
                 <y1>0.017</y1>
                 <x2>0.849</x2>
@@ -596,7 +596,7 @@
             <w>10</w>
             <h>95</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.391</x1>
                 <y1>0.563</y1>
                 <x2>0.440</x2>
@@ -628,7 +628,7 @@
             <w>10</w>
             <h>95</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.077</x1>
                 <y1>0.352</y1>
                 <x2>0.126</x2>
@@ -659,7 +659,7 @@
             <w>256</w>
             <h>256</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/maskfull.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/maskfull.png</path>
                 <x1>0.0</x1>
                 <y1>0.0</y1>
                 <x2>1.0</x2>
@@ -678,7 +678,7 @@
             <w>12</w>
             <h>90</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.528</x1>
                 <y1>0.470</y1>
                 <x2>0.579</x2>
@@ -708,7 +708,7 @@
             <w>10</w>
             <h>16</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.686</x1>
                 <y1>0.833</y1>
                 <x2>0.761</x2>
@@ -744,7 +744,7 @@
             <w>20</w>
             <h>30</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.659</x1>
                 <y1>0.447</y1>
                 <x2>0.784</x2>
@@ -773,7 +773,7 @@
             <w>6</w>
             <h>18</h>
             <texture>
-                <path>Aircraft/A340-600HGW/Models/Instruments/MFD/symbols.png</path>
+                <path>Aircraft/411Workshop/Models/Instruments/MFD/symbols.png</path>
                 <x1>0.138</x1>
                 <y1>0.555</y1>
                 <x2>0.204</x2>

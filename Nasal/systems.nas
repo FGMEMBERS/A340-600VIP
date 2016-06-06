@@ -4,7 +4,7 @@
 var SndOut = props.globals.getNode("/sim/sound/Ovolume",1);
 var chronometer = aircraft.timer.new("/instrumentation/clock/ET-sec",1);
 var vmodel = substr(getprop("sim/aero"), 3);
-aircraft.livery.init("Aircraft/A340-600HGW/Models/Liveries");
+aircraft.livery.init("Aircraft/411Workshop/Models/Liveries");
 
 #EFIS specific class
 # ie: var efis = EFIS.new("instrumentation/efis");
@@ -641,6 +641,7 @@ setlistener("/sim/signals/fdm-initialized", func {
 #    setprop("/instrumentation/groundradar/id",getprop("sim/tower/airport-id"));
     setprop("/sim/flaps/current", 0);
     var capwing = getprop("consumables/fuel/tank[0]/capacity-gal_us");
+	setprop("instrumentation/efis/ecam/display-mode", "FCTL");
 # make the fuel quantity balancing
     var total_fuel = 0;
     var capcenter = 0;
@@ -850,9 +851,9 @@ var Startup = func{
     setprop("controls/lighting/logo-lights",1);
     setprop("controls/lighting/cabin-lights",1);
     setprop("controls/lighting/strobe",1);
-    setprop("controls/lighting/landing-light[0]",1);
-    setprop("controls/lighting/landing-light[1]",1);
-    setprop("controls/lighting/landing-light[2]",1);
+#    setprop("controls/lighting/landing-light[0]",1);
+#    setprop("controls/lighting/landing-light[1]",1);
+#    setprop("controls/lighting/landing-light[2]",1);
     setprop("controls/engines/engine[0]/cutoff",0);
     setprop("controls/engines/engine[1]/cutoff",0);
     setprop("controls/engines/engine[2]/cutoff",0);

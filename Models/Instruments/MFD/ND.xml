@@ -7,7 +7,7 @@ A340-600HGW Navigation display
 
  <!--path>EFIS.ac</path-->
 <!--model>
-		<path>Aircraft/A340-600HGW/Models/Instruments/MFD/terrain-map-pixel.xml</path>
+		<path>Aircraft/411Workshop/Models/Instruments/MFD/terrain-map-pixel.xml</path>
 		<condition>
 			<and>
 				<greater-than>
@@ -33,7 +33,7 @@ A340-600HGW Navigation display
  </animation>
 
     <panel>
-        <path>Aircraft/A340-600HGW/Models/Instruments/MFD/mfd-panel.xml</path>
+        <path>Aircraft/411Workshop/Models/Instruments/MFD/mfd-panel.xml</path>
         <bottom-left>
             <x-m>0.003</x-m>
             <y-m>-0.090</y-m>
@@ -52,7 +52,7 @@ A340-600HGW Navigation display
     </panel>
 
     <panel>
-        <path>Aircraft/A340-600HGW/Models/Instruments/MFD/mfdtext-panel.xml</path>
+        <path>Aircraft/411Workshop/Models/Instruments/MFD/mfdtext-panel.xml</path>
         <bottom-left>
             <x-m>0.005</x-m>
             <y-m>-0.090</y-m>

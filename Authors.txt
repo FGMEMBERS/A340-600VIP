@@ -1,3 +1,6 @@
+Based on Andino's A340-600HGW, and it says:
+
+
 Based on Liam Gathercole's A340-600 Model.
 
 Systems and EICAS mainly taken from Syd Adams, Justin Smithies, and Thorsten Brehm's 777.
