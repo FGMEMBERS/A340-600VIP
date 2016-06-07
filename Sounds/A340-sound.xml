@@ -2,6 +2,18 @@
     <!-- cockpit x=22.5 y=0 z=0.78 -->
     <fx>
 	
+	
+  <apoff>
+   <name>apoff</name>
+   <path>/Aircraft/411Workshop/Sounds/apoff.wav</path>
+   <condition>
+     <property>/controls/switches/apoffsound</property>
+   </condition>
+   <volume>
+    <factor>10.0</factor>
+   </volume>
+  </apoff>
+	
 		<engine>
 			<name>a340_a11</name>
 			<mode>looped</mode>
