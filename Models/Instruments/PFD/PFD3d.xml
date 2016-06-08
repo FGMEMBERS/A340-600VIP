@@ -19,7 +19,7 @@
         <object-name>sidestick-pos</object-name>
 		<condition>
 			<equals>
-				<property>controls/switches/ap_master</property>
+				<property>/controls/it2/ap_master</property>
 				<value>0</value>
 			</equals>
 		</condition>
@@ -259,7 +259,7 @@
 		<type>select</type>
 		<object-name>APEng</object-name>
 		<condition>
-				<property>/controls/switches/ap_master</property>
+				<property>/controls/it2/ap_master</property>
 		</condition>
 	</animation>
 	<animation>
@@ -312,7 +312,7 @@
 		<object-name>APHdg</object-name>
 		<condition>
 					<equals>
-						<property>/controls/switches/aplatmode</property>
+						<property>/controls/it2/aplatmode</property>
 						<value>0</value>
 					</equals>
 		</condition>
@@ -324,11 +324,11 @@
 		<condition>
 			<or>
 					<equals>
-						<property>/controls/switches/aplatmode</property>
+						<property>/controls/it2/aplatmode</property>
 						<value>2</value>
 					</equals>
 					<equals>
-						<property>/controls/switches/loc1</property>
+						<property>/controls/it2/loc1</property>
 						<value>1</value>
 					</equals>
 			</or>
@@ -340,7 +340,7 @@
 		<object-name>APLnav</object-name>
 		<condition>
 					<equals>
-						<property>/controls/switches/aplatmode</property>
+						<property>/controls/it2/aplatmode</property>
 						<value>1</value>
 					</equals>
 		</condition>
@@ -352,7 +352,7 @@
 		<object-name>APAlt</object-name>
 		<condition>
 					<equals>
-						<property>/controls/switches/apvertmode</property>
+						<property>/controls/it2/apvertmode</property>
 						<value>0</value>
 					</equals>
 		</condition>
@@ -363,7 +363,7 @@
 		<object-name>vnav</object-name>
 		<condition>
 					<equals>
-						<property>/controls/switches/apvertmode</property>
+						<property>/controls/it2/apvertmode</property>
 						<value>1</value>
 					</equals>
 		</condition>
@@ -375,11 +375,11 @@
 		<condition>
 			<or>
 					<equals>
-						<property>/controls/switches/apvertmode</property>
+						<property>/controls/it2/apvertmode</property>
 						<value>2</value>
 					</equals>
 					<equals>
-						<property>/controls/switches/app1</property>
+						<property>/controls/it2/app1</property>
 						<value>1</value>
 					</equals>
 			</or>
