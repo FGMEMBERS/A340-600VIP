@@ -5,7 +5,7 @@
 	
   <apoff>
    <name>apoff</name>
-   <path>/Aircraft/411Workshop/Sounds/apoff.wav</path>
+   <path>/Aircraft/A340-600VIP/Sounds/apoff.wav</path>
    <condition>
      <property>/controls/it2/apoffsound</property>
    </condition>

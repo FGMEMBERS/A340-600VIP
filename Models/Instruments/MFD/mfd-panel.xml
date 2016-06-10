@@ -2,7 +2,7 @@
 <PropertyList>
 
 <name>MFD Panel</name>
-<background>Aircraft/411Workshop/Models/Instruments/MFD/black.png</background>
+<background>Aircraft/A340-600VIP/Models/Instruments/MFD/black.png</background>
 <w>256</w>
 <h>256</h>
 

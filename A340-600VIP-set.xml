@@ -1,15 +1,15 @@
 <PropertyList>
 
     <sim n="0">
-        <description>411Workshop</description>
-        <aero>411Workshop</aero>
+        <description>A340-600VIP</description>
+        <aero>A340-600VIP</aero>
         <max-payload type="double">122600</max-payload>
         <startup>
-            <splash-texture>Aircraft/411Workshop/splash.png</splash-texture>
+            <splash-texture>Aircraft/A340-600VIP/splash.png</splash-texture>
         </startup>
 
         <model n="0">
-            <path>Aircraft/411Workshop/Models/411Workshop.xml</path>
+            <path>Aircraft/A340-600VIP/Models/A340-600VIP.xml</path>
             <livery>
                 <file type="string">Airbus</file>
             </livery>
@@ -37,7 +37,7 @@
        <menubar n="0">
             <default n="0">
                 <menu n="100">
-                    <label>411Workshop</label>
+                    <label>A340-600VIP</label>
                 </menu>
             </default>
         </menubar>
@@ -83,7 +83,7 @@
 			</config-->
 			<display>IDENT</display>
 			<ident>
-				 <model>411Workshop</model>
+				 <model>A340-600VIP</model>
 				<engines>RR Trent600</engines>
 			</ident>
 			<input type="string"/>
@@ -384,7 +384,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 		       <command>nasal</command>
 		       <script>
 			  var mal = gui.Dialog.new("/sim/gui/dialogs/announcements/menu/dialog", 
-				                                              "Aircraft/411Workshop/Dialogs/announcements-dialog.xml");
+				                                              "Aircraft/A340-600VIP/Dialogs/announcements-dialog.xml");
 			mal.open();
 		       </script>
 		      </binding>
@@ -396,7 +396,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 		       <command>nasal</command>
 		       <script>
 			  var mal = gui.Dialog.new("/sim/gui/dialogs/operations/menu/dialog", 
-				                                              "Aircraft/411Workshop/Dialogs/airportoperations-dialog.xml");
+				                                              "Aircraft/A340-600VIP/Dialogs/airportoperations-dialog.xml");
 			mal.open();
 		       </script>
 		      </binding>
@@ -407,7 +407,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 		      <binding>
 		       <command>nasal</command>
 		       <script>
-			  var mal = gui.Dialog.new("/sim/gui/dialogs/dump/menu/dialog", "Aircraft/411Workshop/Dialogs/fueldump-dialog.xml");
+			  var mal = gui.Dialog.new("/sim/gui/dialogs/dump/menu/dialog", "Aircraft/A340-600VIP/Dialogs/fueldump-dialog.xml");
 			mal.open();
 		       </script>
 		      </binding>
@@ -419,7 +419,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 			<binding>
 				<command>nasal</command>
 				<script>
-				 var fuel = gui.Dialog.new("sim/gui/dialogs/fuel/dialog", "Aircraft/411Workshop/Systems/fuel-truck.xml");
+				 var fuel = gui.Dialog.new("sim/gui/dialogs/fuel/dialog", "Aircraft/A340-600VIP/Systems/fuel-truck.xml");
 				 fuel.open();
 				</script>
 			</binding>
@@ -431,7 +431,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 			<binding>
 				<command>nasal</command>
 				<script>
-			 var gs = gui.Dialog.new("sim/gui/dialogs/gs/dialog", "Aircraft/411Workshop/Systems/de-ice.xml");
+			 var gs = gui.Dialog.new("sim/gui/dialogs/gs/dialog", "Aircraft/A340-600VIP/Systems/de-ice.xml");
 			 gs.open();
 			</script>
 			</binding>
@@ -511,18 +511,18 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
         </flaps>
 
         <systems>
-            <path>Aircraft/411Workshop/Systems/systems.xml</path>
+            <path>Aircraft/A340-600VIP/Systems/systems.xml</path>
 
             <!--  fast running autopilot rules (running at FDM frequency / 120Hz) -->
             <autopilot>
-                <path>Aircraft/411Workshop/Systems/it-autoflight.xml</path>
+                <path>Aircraft/A340-600VIP/Systems/it-autoflight.xml</path>
             </autopilot>
             <autopilot>
-                <path>Aircraft/411Workshop/Systems/A340-autothrottle.xml</path>
+                <path>Aircraft/A340-600VIP/Systems/A340-autothrottle.xml</path>
             </autopilot>
             <autopilot>
                 <name>Autobrake system</name>
-                <path>Aircraft/411Workshop/Systems/A340-autobrake.xml</path>
+                <path>Aircraft/A340-600VIP/Systems/A340-autobrake.xml</path>
             </autopilot>
             <autopilot>
                 <path>Aircraft/Generic/generic-autopilot-helper.xml</path>
@@ -530,10 +530,10 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 
             <!--  slow running property-rules (running at frame rate) -->
             <property-rule n="100">
-                <path>Aircraft/411Workshop/Systems/A340-spoiler-fcs.xml</path>
+                <path>Aircraft/A340-600VIP/Systems/A340-spoiler-fcs.xml</path>
             </property-rule>
             <property-rule n="101">
-                <path>Aircraft/411Workshop/Systems/A340-PFD.xml</path>
+                <path>Aircraft/A340-600VIP/Systems/A340-PFD.xml</path>
             </property-rule>
 			<property-rule n="102">	
 				<path>Systems/fl2070_sound.xml</path>
@@ -541,11 +541,11 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
         </systems>
 
         <instrumentation>
-            <path>Aircraft/411Workshop/Systems/instrumentation.xml</path>
+            <path>Aircraft/A340-600VIP/Systems/instrumentation.xml</path>
         </instrumentation>
 
         <sound>
-            <path>Aircraft/411Workshop/Sounds/A340-sound.xml</path>
+            <path>Aircraft/A340-600VIP/Sounds/A340-sound.xml</path>
             <stall-horn type="bool">0</stall-horn>
             <click1 type="bool">0</click1>
             <click2 type="bool">0</click2>
@@ -857,8 +857,8 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
                 <line-spacing type="float">0.01</line-spacing>
             </font>
             <lightning type="bool">true</lightning>
-            <radar-texture-path type="string">Aircraft/411Workshop/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
-            <echo-texture-path type="string">Aircraft/411Workshop/Models/Instruments/MFD/wxecho.png</echo-texture-path>
+            <radar-texture-path type="string">Aircraft/A340-600VIP/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
+            <echo-texture-path type="string">Aircraft/A340-600VIP/Models/Instruments/MFD/wxecho.png</echo-texture-path>
             <minimized type="bool">false</minimized>
             <heading-marker type="bool">true</heading-marker>
             <limit-deg type="int">360</limit-deg>
@@ -883,7 +883,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
                 </category-13>
             </configuration-module>
             <voice>
-                <file-prefix type="string">Aircraft/411Workshop/Sounds/mk-viii/</file-prefix>
+                <file-prefix type="string">Aircraft/A340-600VIP/Sounds/mk-viii/</file-prefix>
             </voice>
             <inputs>                            <!-- Module I/O -->
                 <arinc429>
@@ -1011,8 +1011,8 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
             </config>
         </gps>
         <nd>
-            <radar-texture-path type="string">Aircraft/411Workshop/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
-            <symbol-texture-path type="string">Aircraft/411Workshop/Models/Instruments/MFD/boeing-nd.png</symbol-texture-path>
+            <radar-texture-path type="string">Aircraft/A340-600VIP/Models/Instruments/MFD/od_wxradar.png</radar-texture-path>
+            <symbol-texture-path type="string">Aircraft/A340-600VIP/Models/Instruments/MFD/boeing-nd.png</symbol-texture-path>
             <font>
                 <color>
                     <red type="float">0.7</red>
@@ -1071,40 +1071,40 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
     <nasal n="0">
 
 		<mcdu>
-			<file>Aircraft/411Workshop/Nasal/mCDU/init_A.nas</file>
-			<file>Aircraft/411Workshop/Nasal/mCDU/init_B.nas</file>
-			<file>Aircraft/411Workshop/Nasal/mCDU/radios.nas</file>
-			<file>Aircraft/411Workshop/Nasal/mCDU/select_SID.nas</file>
-			<file>Aircraft/411Workshop/Nasal/mCDU/select_STAR.nas</file>
-			<file>Aircraft/411Workshop/Nasal/mCDU/f-pln.nas</file>
-			<file>Aircraft/411Workshop/Nasal/mCDU/lat_rev.nas</file>
-			<file>Aircraft/411Workshop/Nasal/mCDU/common.nas</file>
-			<file>Aircraft/411Workshop/Nasal/mCDU/perf.nas</file>
-			<file>Aircraft/411Workshop/Nasal/mCDU/loop.nas</file>
-			<file>Aircraft/411Workshop/Nasal/mCDU/parse_DB.nas</file>
-			<file>Aircraft/411Workshop/Nasal/mCDU/user.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/mCDU/init_A.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/mCDU/init_B.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/mCDU/radios.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/mCDU/select_SID.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/mCDU/select_STAR.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/mCDU/f-pln.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/mCDU/lat_rev.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/mCDU/common.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/mCDU/perf.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/mCDU/loop.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/mCDU/parse_DB.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/mCDU/user.nas</file>
 		</mcdu>
         <a340>
-            <file>Aircraft/411Workshop/Nasal/Electrical.nas</file>
-            <file>Aircraft/411Workshop/Nasal/systems.nas</file>
-            <file>Aircraft/411Workshop/Nasal/AFDS.nas</file>
-            <file>Aircraft/411Workshop/Nasal/tyresmoke.nas</file>
-            <file>Aircraft/411Workshop/Nasal/gpws.nas</file>
-            <file>Aircraft/411Workshop/Nasal/warnsystem.nas</file>
-            <file>Aircraft/411Workshop/Nasal/brakesystem.nas</file>
-            <file>Aircraft/411Workshop/Nasal/ground_steering.nas</file>
-			<file>Aircraft/411Workshop/Nasal/ground-services.nas</file>
-			<file>Aircraft/411Workshop/Nasal/fuel-dump.nas</file>
-			<!--file>Aircraft/411Workshop/Nasal/terrainmap.nas</file-->
-			<!--file>Aircraft/411Workshop/Nasal/terrain-map.nas</file-->
+            <file>Aircraft/A340-600VIP/Nasal/Electrical.nas</file>
+            <file>Aircraft/A340-600VIP/Nasal/systems.nas</file>
+            <file>Aircraft/A340-600VIP/Nasal/AFDS.nas</file>
+            <file>Aircraft/A340-600VIP/Nasal/tyresmoke.nas</file>
+            <file>Aircraft/A340-600VIP/Nasal/gpws.nas</file>
+            <file>Aircraft/A340-600VIP/Nasal/warnsystem.nas</file>
+            <file>Aircraft/A340-600VIP/Nasal/brakesystem.nas</file>
+            <file>Aircraft/A340-600VIP/Nasal/ground_steering.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/ground-services.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/fuel-dump.nas</file>
+			<!--file>Aircraft/A340-600VIP/Nasal/terrainmap.nas</file-->
+			<!--file>Aircraft/A340-600VIP/Nasal/terrain-map.nas</file-->
             <file>Aircraft/Generic/limits.nas</file>
         </a340>
 		<it2>
-			<file>Aircraft/411Workshop/Nasal/autoflight.nas</file>
-			<file>Aircraft/411Workshop/Nasal/autoflight-logic.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/autoflight.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/autoflight-logic.nas</file>
 		</it2>
         <dialogs>
-            <file>Aircraft/411Workshop/Nasal/dialogs.nas</file>
+            <file>Aircraft/A340-600VIP/Nasal/dialogs.nas</file>
         </dialogs>
         <!--cdu>
             <file>Aircraft/Instruments-3d/cdu/boeing.nas</file>

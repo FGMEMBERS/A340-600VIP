@@ -2,7 +2,7 @@
 <PropertyList>
 
 <name>MFD text</name>
-<background>Aircraft/411Workshop/Models/Instruments/MFD/transparent.png</background>
+<background>Aircraft/A340-600VIP/Models/Instruments/MFD/transparent.png</background>
 <w>400</w>
 <h>256</h>
 
