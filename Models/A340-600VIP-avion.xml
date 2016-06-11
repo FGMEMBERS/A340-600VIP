@@ -2273,7 +2273,7 @@ Liam Gathercole, Andino
 	
 	<object-name>_LightGr.009</object-name>
 	<object-name>_LightGr.014</object-name>
-        <property>gear/gear[3]/rollspeed-ms</property>
+        <property>gear/gear[1]/rollspeed-ms</property>
         <factor>10</factor>
 	<condition>
 		<and>
@@ -2301,7 +2301,7 @@ Liam Gathercole, Andino
 	
 	<object-name>_LightGr.008</object-name>
 	<object-name>_LightGr.015</object-name>
-        <property>gear/gear[3]/rollspeed-ms</property>
+        <property>gear/gear[1]/rollspeed-ms</property>
         <factor>10</factor>
 	<condition>
 		<and>
