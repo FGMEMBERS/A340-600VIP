@@ -221,6 +221,7 @@ egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
 </gear>
 
 <gear x="-3.8" y="0" z="-5.7" compression="3.0" spring="1.2" >
+  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
   <control-output control="EXTEND" prop="/gear/gear[3]/position-norm"/>
   <control-speed control="EXTEND" transition-time="7"/>

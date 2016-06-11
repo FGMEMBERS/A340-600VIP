@@ -2283,14 +2283,8 @@ Liam Gathercole, Andino
 	
 	<object-name>_LightGr.008</object-name>
 	<object-name>_LightGr.015</object-name>
-        <property>gear/gear[1]/rollspeed-ms</property>
+        <property>sim/multiplay/generic/float[10]</property>
         <factor>10</factor>
-	<condition>
-		<and>
-		<property>/gear/gear[1]/wow</property>
-		<property>/gear/gear[2]/wow</property>
-		</and>
-	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
