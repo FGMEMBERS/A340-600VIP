@@ -1678,7 +1678,7 @@ Liam Gathercole, Andino
 <animation>
 	<type>translate</type>
 	<object-name>enginel1reverser</object-name>
-	<property>surface-positions/reverser-norm</property>
+	<property>sim/multiplay/generic/float[6]</property>
 	<factor>0.6</factor>
 	<axis>
 		<x>1</x>
@@ -1690,7 +1690,7 @@ Liam Gathercole, Andino
 <animation>
 	<type>translate</type>
 	<object-name>enginel2reverser</object-name>
-	<property>surface-positions/reverser-norm</property>
+	<property>sim/multiplay/generic/float[6]</property>
 	<factor>0.6</factor>
 	<axis>
 		<x>1</x>
@@ -1702,7 +1702,7 @@ Liam Gathercole, Andino
 <animation>
 	<type>translate</type>
 	<object-name>enginer1reverser</object-name>
-	<property>surface-positions/reverser-norm</property>
+	<property>sim/multiplay/generic/float[6]</property>
 	<factor>0.6</factor>
 	<axis>
 		<x>1</x>
@@ -1714,7 +1714,7 @@ Liam Gathercole, Andino
 <animation>
 	<type>translate</type>
 	<object-name>enginer2reverser</object-name>
-	<property>surface-positions/reverser-norm</property>
+	<property>sim/multiplay/generic/float[6]</property>
 	<factor>0.6</factor>
 	<axis>
 		<x>1</x>
@@ -2146,7 +2146,7 @@ Liam Gathercole, Andino
         <type>spin</type>
         <object-name>_Black_</object-name>
 	<object-name>_Gainsbo.003</object-name>
-        <property>gear/gear/rollspeed-ms</property>
+        <property>sim/multiplay/generic/float[7]</property>
         <factor>10</factor>
 		<offset-deg>0</offset-deg>
         <axis>
@@ -2170,11 +2170,8 @@ Liam Gathercole, Andino
 	
 	<object-name>_LightGr.017</object-name>
 	<object-name>_LightGr.020</object-name>
-        <property>gear/gear[2]/rollspeed-ms</property>
+        <property>sim/multiplay/generic/float[9]</property>
         <factor>10</factor>
-	<condition>
-		<property>/gear/gear[2]/wow</property>
-	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -2194,11 +2191,8 @@ Liam Gathercole, Andino
 	
 	<object-name>_LightGr.016</object-name>
 	<object-name>_LightGr.021</object-name>
-        <property>gear/gear[2]/rollspeed-ms</property>
+        <property>sim/multiplay/generic/float[9]</property>
         <factor>10</factor>
-	<condition>
-		<property>/gear/gear[2]/wow</property>
-	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -2222,11 +2216,8 @@ Liam Gathercole, Andino
 	
 	<object-name>_LightGr.010</object-name>
 	<object-name>_LightGr.011</object-name>
-        <property>gear/gear[1]/rollspeed-ms</property>
+        <property>sim/multiplay/generic/float[8]</property>
         <factor>10</factor>
-	<condition>
-		<property>/gear/gear[1]/wow</property>
-	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -2247,11 +2238,8 @@ Liam Gathercole, Andino
 	
 	<object-name>_LightGr.007</object-name>
 	<object-name>_LightGr.012</object-name>
-        <property>gear/gear[1]/rollspeed-ms</property>
+        <property>sim/multiplay/generic/float[8]</property>
         <factor>10</factor>
-	<condition>
-		<property>/gear/gear[1]/wow</property>
-	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
@@ -2273,14 +2261,8 @@ Liam Gathercole, Andino
 	
 	<object-name>_LightGr.009</object-name>
 	<object-name>_LightGr.014</object-name>
-        <property>gear/gear[1]/rollspeed-ms</property>
+        <property>sim/multiplay/generic/float[10]</property>
         <factor>10</factor>
-	<condition>
-		<and>
-		<property>/gear/gear[1]/wow</property>
-		<property>/gear/gear[2]/wow</property>
-		</and>
-	</condition>
         <axis>
             <x>0</x>
             <y>-1</y>
