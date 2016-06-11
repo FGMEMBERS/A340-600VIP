@@ -1,7 +1,7 @@
 <PropertyList>
 
     <sim n="0">
-        <description>Airbus 340-600VIP</description>
+        <description>Airbus A340-600VIP</description>
         <aero>A340-600VIP</aero>
         <max-payload type="double">122600</max-payload>
         <startup>
