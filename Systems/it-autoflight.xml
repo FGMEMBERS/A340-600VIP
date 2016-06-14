@@ -281,6 +281,57 @@
 			<u_max>1</u_max>
 		</config>
 	</pid-controller>
+	
+  <pi-simple-controller>
+		<name>Altitude hold stage 1</name>
+		<debug type="bool">false</debug>
+    <enable>
+      <prop>/autopilot/locks/altitude</prop>
+      <value>flch</value>
+    </enable>
+		<input>
+			<prop>/instrumentation/altimeter/indicated-altitude-ft</prop>
+		</input>
+		<reference>
+			<prop>/autopilot/settings/target-altitude-ft</prop>
+		</reference>
+		<output>
+			<prop>/autopilot/internal/target-climb-rate-fps</prop>
+		</output>
+		<config>
+			<Kp>0.3</Kp>
+			<Ki>0</Ki>
+			<u_min>-33.333</u_min>
+			<u_max>33.333</u_max>
+		</config>
+	</pi-simple-controller>
+	<pid-controller>
+		<name>Altitude hold stage 2</name>
+		<debug type="bool">false</debug>
+    <enable>
+      <prop>/autopilot/locks/altitude</prop>
+      <value>flch</value>
+    </enable>
+		<input>
+			<prop>/velocities/vertical-speed-fps</prop>
+		</input>
+		<reference>
+			<prop>/autopilot/internal/target-climb-rate-fps</prop>
+		</reference>
+		<output>
+			<prop>/controls/flight/elevator-trim-filter</prop>
+		</output>
+		<config>
+			<Kp>-0.01</Kp>
+			<beta>1</beta>
+			<alpha>0.1</alpha>
+			<gamma>0</gamma>
+			<Ti>10</Ti>
+			<Td>0.00001</Td>
+			<u_min>-1</u_min>
+			<u_max>1</u_max>
+		</config>
+	</pid-controller>
 
   <!-- Glideslope hold. -->
 
@@ -406,9 +457,52 @@
     <output>
       <prop>/controls/engines/engine[0]/throttle</prop>
       <prop>/controls/engines/engine[1]/throttle</prop>
+      <prop>/controls/engines/engine[2]/throttle</prop>
+      <prop>/controls/engines/engine[3]/throttle</prop>
+      <prop>/controls/engines/engine[4]/throttle</prop>
+      <prop>/controls/engines/engine[5]/throttle</prop>
+      <prop>/controls/engines/engine[6]/throttle</prop>
+      <prop>/controls/engines/engine[7]/throttle</prop>
     </output>
     <config>
       <Kp>3.5</Kp>        <!-- proportional gain -->
+      <beta>1.0</beta>    <!-- input value weighing factor -->
+      <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
+      <gamma>0.0</gamma>  <!-- input value weighing factor for -->
+                          <!-- unfiltered derivative error -->
+      <Ti>10.0</Ti>       <!-- integrator time -->
+      <Td>0.00001</Td>    <!-- derivator time -->
+      <u_min>0.0</u_min>  <!-- minimum output clamp -->
+      <u_max>1.0</u_max>  <!-- maximum output clamp -->
+    </config>
+  </pid-controller>
+  
+<!-- TOGA THR -->
+ <pid-controller>
+    <name>TOGA</name>
+    <debug>false</debug>
+    <enable>
+      <prop>/autopilot/locks/speed</prop>
+      <value>toga</value>
+    </enable>
+    <input>
+      <prop>/velocities/airspeed-kt</prop>
+    </input>
+    <reference>
+      <prop>/autopilot/settings/toga</prop>
+    </reference>
+    <output>
+      <prop>/controls/engines/engine[0]/throttle</prop>
+      <prop>/controls/engines/engine[1]/throttle</prop>
+      <prop>/controls/engines/engine[2]/throttle</prop>
+      <prop>/controls/engines/engine[3]/throttle</prop>
+      <prop>/controls/engines/engine[4]/throttle</prop>
+      <prop>/controls/engines/engine[5]/throttle</prop>
+      <prop>/controls/engines/engine[6]/throttle</prop>
+      <prop>/controls/engines/engine[7]/throttle</prop>
+    </output>
+    <config>
+      <Kp>0.1</Kp>        <!-- proportional gain -->
       <beta>1.0</beta>    <!-- input value weighing factor -->
       <alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
       <gamma>0.0</gamma>  <!-- input value weighing factor for -->

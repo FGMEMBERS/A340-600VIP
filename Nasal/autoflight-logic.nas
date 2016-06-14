@@ -1,5 +1,5 @@
 # IT AUTOFLIGHT Logic by Joshua Davidson (it0uchpods/411).
-# V2.8
+# V2.9
 
 var ap_logic_init = func {
 	setprop("/controls/it2/ap_master", 0);
@@ -12,6 +12,8 @@ var ap_logic_init = func {
 	setprop("/controls/it2/vs", 0);
 	setprop("/controls/it2/app", 0);
 	setprop("/controls/it2/app1", 0);
+	setprop("/controls/it2/altc", 0);
+	setprop("/controls/it2/flch", 0);
 	setprop("/controls/it2/aplatmode", 0);
 	setprop("/controls/it2/aphldtrk", 0);
 	setprop("/controls/it2/apvertmode", 3);
@@ -19,6 +21,9 @@ var ap_logic_init = func {
 	setprop("/controls/it2/apoffsound", 1);
 	setprop("/controls/it2/ias", 1);
 	setprop("/controls/it2/mach", 0);
+	setprop("/controls/it2/thr", 0);
+	setprop("/controls/it2/idle", 0);
+	setprop("/controls/it2/clb", 0);
 	setprop("/controls/it2/apthrmode", 0);
 	print("AUTOFLIGHT LOGIC ... FINE!");
 }
@@ -45,6 +50,16 @@ setlistener("/controls/it2/at_mastersw", func {
   } else if (atmas == 1) {
 	setprop("/controls/it2/at_master", 1);
     at_refresh();
+  }
+});
+
+# Flight Director Master System
+setlistener("/controls/it2/fd_mastersw", func {
+  var fdmas = getprop("/controls/it2/fd_mastersw");
+  if (fdmas == 0) {
+	setprop("/controls/it2/fd_master", 0);
+  } else if (fdmas == 1) {
+	setprop("/controls/it2/fd_master", 1);
   }
 });
 
@@ -78,6 +93,18 @@ setlistener("/controls/it2/aplatset", func {
 	setprop("/controls/it2/loc", 1);
 	setprop("/controls/it2/loc1", 1);
 	setprop("/controls/it2/apilsmode", 0);
+  } else if (latset == 3) {
+	setprop("/controls/it2/hdg", 1);
+	setprop("/controls/it2/nav", 0);
+	setprop("/controls/it2/loc", 0);
+	setprop("/controls/it2/loc1", 0);
+	setprop("/controls/it2/app", 0);
+	setprop("/controls/it2/app1", 0);
+	setprop("/controls/it2/aplatmode", 0);
+	setprop("/controls/it2/aphldtrk", 0);
+    var hdgnow = int(getprop("/orientation/heading-magnetic-deg")+0.5);
+	setprop("/autopilot/settings/heading-bug-deg", hdgnow);
+    hdg_master();
   }
 });
 
@@ -96,6 +123,7 @@ setlistener("/controls/it2/apvertset", func {
 	setprop("/controls/it2/apilsmode", 0);
     var altnow = int((getprop("/instrumentation/altimeter/indicated-altitude-ft")+50)/100)*100;
 	setprop("/autopilot/settings/target-altitude-ft", altnow);
+#	flchthrustt.stop(); Disabled since thrust modes not ready
     alt_master();
   } else if (vertset == 1) {
 	setprop("/controls/it2/alt", 0);
@@ -107,6 +135,7 @@ setlistener("/controls/it2/apvertset", func {
 	setprop("/controls/it2/apvertmode", 1);
 	setprop("/controls/it2/aphldtrk2", 0);
 	setprop("/controls/it2/apilsmode", 0);
+#	flchthrustt.stop(); Disabled since thrust modes not ready
     vs_master();
   } else if (vertset == 2) {
 	setprop("/instrumentation/nav/signal-quality-norm", 0);
@@ -122,6 +151,7 @@ setlistener("/controls/it2/apvertset", func {
 	setprop("/controls/it2/altc", 0);
 	setprop("/controls/it2/flch", 0);
 	setprop("/controls/it2/apilsmode", 1);
+#	flchthrustt.stop(); Disabled since thrust modes not ready
   } else if (vertset == 3) {
 	setprop("/controls/it2/alt", 0);
 	setprop("/controls/it2/vs", 0);
@@ -129,7 +159,20 @@ setlistener("/controls/it2/apvertset", func {
 	setprop("/controls/it2/flch", 0);
 	setprop("/controls/it2/apvertmode", 0);
 	setprop("/controls/it2/aphldtrk2", 0);
+#	flchthrustt.stop(); Disabled since thrust modes not ready
     altcap_master();
+  } else if (vertset == 4) {
+	setprop("/controls/it2/alt", 0);
+	setprop("/controls/it2/vs", 0);
+	setprop("/controls/it2/app", 0);
+	setprop("/controls/it2/app1", 0);
+	setprop("/controls/it2/altc", 0);
+	setprop("/controls/it2/flch", 0);
+	setprop("/controls/it2/apvertmode", 0);
+	setprop("/controls/it2/aphldtrk2", 2);
+	setprop("/controls/it2/apilsmode", 0);
+#	flchthrustt.start(); Disabled since thrust modes not ready
+    flch_master();
   }
 });
 
@@ -139,13 +182,19 @@ setlistener("/controls/it2/apthrset", func {
   if (thrset == 0) {
 	setprop("/controls/it2/ias", 1);
 	setprop("/controls/it2/mach", 0);
+	setprop("/controls/it2/thr", 0);
 	setprop("/controls/it2/apthrmode", 0);
     ias_master();
   } else if (thrset == 1) {
 	setprop("/controls/it2/ias", 0);
 	setprop("/controls/it2/mach", 1);
+	setprop("/controls/it2/thr", 0);
 	setprop("/controls/it2/apthrmode", 1);
     mach_master();
+  } else if (thrset == 2) {
+	setprop("/controls/it2/at_mastersw", 1);
+	setprop("/controls/it2/thr", 1);
+    thr_master();
   }
 });
 
@@ -154,7 +203,9 @@ setlistener("/controls/it2/apvertmode", func {
   var vertm = getprop("/controls/it2/apvertmode");
 	if (vertm == 1) {
       altcaptt.start();
-    } else {
+    } else if (vertm == 4) {
+      altcaptt.start();	
+	} else {
 	  altcaptt.stop();
     }
 });
@@ -168,5 +219,19 @@ var altcapt = func {
   }
 }
 
+# FLCH Thrust Modes (not yet implemented) 0=Disabled 1=CLB Thrust, 2=Idle Thrust
+var flchthrust = func {
+  var calt = getprop("/instrumentation/altimeter/indicated-altitude-ft");
+  var alt = getprop("/autopilot/settings/target-altitude-ft");
+  if (calt > alt) {
+	setprop("/controls/it2/flchthrustmode", 1);
+  } else if (calt < alt) {
+	setprop("/controls/it2/flchthrustmode", 2);
+  } else {
+	setprop("/controls/it2/flchthrustmode", 0);
+  }
+}
+
 # Timers
 var altcaptt = maketimer(0.5, altcapt);
+var flchthrustt = maketimer(0.5, flchthrust);
