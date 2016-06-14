@@ -33,18 +33,6 @@ var EFIS = {
         m.mins_mode_txt = m.efis.initNode("minimums-mode-text","RADIO","STRING");
         m.minimums = m.efis.initNode("minimums",250,"INT");
         m.mk_minimums = props.globals.getNode("instrumentation/mk-viii/inputs/arinc429/decision-height");
-        m.wxr = m.efis.initNode("inputs/wxr",0,"BOOL");
-        m.range = m.efis.initNode("inputs/range",0);
-        m.sta = m.efis.initNode("inputs/sta",0,"BOOL");
-        m.wpt = m.efis.initNode("inputs/wpt",0,"BOOL");
-        m.arpt = m.efis.initNode("inputs/arpt",0,"BOOL");
-        m.data = m.efis.initNode("inputs/data",0,"BOOL");
-        m.pos = m.efis.initNode("inputs/pos",0,"BOOL");
-        m.terr = m.efis.initNode("inputs/terr",0,"BOOL");
-        m.rh_vor_adf = m.efis.initNode("inputs/rh-vor-adf",0,"INT");
-        m.lh_vor_adf = m.efis.initNode("inputs/lh-vor-adf",0,"INT");
-		m.nd_plan_wpt = m.efis.initNode("inputs/plan-wpt-index", 0, "INT");
-
         m.radio = m.efis.getNode("radio-mode",1);
         m.radio.setIntValue(0);
         m.radio_selected = m.efis.getNode("radio-selected",1);
