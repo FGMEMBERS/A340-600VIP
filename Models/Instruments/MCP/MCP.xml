@@ -1353,11 +1353,12 @@
 		<object-name>AltKnb</object-name>
 		<action>
 			<button>0</button>
+			<button>1</button>
 			<repeatable>false</repeatable>
 				<binding>
 				<command>property-assign</command>
 				<property>/controls/it2/apvertset</property>
-				<value>0</value>
+				<value>4</value>
 				</binding>
 		</action>
 	</animation>
@@ -1381,8 +1382,8 @@
 		<object-name>ALTtoggle</object-name>
 		<condition>
 			<equals>
-						<property>/controls/it2/apvertmode</property>
-						<value>0</value>
+				<property>/controls/it2/apvertmode</property>
+				<value>0</value>
 			</equals>
 		</condition>
 	</animation>
@@ -1527,6 +1528,15 @@
 		<object-name>VSKnb</object-name>
 		<action>
 			<button>0</button>
+			<repeatable>false</repeatable>
+				<binding>
+				<command>property-assign</command>
+				<property>/controls/it2/apvertset</property>
+				<value>0</value>
+				</binding>
+		</action>
+		<action>
+			<button>1</button>
 			<repeatable>false</repeatable>
 				<binding>
 				<command>property-assign</command>

@@ -11,9 +11,9 @@
 	<predict-simple>
 		<name>predicted altitude 5 seconds ahead</name>
 		<debug>false</debug>
-		<input>/instrumentation/altimeter/indicated-altitude-ft</input>
+		<input>/position/altitude-ft</input>
 		<output>/autopilot/internal/altitude-5-sec-ahead</output>
-		<seconds>5.0</seconds>
+		<seconds>2.0</seconds>
 		<filter-gain>0.1</filter-gain>
 	</predict-simple>
 
@@ -136,6 +136,51 @@
  <!-- =============================================================== -->
  <!-- Vertical Modes                                                  -->
  <!-- =============================================================== -->
+
+	<pid-controller>
+		<name>System Command: Pitch</name>
+		<debug>false</debug>
+		<enable>
+			<property>/autopilot/locks/altitude</property>
+			<value>altitude-hold</value>
+		</enable>
+		<input>
+			<property>/orientation/pitch-deg</property>
+		</input>
+		<reference>
+			<property>/autopilot/internal/target-pitch-deg</property>
+		</reference>
+		<output>
+			<property>/controls/flight/elevator-trim-filter</property>
+		</output>
+		<config>
+			<Kp>-0.10</Kp>      
+			<beta>1.0</beta>    <!-- input value weighing factor -->
+			<alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
+			<gamma>0.0</gamma>  <!-- input value weighing factor for -->
+			<Ti>10.0</Ti>       <!-- integrator time  10.0 -->
+			<Td>0.0001</Td>    <!-- derivator time -->
+			<u_min>-0.85</u_min> <!-- -0.45 for elevator -->
+			<u_max>0.85</u_max>  <!-- 0.45 for elevator -->
+		</config>
+	</pid-controller>
+	
+    <filter>
+        <name>Elevator control filter</name>
+        <debug>false</debug>
+        <feedback-if-disabled>true</feedback-if-disabled>
+        <initialize-to>output</initialize-to>
+		<enable>
+			<prop>/controls/it2/ap_master</prop>
+			<value>1</value>
+		</enable>
+        <input>
+            <property>/controls/flight/elevator-trim-filter</property>
+        </input>
+        <output>/controls/flight/elevator-trim</output>
+        <type>noise-spike</type>
+        <max-rate-of-change>0.1</max-rate-of-change>
+    </filter>
 	
 	<pid-controller>
 		<name>Altitude Hold Computer</name>
@@ -145,7 +190,7 @@
 			<value>altitude-hold</value>
 		</enable>
 		<input>
-			<property>/autopilot/internal/altitude-5-sec-ahead</property>
+			<property>/instrumentation/altimeter/indicated-altitude-ft</property>
 		</input>
 		<reference>
 			<property>/autopilot/settings/target-altitude-ft</property>
@@ -162,10 +207,10 @@
 			<Ti>10.0</Ti>          <!-- integrator time  10.0 -->
 			<Td>0.0001</Td>       <!-- derivator time -->
 			<u_min>
-				<value>-4.333</value>
+				<value>-15.333</value>
 			</u_min>
 			<u_max>
-				<value>4.333</value>
+				<value>15.333</value>
 			</u_max>
 		</config>
 	</pid-controller>
@@ -205,10 +250,16 @@
 		<debug>false</debug>
 		<enable>
 			<condition>
-				<equals>
-					<property>/autopilot/locks/altitude</property>
-					<value>gs1-hold</value>
-				</equals>
+				<and>
+					<equals>
+						<property>/autopilot/locks/altitude</property>
+						<value>gs1-hold</value>
+					</equals>
+					<equals>
+						<property>/instrumentation/nav[0]/gs-in-range</property>
+						<value>true</value>
+					</equals>
+				</and>
 			</condition>
 		</enable>
 		<input>
@@ -238,31 +289,30 @@
 		<debug>false</debug>
 		<enable>
 			<prop>/autopilot/locks/altitude</prop>
-			<value>flch</value>
+			<value>flch1</value>
 		</enable>
 		<input>
 			<condition>
 				<equals>
-					<property>/controls/it2/apthrmode</property>
+					<property>/controls/it2/ias-mach</property>
 					<value>0</value>
 				</equals>
 			</condition>
-			<prop>/autopilot/internal/lookahead-10-sec-airspeed-kt</prop>
+			<prop>/autopilot/internal/lookahead-5-sec-airspeed-kt</prop>
 		</input>
 		<input>
 			<condition>
 				<equals>
-					<property>/controls/it2/apthrmode</property>
+					<property>/controls/it2/ias-mach</property>
 					<value>1</value>
 				</equals>
 			</condition>
 			<prop>/velocities/mach</prop>
-			<scale>10.0</scale>
 		</input>
 		<reference>
 			<condition>
 				<equals>
-					<property>/controls/it2/apthrmode</property>
+					<property>/controls/it2/ias-mach</property>
 					<value>0</value>
 				</equals>
 			</condition>
@@ -271,23 +321,22 @@
 		<reference>
 			<condition>
 				<equals>
-					<property>/controls/it2/apthrmode</property>
+					<property>/controls/it2/ias-mach</property>
 					<value>1</value>
 				</equals>
 			</condition>
-			<prop>/autopilot/settings/target-mach</prop>
-			<scale>10.0</scale>
+			<prop>/autopilot/settings/target-speed-mach</prop>
 		</reference>
 		<output>
 			<prop>/autopilot/settings/target-pitch-deg</prop>
 		</output>
 		<config>
-			<Kp>-0.15</Kp>       <!-- proportional gain -->
+			<Kp>-1.0</Kp>       <!-- proportional gain -->
 			<beta>1.0</beta>    <!-- input value weighing factor -->
 			<alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
 			<gamma>0.0</gamma>  <!-- input value weighing factor for -->
 			<!-- unfiltered derivative error -->
-			<Ti>10.0</Ti>        <!-- integrator time -->
+			<Ti>1.0</Ti>        <!-- integrator time -->
 			<Td>0.00001</Td>    <!-- derivator time -->
 			<u_min>-15.0</u_min><!-- minimum output clamp -->
 			<u_max>15.0</u_max> <!-- maximum output clamp -->
@@ -299,7 +348,7 @@
 		<debug>false</debug>
 		<enable>
 			<prop>/autopilot/locks/altitude</prop>
-			<value>flch</value>
+			<value>flch1</value>
 		</enable>
 		<input>
 			<prop>/orientation/pitch-deg</prop>
@@ -308,65 +357,20 @@
 			<prop>/autopilot/settings/target-pitch-deg</prop>
 		</reference>
 		<output>
-			<prop>/controls/flight/elevator-trim-filter</prop>
+			<prop>/controls/flight/elevator</prop>
 		</output>
 		<config>
-			<Kp>-0.07</Kp>      <!-- proportional gain -->
+			<Kp>-0.05</Kp>      <!-- proportional gain -->
 			<beta>1.0</beta>    <!-- input value weighing factor -->
 			<alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
 			<gamma>0.0</gamma>  <!-- input value weighing factor for -->
 			<!-- unfiltered derivative error -->
-			<Ti>10.0</Ti>        <!-- integrator time -->
+			<Ti>1.0</Ti>        <!-- integrator time -->
 			<Td>0.00001</Td>    <!-- derivator time -->
 			<u_min>-1.0</u_min> <!-- minimum output clamp -->
 			<u_max>1.0</u_max>  <!-- maximum output clamp -->
 		</config>
 	</pid-controller>
-
-	<pid-controller>
-		<name>System Command: Pitch</name>
-		<debug>false</debug>
-		<enable>
-			<property>/autopilot/locks/altitude</property>
-			<value>altitude-hold</value>
-		</enable>
-		<input>
-			<property>/orientation/pitch-deg</property>
-		</input>
-		<reference>
-			<property>/autopilot/internal/target-pitch-deg</property>
-		</reference>
-		<output>
-			<property>/controls/flight/elevator-trim-filter</property>
-		</output>
-		<config>
-			<Kp>-0.10</Kp>      
-			<beta>1.0</beta>    <!-- input value weighing factor -->
-			<alpha>0.1</alpha>  <!-- low pass filter weighing factor -->
-			<gamma>0.0</gamma>  <!-- input value weighing factor for -->
-			<Ti>10.0</Ti>       <!-- integrator time  10.0 -->
-			<Td>0.0001</Td>    <!-- derivator time -->
-			<u_min>-0.85</u_min> <!-- -0.45 for elevator -->
-			<u_max>0.85</u_max>  <!-- 0.45 for elevator -->
-		</config>
-	</pid-controller>
-	
-	<filter>
-		<name>Elevator control filter</name>
-		<debug>false</debug>
-		<feedback-if-disabled>true</feedback-if-disabled>
-		<initialize-to>output</initialize-to>
-		<enable>
-			<prop>/controls/it2/ap_master</prop>
-			<value>1</value>
-		</enable>
-		<input>
-			<property>/controls/flight/elevator-trim-filter</property>
-		</input>
-		<output>/controls/flight/elevator-trim</output>
-		<type>noise-spike</type>
-		<max-rate-of-change>0.2</max-rate-of-change>
-	</filter>
 
  <!-- =============================================================== -->
  <!-- Thrust Modes                                                    -->

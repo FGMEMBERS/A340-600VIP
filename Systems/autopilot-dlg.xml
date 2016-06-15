@@ -129,8 +129,8 @@
 				<label>THR</label>
 				<visible>
 					<equals>
-						<property>/controls/it2/thr</property>
-						<value>1</value>
+						<property>/controls/it2/apthrmode2</property>
+						<value>0</value>
 					</equals>
 				</visible>
 			</text>
@@ -139,8 +139,8 @@
 				<label>IDLE</label>
 				<visible>
 					<equals>
-						<property>/controls/it2/apthrmode</property>
-						<value>3</value>
+						<property>/controls/it2/apthrmode2</property>
+						<value>1</value>
 					</equals>
 				</visible>
 			</text>
@@ -149,8 +149,8 @@
 				<label>CLB</label>
 				<visible>
 					<equals>
-						<property>/controls/it2/apthrmode</property>
-						<value>4</value>
+						<property>/controls/it2/apthrmode2</property>
+						<value>2</value>
 					</equals>
 				</visible>
 			</text>
@@ -283,7 +283,7 @@
 				<legend>SPD</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>/controls/it2/apthrset</property>
+				<property>/controls/it2/apthrmode</property>
 				<value>0</value>
 				</binding>
 			</button>
@@ -294,21 +294,20 @@
 				<legend>Mach</legend>
 				<binding>
 				<command>property-assign</command>
-				<property>/controls/it2/apthrset</property>
+				<property>/controls/it2/apthrmode</property>
 				<value>1</value>
 				</binding>
 			</button>
 			
-			<button>
+			<!--button>
 				<row>1</row>
 				<col>1</col>
-				<legend>TOGA</legend>
+				<legend>ARM</legend>
 				<binding>
-				<command>property-assign</command>
-				<property>/controls/it2/apthrset</property>
-				<value>2</value>
+				<command>property-toggle</command>
+				<property>/controls/it2/at-arm</property>
 				</binding>
-			</button>
+			</button-->
 		</group>
 
 		<group>
@@ -809,7 +808,7 @@
 			<input>
 				<row>0</row>
 				<col>3</col>
-                <pref-width>45</pref-width>
+                <pref-width>55</pref-width>
 				<property>/autopilot/settings/vertical-speed-fpm</property>
 				<live type="bool">true</live>
 				<binding>
