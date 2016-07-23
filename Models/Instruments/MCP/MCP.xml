@@ -378,7 +378,7 @@
 				<property>/it-autoflight/fd_master</property>
 			</binding>
 		</action>
-	</animation-->
+	</animation>
 	<animation>
 		<name>Flight director button light</name>
 		<type>select</type>
