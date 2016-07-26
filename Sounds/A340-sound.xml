@@ -2,7 +2,6 @@
     <!-- cockpit x=22.5 y=0 z=0.78 -->
     <fx>
 	
-	
   <apoff>
    <name>apoff</name>
    <path>/Aircraft/A340-600VIP/Sounds/apoff.wav</path>
@@ -10,7 +9,7 @@
      <property>/it-autoflight/apoffsound</property>
    </condition>
    <volume>
-    <factor>10.0</factor>
+    <factor>40.0</factor>
    </volume>
   </apoff>
 	
