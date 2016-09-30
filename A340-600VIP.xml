@@ -29,10 +29,10 @@ Leading edge MAC = -3.132V
 
 
 <approach speed="132" alt="0.0" aoa="5.0" fuel="0.2" glide-angle="0.0">
-      <control-setting axis="/controls/engines/engine[0]/throttle-act" value="0.25"/>
-      <control-setting axis="/controls/engines/engine[1]/throttle-act" value="0.25"/>
-	  <control-setting axis="/controls/engines/engine[2]/throttle-act" value="0.25"/>
-      <control-setting axis="/controls/engines/engine[3]/throttle-act" value="0.25"/>
+      <control-setting axis="/controls/engines/engine[0]/throttle-fdm" value="0.25"/>
+      <control-setting axis="/controls/engines/engine[1]/throttle-fdm" value="0.25"/>
+	  <control-setting axis="/controls/engines/engine[2]/throttle-fdm" value="0.25"/>
+      <control-setting axis="/controls/engines/engine[3]/throttle-fdm" value="0.25"/>
       <control-setting axis="/controls/flight/flaps" value="1"/>
       <control-setting axis="/surface-positions/slats" value="1"/>
       <control-setting axis="/controls/gear/gear-down" value="1"/>
@@ -43,10 +43,10 @@ Leading edge MAC = -3.132V
 
 <!-- Cruise configuration -->
 <cruise speed="500" alt="35000" fuel="0.7">
-  <control-setting axis="/controls/engines/engine[0]/throttle-lever" value="0.75"/>
-  <control-setting axis="/controls/engines/engine[1]/throttle-lever" value="0.75"/>
-<control-setting axis="/controls/engines/engine[2]/throttle-lever" value="0.75"/>
-<control-setting axis="/controls/engines/engine[3]/throttle-lever" value="0.75"/>
+  <control-setting axis="/controls/engines/engine[0]/throttle-fdm" value="0.75"/>
+  <control-setting axis="/controls/engines/engine[1]/throttle-fdm" value="0.75"/>
+<control-setting axis="/controls/engines/engine[2]/throttle-fdm" value="0.75"/>
+<control-setting axis="/controls/engines/engine[3]/throttle-fdm" value="0.75"/>
   <control-setting axis="/controls/flight/flaps" value="0.0"/>
   <control-setting axis="/controls/gear/gear-down" value="0"/>
 <solve-weight idx="0" weight="350"/>
@@ -147,7 +147,7 @@ Leading edge MAC = -3.132V
 
 <jet x="2.16" y="19.89"  z="-1.995" mass="10660" thrust="65000" spool-time="3"
 egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
-  <control-input axis="/controls/engines/engine[0]/throttle-lever" control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[0]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST"/>
     <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[0]"/>
@@ -158,7 +158,7 @@ egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
 
 <jet x="8.16" y="9.89"  z="-2.995" mass="10660" thrust="65000" spool-time="3"
 egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
-  <control-input axis="/controls/engines/engine[1]/throttle-lever" control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[1]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
     <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[1]"/>
@@ -168,7 +168,7 @@ egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
 
 <jet x="8.16" y="-9.89"  z="-2.995" mass="10660" thrust="65000"  spool-time="3"
 egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
-  <control-input axis="/controls/engines/engine[2]/throttle-lever" control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[2]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[2]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[2]/reverser" control="REVERSE_THRUST"/>
     <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[2]"/>
@@ -179,7 +179,7 @@ egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
 
 <jet x="2.16" y="-19.89"  z="-1.995" mass="10660" thrust="65000"  spool-time="3"
 egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
-  <control-input axis="/controls/engines/engine[3]/throttle-lever" control="THROTTLE"/>
+  <control-input axis="/controls/engines/engine[3]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[3]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[3]/reverser" control="REVERSE_THRUST"/>
     <control-output control="REVERSE_THRUST" prop="/surface-positions/reverser-norm[3]"/>
