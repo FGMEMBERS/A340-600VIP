@@ -146,7 +146,7 @@ Leading edge MAC = -3.132V
 <!-- Engines -->
 
 <jet x="2.16" y="19.89"  z="-1.995" mass="10660" thrust="65000" spool-time="3"
-egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
+egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[0]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[0]/reverser" control="REVERSE_THRUST"/>
@@ -157,7 +157,7 @@ egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
 
 
 <jet x="8.16" y="9.89"  z="-2.995" mass="10660" thrust="65000" spool-time="3"
-egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
+egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[1]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[1]/reverser" control="REVERSE_THRUST"/>
@@ -167,7 +167,7 @@ egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
 </jet>
 
 <jet x="8.16" y="-9.89"  z="-2.995" mass="10660" thrust="65000"  spool-time="3"
-egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
+egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[2]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[2]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[2]/reverser" control="REVERSE_THRUST"/>
@@ -178,7 +178,7 @@ egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
 
 
 <jet x="2.16" y="-19.89"  z="-1.995" mass="10660" thrust="65000"  spool-time="3"
-egt="840" tsfc="0.235" n1-idle="45" n1-max="105" n2-idle="70" n2-max="108">
+egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[3]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[3]/mixture" control="MIXTURE"/>
   <control-input axis="/controls/engines/engine[3]/reverser" control="REVERSE_THRUST"/>
