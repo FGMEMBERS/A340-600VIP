@@ -130,23 +130,6 @@
         </view>
 
 	  <view n="100">
-	    <name>Wing right</name>
-	    <type>lookfrom</type>
-	    <internal archive="y">false</internal>
-	    <config>
-	      <from-model type="bool">true</from-model>
-	      <from-model-idx type="int">0</from-model-idx>
-	      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
-	      <default-field-of-view-deg type="double">118</default-field-of-view-deg>
-	      <pitch-offset-deg>-8.0</pitch-offset-deg>
-	      <heading-offset-deg type="double">270</heading-offset-deg> <!-- parallel to the panel -->
-	      <x-offset-m archive="y"> 3.50 </x-offset-m> <!--Left/Right-->
-	      <y-offset-m archive="y"> 1.27 </y-offset-m> <!--Up/Down-->
-	      <z-offset-m archive="y"> 1.27 </z-offset-m> <!--Fdw/Back-->
-	    </config>
-	  </view>
-
-	  <view n="101">
 	   <name>Jump seat</name>
 	   <type>lookfrom</type>
 	   <internal type="bool">true</internal>
@@ -165,7 +148,7 @@
 	   </dynamic>
 	  </view>
 
-	  <view n="102">
+	  <view n="101">
 	   <name>Tail view</name>
 	   <type>lookfrom</type>
 	   <internal type="bool">false</internal>
@@ -184,7 +167,7 @@
 	   </dynamic>
 	  </view>
 
-	  <view n="103">
+	  <view n="102">
 	   <name>Economy class view</name>
         <type>lookfrom</type>
         <internal archive="y">true</internal>
@@ -196,7 +179,7 @@
         </config>
 	  </view>
 
-	<view n="104">
+	<view n="103">
 	   <name>Gear view</name>
 	   <type>lookfrom</type>
 	   <internal type="bool">false</internal>
@@ -216,7 +199,7 @@
 	  </view>
 
 
-	<view n="105">
+	<view n="104">
            <name>Copilot seat</name>
 	   <type>lookfrom</type>
 	   <internal type="bool">true</internal>
@@ -241,8 +224,8 @@
 	   </dynamic>
 	  </view>
 
-     <view n="106">
-	    <name>Wing left</name>
+     <view n="105">
+	    <name>Wing Left</name>
 	    <type>lookfrom</type>
 	    <internal archive="y">false</internal>
 	    <config>
@@ -251,8 +234,25 @@
 	      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
 	      <default-field-of-view-deg type="double">118</default-field-of-view-deg>
 	      <pitch-offset-deg>-8.0</pitch-offset-deg>
-	      <heading-offset-deg type="double">70</heading-offset-deg> <!-- parallel to the panel -->
+	      <heading-offset-deg type="double">90</heading-offset-deg> <!-- parallel to the panel -->
 	      <x-offset-m archive="y"> -3.50 </x-offset-m> <!--Left/Right-->
+	      <y-offset-m archive="y"> 1.27 </y-offset-m> <!--Up/Down-->
+	      <z-offset-m archive="y"> 1.27 </z-offset-m> <!--Fdw/Back-->
+	    </config>
+	  </view>
+	  
+	  <view n="106">
+	    <name>Wing Right</name>
+	    <type>lookfrom</type>
+	    <internal archive="y">false</internal>
+	    <config>
+	      <from-model type="bool">true</from-model>
+	      <from-model-idx type="int">0</from-model-idx>
+	      <ground-level-nearplane-m type="double">0.01f</ground-level-nearplane-m>
+	      <default-field-of-view-deg type="double">118</default-field-of-view-deg>
+	      <pitch-offset-deg>-8.0</pitch-offset-deg>
+	      <heading-offset-deg type="double">270</heading-offset-deg> <!-- parallel to the panel -->
+	      <x-offset-m archive="y"> 3.50 </x-offset-m> <!--Left/Right-->
 	      <y-offset-m archive="y"> 1.27 </y-offset-m> <!--Up/Down-->
 	      <z-offset-m archive="y"> 1.27 </z-offset-m> <!--Fdw/Back-->
 	    </config>
