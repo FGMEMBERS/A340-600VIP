@@ -305,7 +305,7 @@ Pre-departure:
    Taxi away from the terminal with a Pushback truck
 
 Departure:
-2. Select 411Workshop/Autostart (or hold s)
+2. Select A340-600VIP/Autostart (or hold s)
 3. set your flaps
 4. Release the parking brakes
 5. Apply throttle gently, until at full throttle
@@ -315,7 +315,7 @@ Departure:
 
 Captain Notes:
 - Never reverse from terminal without aid from a pushback. It should be used until the aircraft is on the taxiway.
-- The 411Workshop is a heavy aircraft, and may take some getting used to the controls.
+- The A340-600VIP is a heavy aircraft, and may take some getting used to the controls.
 - Ensure you allow enough room to manoeuvre around the airport, given that it is a long aircraft.
 - There are risks of overrunning the runway apron upon landing and takeoff, aswell as overrunning the taxiway corners in the A340. In wet conditions especially take care and ensure that the correct speed guidelines and height are maintained.
 
@@ -463,7 +463,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
                 <float n="1" alias="/gear/gear[1]/compression-m"/>
                 <float n="2" alias="/gear/gear[2]/compression-m"/>
                 <float n="3" alias="/gear/gear[3]/compression-m"/>
-                <float n="4" alias="/gear/gear[4]/compression-m"/>
+                <!--float n="4" alias="unused"/-->
                 <float n="5" alias="/surface-positions/speedbrake-norm"/>
                 <float n="6" alias="/surface-positions/reverser-norm"/>
 				<float n="7" alias="/gear/gear[0]/rollspeed-ms"/>
