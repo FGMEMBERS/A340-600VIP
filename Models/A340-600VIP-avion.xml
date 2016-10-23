@@ -902,7 +902,7 @@ Liam Gathercole, Andino
     <animation>
         <type>rotate</type>
         <object-name>mid_gear</object-name>
-        <property>gear/gear[0]/position-norm</property>
+        <property>gear/gear[3]/position-norm</property>
         <interpolation>
             <entry>
                 <ind>0</ind>

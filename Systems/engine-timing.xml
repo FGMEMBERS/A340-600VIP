@@ -3,6 +3,82 @@
 <PropertyList>
 
     <filter>
+        <name>EPR 1</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[0]/n1</property> 
+                    <entry><ind>    0</ind><dep>1.00</dep></entry>
+                    <entry><ind>   27</ind><dep>1.01</dep></entry>
+                    <entry><ind>   35</ind><dep>1.03</dep></entry>
+                    <entry><ind>105.0</ind><dep>1.36</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[0]/epr-actual</output>
+    </filter>
+	
+    <filter>
+        <name>EPR 2</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[1]/n1</property> 
+                    <entry><ind>    0</ind><dep>1.00</dep></entry>
+                    <entry><ind>   27</ind><dep>1.01</dep></entry>
+                    <entry><ind>   35</ind><dep>1.03</dep></entry>
+                    <entry><ind>105.0</ind><dep>1.36</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[1]/epr-actual</output>
+    </filter>
+	
+    <filter>
+        <name>EPR 3</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[2]/n1</property> 
+                    <entry><ind>    0</ind><dep>1.00</dep></entry>
+                    <entry><ind>   27</ind><dep>1.01</dep></entry>
+                    <entry><ind>   35</ind><dep>1.03</dep></entry>
+                    <entry><ind>105.0</ind><dep>1.36</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[2]/epr-actual</output>
+    </filter>
+	
+    <filter>
+        <name>EPR 4</name>
+        <type>gain</type>
+        <gain>1</gain>
+        <update-interval-secs type="double">0.05</update-interval-secs>
+        <input> 
+            <expression>
+                <table>
+                    <property>/engines/engine[3]/n1</property> 
+                    <entry><ind>    0</ind><dep>1.00</dep></entry>
+                    <entry><ind>   27</ind><dep>1.01</dep></entry>
+                    <entry><ind>   35</ind><dep>1.03</dep></entry>
+                    <entry><ind>105.0</ind><dep>1.36</dep></entry>
+                </table>
+            </expression>
+        </input>
+		<output>/engines/engine[3]/epr-actual</output>
+    </filter>
+
+    <filter>
         <name>EGT 1</name>
         <type>gain</type>
         <gain>1</gain>
