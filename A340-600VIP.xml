@@ -205,7 +205,7 @@ egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-speed control="EXTEND" transition-time="7"/>
 </gear>
 
-<gear x="-2.39" y="5.6" z="-5.7" compression="0.8" spring="1.0" >
+<gear x="-2.39" y="5.6" z="-5.7" compression="0.8" spring="0.6" >
   <control-input axis="/controls/gear/brake-left" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -213,7 +213,7 @@ egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-speed control="EXTEND" transition-time="7"/>
 </gear>
 
-<gear x="-2.39" y="-5.6" z="-5.7" compression="0.8" spring="1.0">
+<gear x="-2.39" y="-5.6" z="-5.7" compression="0.8" spring="0.6">
   <control-input axis="/controls/gear/brake-right" control="BRAKE"/>
   <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
@@ -221,7 +221,7 @@ egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-speed control="EXTEND" transition-time="7"/>
 </gear>
 
-<gear x="-3.8" y="0" z="-5.65" compression="0.8" spring="1.0">
+<gear x="-3.8" y="0" z="-5.65" compression="0.8" spring="0.6">
   <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
   <control-output control="EXTEND" prop="/gear/gear[3]/position-norm"/>
