@@ -78,13 +78,13 @@
 			<kp-vorloc>0.10</kp-vorloc>
 		</roll>
 		<pitch>
-			<umin>-0.20</umin>
-			<umax>0.20</umax>
+			<umin>-0.30</umin>
+			<umax>0.30</umax>
 			<kp>-0.09</kp>
 		</pitch>
 		<flch>
-			<umin>-0.20</umin>
-			<umax>0.20</umax>
+			<umin>-0.30</umin>
+			<umax>0.30</umax>
 			<kp>-0.09</kp>
 		</flch>
 		<gs>
@@ -464,7 +464,55 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 			</script>
 			</binding>
 			</item>
-
+			
+			
+			<item>
+			<name>fbw_normal</name>
+			<label>Use NORMAL Law</label>
+			<binding>
+			<command>nasal</command>
+			<script>
+			setprop("/it-fbw/law", "NORMAL");
+			gui.popupTip("Fly By Wire switched to NORMAL law!");
+			</script>
+			</binding>
+			</item>
+			
+			<item>
+			<name>fbw_alternate</name>
+			<label>Use ALTERNATE Law</label>
+			<binding>
+			<command>nasal</command>
+			<script>
+			setprop("/it-fbw/law", "ALTERNATE");
+			gui.popupTip("Fly By Wire switched to ALTERNATE law!");
+			</script>
+			</binding>
+			</item>
+			
+			<item>
+			<name>fbw_direct</name>
+			<label>Use DIRECT Law</label>
+			<binding>
+			<command>nasal</command>
+			<script>
+			setprop("/it-fbw/law", "DIRECT");
+			gui.popupTip("Fly By Wire switched to DIRECT law!");
+			</script>
+			</binding>
+			</item>
+			
+			<item>
+			<name>fbw_backup</name>
+			<label>Use BACKUP Law</label>
+			<binding>
+			<command>nasal</command>
+			<script>
+			setprop("/it-fbw/law", "BACKUP");
+			gui.popupTip("Fly By Wire switched to MECHANICAL BACKUP law!");
+			</script>
+			</binding>
+			</item>
 
 
                 </menu>
@@ -549,6 +597,10 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
                 <name>Custom engine values system</name>
                 <path>Aircraft/A340-600VIP/Systems/engine-timing.xml</path>
             </autopilot>
+            <autopilot>
+                <name>FBW</name>
+                <path>Aircraft/A340-600VIP/Systems/it-fbw.xml</path>
+            </autopilot>
 
             <!--  slow running property-rules (running at frame rate) -->
             <property-rule n="100">
@@ -586,6 +638,17 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
         <virtual-cockpit>true</virtual-cockpit>
         <allow-toggle-cockpit>true</allow-toggle-cockpit>
     </sim>
+	
+	<it-fbw>
+		<roll-deg>0</roll-deg>
+		<pitch-deg>0</pitch-deg>
+		<octal-roll>1</octal-roll>
+		<octal-pitch>1</octal-pitch>
+	</it-fbw>
+	
+	<position>
+		<gear-agl-ft>0</gear-agl-ft>
+	</position>
 
     <engines n="0">
         <engine n="0">
@@ -974,6 +1037,9 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 		<thrust>
 			<file>Aircraft/A340-600VIP/Nasal/thrust.nas</file>
 		</thrust>
+		<fbw>
+			<file>Aircraft/A340-600VIP/Nasal/it-fbw.nas</file>
+		</fbw>
         <!--cdu>
             <file>Aircraft/Instruments-3d/cdu/boeing.nas</file>
         </cdu-->

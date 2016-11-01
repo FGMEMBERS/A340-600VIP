@@ -104,7 +104,7 @@ Leading edge MAC = -3.132V
 <control-output control="SPOILER" prop="/surface-positions/speedbrake-norm"/>
   <control-speed control="SPOILER" transition-time="5"/>
 
-    <control-input axis="/controls/flight/aileron" control="FLAP1" split="true"/>
+    <control-input axis="/controls/flight/aileron-fbw" control="FLAP1" split="true"/>
   <control-input axis="/controls/flight/aileron-trim" control="FLAP1" split="true"/>
   <control-output control="FLAP1" side="left"
 		  prop="/surface-positions/left-aileron-pos-norm"/>
@@ -117,7 +117,7 @@ Leading edge MAC = -3.132V
        sweep="28" dihedral="7">
   <stall aoa="15" width="2" peak="1.5"/>
   <flap0 start="0" end="1" lift="1.4" drag="1.2"/>
-  <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+  <control-input axis="/controls/flight/elevator-fbw" control="FLAP0"/>
   <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
   <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
 </hstab>
@@ -127,7 +127,7 @@ Leading edge MAC = -3.132V
        sweep="28" dihedral="7">
   <stall aoa="15" width="2" peak="1.5"/>
   <flap0 start="0" end="1" lift="1.4" drag="1.2"/>
-  <control-input axis="/controls/flight/elevator" control="FLAP0"/>
+  <control-input axis="/controls/flight/elevator-fbw" control="FLAP0"/>
   <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
   <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
 </hstab-->
