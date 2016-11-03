@@ -93,6 +93,15 @@
 	</settings>
 </it-autoflight>
 
+	<it-fbw>
+		<roll-deg>0</roll-deg>
+		<pitch-deg>0</pitch-deg>
+	</it-fbw>
+	
+	<position>
+		<gear-agl-ft>0</gear-agl-ft>
+	</position>
+
     <!--consumables n="0">
         <fuel n="0">
             <tank n="3"><name>Rear A</name></tank>
@@ -145,9 +154,9 @@
             <internal archive="y">true</internal>
             <config>
                 <x-offset-m type="double">-0.50</x-offset-m>
-                <y-offset-m type="double">0.25</y-offset-m>
+                <y-offset-m type="double">0.14</y-offset-m>
                 <z-offset-m type="double">-34.60</z-offset-m>
-                <pitch-offset-deg>-13.5</pitch-offset-deg>
+                <pitch-offset-deg>-8</pitch-offset-deg>
                 <limits>
                     <enabled type="bool">true</enabled> 
                 </limits>
@@ -233,7 +242,7 @@
 	    <from-model-idx type="int">0</from-model-idx>
 	    <ground-level-nearplane-m type="double">6f</ground-level-nearplane-m>
 		        <x-offset-m type="double">0.45</x-offset-m>
-		        <y-offset-m type="double">0.28</y-offset-m>
+		        <y-offset-m type="double">0.14</y-offset-m>
 		        <z-offset-m type="double">-34.54</z-offset-m>
 
 
@@ -241,7 +250,7 @@
 
 
 
-	    <pitch-offset-deg>-10</pitch-offset-deg>
+	    <pitch-offset-deg>-8</pitch-offset-deg>
 	    <default-field-of-view-deg type="double">65.0</default-field-of-view-deg>
 	   </config>
 	   <dynamic>
@@ -612,6 +621,9 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 			<property-rule n="102">	
 				<path>Systems/fl2070_sound.xml</path>
 			</property-rule>
+			<property-rule n="103">	
+				<path>Systems/pfd.xml</path>
+			</property-rule>
         </systems>
 
         <instrumentation>
@@ -639,16 +651,19 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
         <allow-toggle-cockpit>true</allow-toggle-cockpit>
     </sim>
 	
-	<it-fbw>
-		<roll-deg>0</roll-deg>
-		<pitch-deg>0</pitch-deg>
-		<octal-roll>1</octal-roll>
-		<octal-pitch>1</octal-pitch>
-	</it-fbw>
-	
-	<position>
-		<gear-agl-ft>0</gear-agl-ft>
-	</position>
+	<modes>
+		<altimeter>
+			<inhg>0</inhg>
+		</altimeter>
+		<pfd>
+			<minimums-mode>DH</minimums-mode>
+			<ILS1>false</ILS1>
+			<ILS2>false</ILS2>
+			<fma>
+				<athr-box>O  </athr-box>
+			</fma>
+		</pfd>
+	</modes>
 
     <engines n="0">
         <engine n="0">
@@ -1013,6 +1028,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 			<file>Aircraft/A340-600VIP/Nasal/mCDU/user.nas</file>
 		</mcdu>
         <a340>
+            <file>Aircraft/Generic/limits.nas</file>
             <file>Aircraft/A340-600VIP/Nasal/Electrical.nas</file>
             <file>Aircraft/A340-600VIP/Nasal/systems.nas</file>
             <file>Aircraft/A340-600VIP/Nasal/tyresmoke.nas</file>
@@ -1022,11 +1038,9 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
             <file>Aircraft/A340-600VIP/Nasal/ground_steering.nas</file>
 			<file>Aircraft/A340-600VIP/Nasal/ground-services.nas</file>
 			<file>Aircraft/A340-600VIP/Nasal/fuel-dump.nas</file>
-			<!--file>Aircraft/A340-600VIP/Nasal/terrainmap.nas</file-->
-			<!--file>Aircraft/A340-600VIP/Nasal/terrain-map.nas</file-->
-            <file>Aircraft/Generic/limits.nas</file>
 			<file>Aircraft/A340-600VIP/Models/Instruments/ND/ND.nas</file>
 			<file>Aircraft/A340-600VIP/Nasal/efis.nas</file>
+			<file>Aircraft/A340-600VIP/Nasal/PFD_FMA.nas</file>
         </a340>
 		<itaf>
 			<file>Aircraft/A340-600VIP/Nasal/it-autoflight.nas</file>
@@ -1040,9 +1054,6 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 		<fbw>
 			<file>Aircraft/A340-600VIP/Nasal/it-fbw.nas</file>
 		</fbw>
-        <!--cdu>
-            <file>Aircraft/Instruments-3d/cdu/boeing.nas</file>
-        </cdu-->
     </nasal>
 
     <limits n="0">

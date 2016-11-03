@@ -5,7 +5,7 @@
 <PropertyList>
 
  <!-- =============================================================== -->
- <!-- Lateral  Modes                                                  -->
+ <!-- Lateral                                                         -->
  <!-- =============================================================== -->
 	
 	<pid-controller>
@@ -72,6 +72,10 @@
 						<property>/it-autoflight/ap_master2</property>
 						<value>0</value>
 					</equals>
+					<greater-than>
+						<property>/position/gear-agl-ft</property>
+						<value>1</value>
+					</greater-than>
 					<or>
 						<equals>
 							<property>/it-fbw/law</property>
@@ -97,6 +101,10 @@
 						<property>/it-autoflight/ap_master2</property>
 						<value>1</value>
 					</equals>
+					<less-than-equals>
+						<property>/position/gear-agl-ft</property>
+						<value>1</value>
+					</less-than-equals>
 					<equals>
 						<property>/it-fbw/law</property>
 						<value>DIRECT</value>
@@ -120,7 +128,7 @@
 	</filter>
 	
  <!-- =============================================================== -->
- <!-- Vertical Modes                                                  -->
+ <!-- Vertical                                                        -->
  <!-- =============================================================== -->
 	
 	<pid-controller>
@@ -160,12 +168,12 @@
 			<property>/controls/flight/elevator-fbw-cmd</property>
 		</output>
 		<config>
-			<Kp>-0.10</Kp>
+			<Kp>-0.12</Kp>
 			<beta>1.0</beta>	
 			<alpha>0.1</alpha>	
 			<gamma>0.0</gamma>	
 			<Ti>10</Ti>        	
-			<Td>0.001</Td>     	
+			<Td>0.0001</Td>     	
 			<u_min>-1</u_min>
 			<u_max>1</u_max>
 		</config>
@@ -189,7 +197,7 @@
 					</equals>
 					<greater-than>
 						<property>/position/gear-agl-ft</property>
-						<value>50</value>
+						<value>1</value>
 					</greater-than>
 					<or>
 						<equals>
@@ -218,7 +226,7 @@
 					</equals>
 					<less-than-equals>
 						<property>/position/gear-agl-ft</property>
-						<value>50</value>
+						<value>1</value>
 					</less-than-equals>
 					<equals>
 						<property>/it-fbw/law</property>
