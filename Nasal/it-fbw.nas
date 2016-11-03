@@ -1,4 +1,5 @@
 # A340 FBW System by Joshua Davidson (it0uchpods/411)
+# V0.6
 
 var roll_input = func {
 
