@@ -17,7 +17,7 @@
 
 <!-- Shadow -->
 
-  <!--model>
+  <model>
     <name>shadowOSG</name>
     <path>Aircraft/A340-600VIP/Models/shadow.xml</path>
  <offsets>
@@ -37,7 +37,8 @@
         <value>true</value>
       </equals>
     </condition>
-  </animation-->
+  </animation>
+
 
 <!-- Airport Operations -->
 

@@ -1028,7 +1028,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 			<file>Aircraft/A340-600VIP/Nasal/mCDU/user.nas</file>
 		</mcdu>
         <a340>
-            <file>Aircraft/Generic/limits.nas</file>
+            <file>Aircraft/A340-600VIP/limits.nas</file>
             <file>Aircraft/A340-600VIP/Nasal/Electrical.nas</file>
             <file>Aircraft/A340-600VIP/Nasal/systems.nas</file>
             <file>Aircraft/A340-600VIP/Nasal/tyresmoke.nas</file>
@@ -1036,12 +1036,12 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
             <file>Aircraft/A340-600VIP/Nasal/warnsystem.nas</file>
             <file>Aircraft/A340-600VIP/Nasal/brakesystem.nas</file>
             <file>Aircraft/A340-600VIP/Nasal/ground_steering.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/ground-services.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/fuel-dump.nas</file>
-			<file>Aircraft/A340-600VIP/Models/Instruments/ND/ND.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/efis.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/PFD_FMA.nas</file>
-        </a340>
+	    <file>Aircraft/A340-600VIP/Nasal/ground-services.nas</file>
+	    <file>Aircraft/A340-600VIP/Nasal/fuel-dump.nas</file>
+	    <file>Aircraft/A340-600VIP/Models/Instruments/ND/ND.nas</file>
+	    <file>Aircraft/A340-600VIP/Nasal/efis.nas</file>
+	    <file>Aircraft/A340-600VIP/Nasal/PFD_FMA.nas</file>
+         </a340>
 		<itaf>
 			<file>Aircraft/A340-600VIP/Nasal/it-autoflight.nas</file>
 		</itaf>
