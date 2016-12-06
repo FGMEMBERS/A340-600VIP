@@ -1533,6 +1533,29 @@
         </font-resolution>
     </text>
 	
+	<text>
+        <name>athr-afloor-fma</name>
+        <offsets>
+            <x-m>0.00091828</x-m>
+            <y-m>-0.0546226</y-m>
+            <z-m>0.0630781</z-m>
+        </offsets>
+        <alignment>center-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">AFLOOR</format>
+		<property>autopilot/serviceable</property>
+        <font type="string">helvetica_medium.txf</font>
+        <draw-text type="bool">true</draw-text>
+        <draw-alignment type="bool">false</draw-alignment>
+        <draw-boundingbox type="bool">false</draw-boundingbox>
+        <character-size>0.0055</character-size>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+	
     <text>
         <name>athr-box-fma</name>
         <offsets>
@@ -1598,7 +1621,23 @@
 					</equals>
 					<equals>
 						<property>/systems/thrust/state4</property>
-						<value>MCT</value>
+						<value>AFLOOR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state1</property>
+						<value>AFLOOR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state2</property>
+						<value>AFLOOR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>AFLOOR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>AFLOOR</value>
 					</equals>
 				</or>
 			</and>
@@ -1677,6 +1716,69 @@
 					<equals>
 						<property>/systems/thrust/state4</property>
 						<value>MCT</value>
+					</equals>
+				</or>
+			</and>
+        </condition>
+    </animation>
+	
+	    <animation>
+        <type>select</type>
+        <object-name>athr-afloor-fma</object-name>
+        <condition>
+			<and>
+				<equals>
+					<property>/it-autoflight/at_master</property>
+					<value>1</value>
+				</equals>
+				<not-equals>
+					<property>/systems/thrust/state1</property>
+					<value>TOGA</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state2</property>
+					<value>TOGA</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state3</property>
+					<value>TOGA</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state4</property>
+					<value>TOGA</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state1</property>
+					<value>MCT</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state2</property>
+					<value>MCT</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state3</property>
+					<value>MCT</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state4</property>
+					<value>MCT</value>
+				</not-equals>
+				<or>
+					<equals>
+						<property>/systems/thrust/state1</property>
+						<value>AFLOOR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state2</property>
+						<value>AFLOOR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>AFLOOR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>AFLOOR</value>
 					</equals>
 				</or>
 			</and>
@@ -1856,6 +1958,7 @@
 		<object-name>athr-man-fma</object-name>
 		<object-name>athr-toga-fma</object-name>
 		<object-name>athr-mct-fma</object-name>
+		<object-name>athr-afloor-fma</object-name>
 		<object-name>athr-box-fma</object-name>
 		<object-name>athr-lvrclb-fma</object-name>
 		<object-name>vs-num</object-name>

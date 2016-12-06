@@ -93,6 +93,10 @@
 						<property>/systems/thrust/state1</property>
 						<value>IDLE</value>
 					</equals>
+					<equals>
+						<property>/systems/thrust/state1</property>
+						<value>AFLOOR</value>
+					</equals>
 				</or>
 			</condition>
 		</enable>
@@ -141,6 +145,21 @@
 				</and>
 			</condition>
 			<property>/controls/engines/engine[0]/throttle-cmd</property>
+		</input>
+				<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/systems/thrust/state1</property>
+						<value>AFLOOR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state1</property>
+						<value>TOGALK</value>
+					</equals>
+				</or>
+			</condition>
+			<property>/controls/engines/engine[0]/throttle-lk</property>
 		</input>
 		<output>
 			<property>/controls/engines/engine[0]/throttle-fdm</property>
@@ -235,6 +254,10 @@
 						<property>/systems/thrust/state2</property>
 						<value>IDLE</value>
 					</equals>
+					<equals>
+						<property>/systems/thrust/state2</property>
+						<value>AFLOOR</value>
+					</equals>
 				</or>
 			</condition>
 		</enable>
@@ -283,6 +306,21 @@
 				</and>
 			</condition>
 			<property>/controls/engines/engine[1]/throttle-cmd</property>
+		</input>
+				<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/systems/thrust/state2</property>
+						<value>AFLOOR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state2</property>
+						<value>TOGALK</value>
+					</equals>
+				</or>
+			</condition>
+			<property>/controls/engines/engine[0]/throttle-lk</property>
 		</input>
 		<output>
 			<property>/controls/engines/engine[1]/throttle-fdm</property>
@@ -362,7 +400,7 @@
 		<debug>false</debug>
 		<feedback-if-disabled>true</feedback-if-disabled>
 		<initialize-to>output</initialize-to>
-		<enable>
+				<enable>
 			<condition>
 				<or>
 					<equals>
@@ -376,6 +414,10 @@
 					<equals>
 						<property>/systems/thrust/state3</property>
 						<value>IDLE</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>AFLOOR</value>
 					</equals>
 				</or>
 			</condition>
@@ -425,6 +467,21 @@
 				</and>
 			</condition>
 			<property>/controls/engines/engine[2]/throttle-cmd</property>
+		</input>
+				<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>AFLOOR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>TOGALK</value>
+					</equals>
+				</or>
+			</condition>
+			<property>/controls/engines/engine[0]/throttle-lk</property>
 		</input>
 		<output>
 			<property>/controls/engines/engine[2]/throttle-fdm</property>
@@ -519,6 +576,10 @@
 						<property>/systems/thrust/state4</property>
 						<value>IDLE</value>
 					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>AFLOOR</value>
+					</equals>
 				</or>
 			</condition>
 		</enable>
@@ -567,6 +628,21 @@
 				</and>
 			</condition>
 			<property>/controls/engines/engine[3]/throttle-cmd</property>
+		</input>
+				<input>
+			<condition>
+				<or>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>AFLOOR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>TOGALK</value>
+					</equals>
+				</or>
+			</condition>
+			<property>/controls/engines/engine[0]/throttle-lk</property>
 		</input>
 		<output>
 			<property>/controls/engines/engine[3]/throttle-fdm</property>
