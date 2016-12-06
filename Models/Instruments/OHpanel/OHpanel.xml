@@ -108,7 +108,7 @@
 		<object-name>LdgElevKnb</object-name>
 		<object-name>LeftRainRPLNT</object-name>
 		<object-name>LeftWiperKnb</object-name>
-		<object-name>Markings</object-name>
+		<!--object-name>Markings</object-name-->
 		<object-name>MidCall</object-name>
 		<object-name>NavLogoLtSwtch</object-name>
 		<object-name>NoSmokingSwtch</object-name>
@@ -179,7 +179,7 @@
 			</or>
 		</condition>
 	</animation>
-	<animation>
+	<!--animation>
 		<name>Panel no lighting select</name>
 		<type>select</type>
 		<object-name>Markings</object-name>
@@ -207,7 +207,7 @@
 				</and>
 			</or>
 		</condition>
-	</animation>
+	</animation-->
 	<animation>
 		<name>Panel lighting</name>
 		<type>material</type>
