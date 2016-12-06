@@ -3,7 +3,7 @@
 
 var roll_input = func {
 
-	if (getprop("/it-autoflight/ap_master") == 0 and getprop("/it-autoflight/ap_master2") == 0) {
+	if (getprop("/it-autoflight/output/ap1") == 0 and getprop("/it-autoflight/output/ap2") == 0) {
 		var ail = getprop("/controls/flight/aileron");
 		
 		if (ail >= 0.1 and ail < 0.2) {
@@ -74,7 +74,7 @@ var roll_input = func {
 
 var pitch_input = func {
 
-	if (getprop("/it-autoflight/ap_master") == 0 and getprop("/it-autoflight/ap_master2") == 0) {
+	if (getprop("/it-autoflight/output/ap1") == 0 and getprop("/it-autoflight/output/ap2") == 0) {
 		var elev = getprop("/controls/flight/elevator");
 		
 		if (elev >= 0.1 and elev < 0.2) {
@@ -138,14 +138,14 @@ var pitch_input = func {
     settimer(pitch_input, 0.01);
 }
 
-setlistener("/it-autoflight/ap_master", func {
-	if (getprop("/it-autoflight/ap_master") == 0) {
+setlistener("/it-autoflight/output/ap1", func {
+	if (getprop("/it-autoflight/output/ap1") == 0) {
 		setprop("/it-fbw/roll-deg", getprop("/orientation/roll-deg"));
 	}
 });
 
-setlistener("/it-autoflight/ap_master", func {
-	if (getprop("/it-autoflight/ap_master") == 0) {
+setlistener("/it-autoflight/output/ap2", func {
+	if (getprop("/it-autoflight/output/ap2") == 0) {
 		setprop("/it-fbw/pitch-deg", getprop("/orientation/pitch-deg"));
 	}
 });

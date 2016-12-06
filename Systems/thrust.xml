@@ -104,7 +104,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>0</value>
 					</equals>
 					<or>
@@ -129,7 +129,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
 					</equals>
 					<or>
@@ -179,15 +179,15 @@
 						</equals>
 					</or>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/apthrmode2</property>
+						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/retard</property>
+						<property>/it-autoflight/output/retard</property>
 						<value>0</value>
 					</equals>
 				</and>
@@ -208,15 +208,15 @@
 						</equals>
 					</or>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
 					</equals>
 					<not-equals>
-						<property>/it-autoflight/apthrmode2</property>
+						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
 					</not-equals>
 					<equals>
-						<property>/it-autoflight/retard</property>
+						<property>/it-autoflight/output/retard</property>
 						<value>0</value>
 					</equals>
 				</and>
@@ -226,7 +226,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/at_master</property>
+					<property>/it-autoflight/output/athr</property>
 					<value>0</value>
 				</equals>
 			</condition>
@@ -265,7 +265,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>0</value>
 					</equals>
 					<or>
@@ -290,7 +290,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
 					</equals>
 					<or>
@@ -340,15 +340,15 @@
 						</equals>
 					</or>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/apthrmode2</property>
+						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/retard</property>
+						<property>/it-autoflight/output/retard</property>
 						<value>0</value>
 					</equals>
 				</and>
@@ -369,15 +369,15 @@
 						</equals>
 					</or>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
 					</equals>
 					<not-equals>
-						<property>/it-autoflight/apthrmode2</property>
+						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
 					</not-equals>
 					<equals>
-						<property>/it-autoflight/retard</property>
+						<property>/it-autoflight/output/retard</property>
 						<value>0</value>
 					</equals>
 				</and>
@@ -387,7 +387,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/at_master</property>
+					<property>/it-autoflight/output/athr</property>
 					<value>0</value>
 				</equals>
 			</condition>
@@ -426,7 +426,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>0</value>
 					</equals>
 					<or>
@@ -451,7 +451,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
 					</equals>
 					<or>
@@ -501,15 +501,15 @@
 						</equals>
 					</or>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/apthrmode2</property>
+						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/retard</property>
+						<property>/it-autoflight/output/retard</property>
 						<value>0</value>
 					</equals>
 				</and>
@@ -530,15 +530,15 @@
 						</equals>
 					</or>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
 					</equals>
 					<not-equals>
-						<property>/it-autoflight/apthrmode2</property>
+						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
 					</not-equals>
 					<equals>
-						<property>/it-autoflight/retard</property>
+						<property>/it-autoflight/output/retard</property>
 						<value>0</value>
 					</equals>
 				</and>
@@ -548,7 +548,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/at_master</property>
+					<property>/it-autoflight/output/athr</property>
 					<value>0</value>
 				</equals>
 			</condition>
@@ -587,7 +587,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>0</value>
 					</equals>
 					<or>
@@ -612,7 +612,7 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
 					</equals>
 					<or>
@@ -662,15 +662,15 @@
 						</equals>
 					</or>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/apthrmode2</property>
+						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/retard</property>
+						<property>/it-autoflight/output/retard</property>
 						<value>0</value>
 					</equals>
 				</and>
@@ -691,15 +691,15 @@
 						</equals>
 					</or>
 					<equals>
-						<property>/it-autoflight/at_master</property>
+						<property>/it-autoflight/output/athr</property>
 						<value>1</value>
 					</equals>
 					<not-equals>
-						<property>/it-autoflight/apthrmode2</property>
+						<property>/it-autoflight/output/thr-mode</property>
 						<value>0</value>
 					</not-equals>
 					<equals>
-						<property>/it-autoflight/retard</property>
+						<property>/it-autoflight/output/retard</property>
 						<value>0</value>
 					</equals>
 				</and>
@@ -709,7 +709,7 @@
 		<max-rate-of-change>
 			<condition>
 				<equals>
-					<property>/it-autoflight/at_master</property>
+					<property>/it-autoflight/output/athr</property>
 					<value>0</value>
 				</equals>
 			</condition>
