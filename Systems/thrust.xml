@@ -404,10 +404,28 @@
 		</max-rate-of-change>
 		<max-rate-of-change>
 			<condition>
-				<equals>
-					<property>/it-autoflight/output/athr</property>
-					<value>0</value>
-				</equals>
+				<or>
+					<equals>
+						<property>/it-autoflight/output/athr</property>
+						<value>0</value>
+					</equals>
+					<and>
+						<equals>
+							<property>/it-autoflight/output/athr</property>
+							<value>1</value>
+						</equals>
+						<or>
+							<equals>
+								<property>/systems/thrust/state2</property>
+								<value>AFLOOR</value>
+							</equals>
+							<equals>
+								<property>/systems/thrust/state2</property>
+								<value>TOGALK</value>
+							</equals>
+						</or>
+					</and>
+				</or>
 			</condition>
 			<value>1</value>
 		</max-rate-of-change>
@@ -565,10 +583,28 @@
 		</max-rate-of-change>
 		<max-rate-of-change>
 			<condition>
-				<equals>
-					<property>/it-autoflight/output/athr</property>
-					<value>0</value>
-				</equals>
+				<or>
+					<equals>
+						<property>/it-autoflight/output/athr</property>
+						<value>0</value>
+					</equals>
+					<and>
+						<equals>
+							<property>/it-autoflight/output/athr</property>
+							<value>1</value>
+						</equals>
+						<or>
+							<equals>
+								<property>/systems/thrust/state3</property>
+								<value>AFLOOR</value>
+							</equals>
+							<equals>
+								<property>/systems/thrust/state3</property>
+								<value>TOGALK</value>
+							</equals>
+						</or>
+					</and>
+				</or>
 			</condition>
 			<value>1</value>
 		</max-rate-of-change>
@@ -726,10 +762,28 @@
 		</max-rate-of-change>
 		<max-rate-of-change>
 			<condition>
-				<equals>
-					<property>/it-autoflight/output/athr</property>
-					<value>0</value>
-				</equals>
+				<or>
+					<equals>
+						<property>/it-autoflight/output/athr</property>
+						<value>0</value>
+					</equals>
+					<and>
+						<equals>
+							<property>/it-autoflight/output/athr</property>
+							<value>1</value>
+						</equals>
+						<or>
+							<equals>
+								<property>/systems/thrust/state4</property>
+								<value>AFLOOR</value>
+							</equals>
+							<equals>
+								<property>/systems/thrust/state4</property>
+								<value>TOGALK</value>
+							</equals>
+						</or>
+					</and>
+				</or>
 			</condition>
 			<value>1</value>
 		</max-rate-of-change>
