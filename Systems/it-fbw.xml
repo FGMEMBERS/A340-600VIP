@@ -15,11 +15,11 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/ap_master</property>
+						<property>/it-autoflight/output/ap1</property>
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/ap_master2</property>
+						<property>/it-autoflight/output/ap2</property>
 						<value>0</value>
 					</equals>
 					<or>
@@ -65,11 +65,11 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/ap_master</property>
+						<property>/it-autoflight/output/ap1</property>
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/ap_master2</property>
+						<property>/it-autoflight/output/ap2</property>
 						<value>0</value>
 					</equals>
 					<greater-than>
@@ -94,11 +94,11 @@
 			<condition>
 				<or>
 					<equals>
-						<property>/it-autoflight/ap_master</property>
+						<property>/it-autoflight/output/ap1</property>
 						<value>1</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/ap_master2</property>
+						<property>/it-autoflight/output/ap2</property>
 						<value>1</value>
 					</equals>
 					<less-than-equals>
@@ -138,11 +138,11 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/ap_master</property>
+						<property>/it-autoflight/output/ap1</property>
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/ap_master2</property>
+						<property>/it-autoflight/output/ap2</property>
 						<value>0</value> 
 					</equals>
 					<or>
@@ -188,11 +188,11 @@
 			<condition>
 				<and>
 					<equals>
-						<property>/it-autoflight/ap_master</property>
+						<property>/it-autoflight/output/ap1</property>
 						<value>0</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/ap_master2</property>
+						<property>/it-autoflight/output/ap2</property>
 						<value>0</value>
 					</equals>
 					<greater-than>
@@ -217,11 +217,11 @@
 			<condition>
 				<or>
 					<equals>
-						<property>/it-autoflight/ap_master</property>
+						<property>/it-autoflight/output/ap1</property>
 						<value>1</value>
 					</equals>
 					<equals>
-						<property>/it-autoflight/ap_master2</property>
+						<property>/it-autoflight/output/ap2</property>
 						<value>1</value>
 					</equals>
 					<less-than-equals>
@@ -262,11 +262,11 @@
 					</greater-than>
 					<and>
 						<equals>
-							<property>/it-autoflight/ap_master</property>
+							<property>/it-autoflight/output/ap1</property>
 							<value>0</value>
 						</equals>
 						<equals>
-							<property>/it-autoflight/ap_master2</property>
+							<property>/it-autoflight/output/ap2</property>
 							<value>0</value>
 						</equals>
 						<or>
@@ -320,11 +320,11 @@
 					</less-than>
 					<and>
 						<equals>
-							<property>/it-autoflight/ap_master</property>
+							<property>/it-autoflight/output/ap1</property>
 							<value>0</value>
 						</equals>
 						<equals>
-							<property>/it-autoflight/ap_master2</property>
+							<property>/it-autoflight/output/ap2</property>
 							<value>0</value>
 						</equals>
 						<or>
@@ -376,11 +376,11 @@
 				<and>
 					<and>
 						<equals>
-							<property>/it-autoflight/ap_master</property>
+							<property>/it-autoflight/output/ap1</property>
 							<value>0</value>
 						</equals>
 						<equals>
-							<property>/it-autoflight/ap_master2</property>
+							<property>/it-autoflight/output/ap2</property>
 							<value>0</value>
 						</equals>
 						<or>
