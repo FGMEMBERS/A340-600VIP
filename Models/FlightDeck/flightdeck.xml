@@ -1743,7 +1743,7 @@
 		<type>rotate</type>
 		<object-name>trim_wheel</object-name>
 		<property>/controls/flight/elevator-trim</property>
-		<factor>-70</factor>
+		<factor>-700</factor>
 		<center>
 			<x-m>-0.2373</x-m>
 			<y-m>0</y-m>
@@ -2358,7 +2358,7 @@
         <object-name>sidestick_1</object-name>
         <object-name>sidestick_3</object-name>
         <object-name>sidestick_button1</object-name>
-        <property>aircraft/sidestick-y</property>
+        <property>controls/flight/elevator</property>
         <factor>10</factor>
         <center>
             <x-m>-0.18</x-m>
@@ -2377,7 +2377,7 @@
         <object-name>sidestick_1</object-name>
         <object-name>sidestick_3</object-name>
         <object-name>sidestick_button1</object-name>
-        <property>aircraft/sidestick-x</property>
+        <property>controls/flight/aileron</property>
         <factor>10</factor>
         <center>
             <x-m>-0.19</x-m>
@@ -2397,7 +2397,7 @@
         <object-name>sidestick_3</object-name>
         <object-name>sidestick_button1</object-name>
         <object-name>level3</object-name>
-        <property>aircraft/sidestick-y</property>
+        <property>controls/flight/elevator</property>
         <factor>3</factor>
         <center>
             <x-m>-0.1903</x-m>
@@ -2417,7 +2417,7 @@
         <object-name>sidestick_3</object-name>
         <object-name>sidestick_button1</object-name>
         <object-name>level3</object-name>
-        <property>aircraft/sidestick-x</property>
+        <property>controls/flight/aileron</property>
         <factor>3</factor>
         <center>
             <x-m>-0.1903</x-m>
@@ -2438,7 +2438,7 @@
         <object-name>sidestick_button1</object-name>
         <object-name>level3</object-name>
         <object-name>level2</object-name>
-        <property>aircraft/sidestick-y</property>
+        <property>controls/flight/elevator</property>
         <factor>3</factor>
         <center>
             <x-m>-0.1903</x-m>
@@ -2459,7 +2459,7 @@
         <object-name>sidestick_button1</object-name>
         <object-name>level3</object-name>
         <object-name>level2</object-name>
-        <property>aircraft/sidestick-x</property>
+        <property>controls/flight/elevator</property>
         <factor>3</factor>
         <center>
             <x-m>-0.1903</x-m>
@@ -2481,7 +2481,7 @@
         <object-name>level3</object-name>
         <object-name>level2</object-name>
         <object-name>level1</object-name>
-        <property>aircraft/sidestick-y</property>
+        <property>controls/flight/elevator</property>
         <factor>3</factor>
         <center>
             <x-m>-0.1903</x-m>
@@ -2503,7 +2503,7 @@
         <object-name>level3</object-name>
         <object-name>level2</object-name>
         <object-name>level1</object-name>
-        <property>aircraft/sidestick-x</property>
+        <property>controls/flight/aileron</property>
         <factor>3</factor>
         <center>
             <x-m>-0.1903</x-m>
@@ -2524,7 +2524,7 @@
         <object-name>sidestick_2</object-name>
         <object-name>sidestick_4</object-name>
         <object-name>sidestick_button2</object-name>
-        <property>aircraft/sidestick-y</property>
+        <property>controls/flight/elevator</property>
         <factor>10</factor>
         <center>
             <x-m>-0.18</x-m>
@@ -2543,7 +2543,7 @@
         <object-name>sidestick_2</object-name>
         <object-name>sidestick_4</object-name>
         <object-name>sidestick_button2</object-name>
-        <property>aircraft/sidestick-x</property>
+        <property>controls/flight/aileron</property>
         <factor>10</factor>
         <center>
             <x-m>-0.19</x-m>
@@ -2563,7 +2563,7 @@
         <object-name>sidestick_4</object-name>
         <object-name>sidestick_button2</object-name>
         <object-name>level3_2</object-name>
-        <property>aircraft/sidestick-y</property>
+        <property>controls/flight/elevator</property>
         <factor>3</factor>
         <center>
             <x-m>-0.1903</x-m>
@@ -2583,7 +2583,7 @@
         <object-name>sidestick_4</object-name>
         <object-name>sidestick_button2</object-name>
         <object-name>level3_2</object-name>
-        <property>aircraft/sidestick-x</property>
+        <property>controls/flight/aileron</property>
         <factor>3</factor>
         <center>
             <x-m>-0.1903</x-m>
@@ -2604,7 +2604,7 @@
         <object-name>sidestick_button2</object-name>
         <object-name>level3_2</object-name>
         <object-name>level2_2</object-name>
-        <property>aircraft/sidestick-y</property>
+        <property>controls/flight/elevator</property>
         <factor>3</factor>
         <center>
             <x-m>-0.1903</x-m>
@@ -2625,7 +2625,7 @@
         <object-name>sidestick_button2</object-name>
         <object-name>level3_2</object-name>
         <object-name>level2_2</object-name>
-        <property>aircraft/sidestick-x</property>
+        <property>controls/flight/aileron</property>
         <factor>3</factor>
         <center>
             <x-m>-0.1903</x-m>
@@ -2647,7 +2647,7 @@
         <object-name>level3_2</object-name>
         <object-name>level2_2</object-name>
         <object-name>level1_2</object-name>
-        <property>aircraft/sidestick-y</property>
+        <property>controls/flight/elevator</property>
         <factor>3</factor>
         <center>
             <x-m>-0.1903</x-m>
@@ -2669,7 +2669,7 @@
         <object-name>level3_2</object-name>
         <object-name>level2_2</object-name>
         <object-name>level1_2</object-name>
-        <property>aircraft/sidestick-x</property>
+        <property>controls/flight/aileron</property>
         <factor>3</factor>
         <center>
             <x-m>-0.1903</x-m>

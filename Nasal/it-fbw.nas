@@ -3,13 +3,13 @@
 
 var roll_input = func {
 
-	if (getprop("/it-autoflight/output/ap1") == 0 and getprop("/it-autoflight/output/ap2") == 0) {
+	if (getprop("/it-autoflight/output/ap1") == 0 and getprop("/it-autoflight/output/ap2") == 0 and ((getprop("/it-fbw/law") == "NORMAL") or (getprop("/it-fbw/law") == "ALTERNATE"))) {
 		var ail = getprop("/controls/flight/aileron");
 		
-		if (ail >= 0.1 and ail < 0.2) {
+		if (ail >= 0.05 and ail < 0.15) {
 			var rfbw = getprop("/it-fbw/roll-deg");
 			setprop("/it-fbw/roll-deg", rfbw + "0.01");
-		} else if (ail >= 0.2 and ail < 0.3) {
+		} else if (ail >= 0.15 and ail < 0.3) {
 			var rfbw = getprop("/it-fbw/roll-deg");
 			setprop("/it-fbw/roll-deg", rfbw + "0.1");
 		} else if (ail >= 0.3 and ail < 0.5) {
@@ -23,10 +23,10 @@ var roll_input = func {
 			setprop("/it-fbw/roll-deg", rfbw + "0.5");
 		}
 	
-		if (ail <= -0.1 and ail > -0.2) {
+		if (ail <= -0.05 and ail > -0.15) {
 			var rfbw = getprop("/it-fbw/roll-deg");
 			setprop("/it-fbw/roll-deg", rfbw - "0.01");
-		} else if (ail <= -0.2 and ail > -0.3) {
+		} else if (ail <= -0.15 and ail > -0.3) {
 			var rfbw = getprop("/it-fbw/roll-deg");
 			setprop("/it-fbw/roll-deg", rfbw - "0.1");
 		} else if (ail <= -0.3 and ail > -0.5) {
@@ -74,41 +74,41 @@ var roll_input = func {
 
 var pitch_input = func {
 
-	if (getprop("/it-autoflight/output/ap1") == 0 and getprop("/it-autoflight/output/ap2") == 0) {
+	if (getprop("/it-autoflight/output/ap1") == 0 and getprop("/it-autoflight/output/ap2") == 0 and ((getprop("/it-fbw/law") == "NORMAL") or (getprop("/it-fbw/law") == "ALTERNATE"))) {
 		var elev = getprop("/controls/flight/elevator");
 		
-		if (elev >= 0.1 and elev < 0.2) {
-			var rfbw = getprop("/it-fbw/pitch-deg");
-			setprop("/it-fbw/pitch-deg", rfbw - "0.02");
-		} else if (elev >= 0.2 and elev < 0.3) {
-			var rfbw = getprop("/it-fbw/pitch-deg");
-			setprop("/it-fbw/pitch-deg", rfbw - "0.05");
+		if (elev >= 0.05 and elev < 0.15) {
+			var pfbw = getprop("/it-fbw/pitch-deg");
+			setprop("/it-fbw/pitch-deg", pfbw - "0.02");
+		} else if (elev >= 0.15 and elev < 0.3) {
+			var pfbw = getprop("/it-fbw/pitch-deg");
+			setprop("/it-fbw/pitch-deg", pfbw - "0.05");
 		} else if (elev >= 0.3 and elev < 0.5) {
-			var rfbw = getprop("/it-fbw/pitch-deg");
-			setprop("/it-fbw/pitch-deg", rfbw - "0.1");
+			var pfbw = getprop("/it-fbw/pitch-deg");
+			setprop("/it-fbw/pitch-deg", pfbw - "0.1");
 		} else if (elev >= 0.5 and elev < 0.7) {
-			var rfbw = getprop("/it-fbw/pitch-deg");
-			setprop("/it-fbw/pitch-deg", rfbw - "0.2");
+			var pfbw = getprop("/it-fbw/pitch-deg");
+			setprop("/it-fbw/pitch-deg", pfbw - "0.15");
 		} else if (elev >= 0.7 and elev <= 1) {
-			var rfbw = getprop("/it-fbw/pitch-deg");
-			setprop("/it-fbw/pitch-deg", rfbw - "0.3");
+			var pfbw = getprop("/it-fbw/pitch-deg");
+			setprop("/it-fbw/pitch-deg", pfbw - "0.2");
 		}
 	
-		if (elev <= -0.1 and elev > -0.2) {
-			var rfbw = getprop("/it-fbw/pitch-deg");
-			setprop("/it-fbw/pitch-deg", rfbw + "0.02");
-		} else if (elev <= -0.2 and elev > -0.3) {
-			var rfbw = getprop("/it-fbw/pitch-deg");
-			setprop("/it-fbw/pitch-deg", rfbw + "0.05");
+		if (elev <= -0.05 and elev > -0.15) {
+			var pfbw = getprop("/it-fbw/pitch-deg");
+			setprop("/it-fbw/pitch-deg", pfbw + "0.02");
+		} else if (elev <= -0.15 and elev > -0.3) {
+			var pfbw = getprop("/it-fbw/pitch-deg");
+			setprop("/it-fbw/pitch-deg", pfbw + "0.05");
 		} else if (elev <= -0.3 and elev > -0.5) {
-			var rfbw = getprop("/it-fbw/pitch-deg");
-			setprop("/it-fbw/pitch-deg", rfbw + "0.1");
+			var pfbw = getprop("/it-fbw/pitch-deg");
+			setprop("/it-fbw/pitch-deg", pfbw + "0.1");
 		} else if (elev <= -0.5 and elev > -0.7) {
-			var rfbw = getprop("/it-fbw/pitch-deg");
-			setprop("/it-fbw/pitch-deg", rfbw + "0.2");
+			var pfbw = getprop("/it-fbw/pitch-deg");
+			setprop("/it-fbw/pitch-deg", pfbw + "0.15");
 		} else if (elev <= -0.7 and elev >= -1) {
-			var rfbw = getprop("/it-fbw/pitch-deg");
-			setprop("/it-fbw/pitch-deg", rfbw + "0.3");
+			var pfbw = getprop("/it-fbw/pitch-deg");
+			setprop("/it-fbw/pitch-deg", pfbw + "0.2");
 		}
 	}
 	
@@ -141,11 +141,23 @@ var pitch_input = func {
 setlistener("/it-autoflight/output/ap1", func {
 	if (getprop("/it-autoflight/output/ap1") == 0) {
 		setprop("/it-fbw/roll-deg", getprop("/orientation/roll-deg"));
+		setprop("/it-fbw/pitch-deg", getprop("/orientation/pitch-deg"));
 	}
 });
 
 setlistener("/it-autoflight/output/ap2", func {
 	if (getprop("/it-autoflight/output/ap2") == 0) {
+		setprop("/it-fbw/roll-deg", getprop("/orientation/roll-deg"));
+		setprop("/it-fbw/pitch-deg", getprop("/orientation/pitch-deg"));
+	}
+});
+
+setlistener("/it-fbw/law", func {
+	if (getprop("/it-fbw/law") == "NORMAL") {
+		setprop("/it-fbw/roll-deg", getprop("/orientation/roll-deg"));
+		setprop("/it-fbw/pitch-deg", getprop("/orientation/pitch-deg"));
+	} else if (getprop("/it-fbw/law") == "ALTERNATE") {
+		setprop("/it-fbw/roll-deg", getprop("/orientation/roll-deg"));
 		setprop("/it-fbw/pitch-deg", getprop("/orientation/pitch-deg"));
 	}
 });

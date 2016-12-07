@@ -8,7 +8,7 @@
  <!-- Lateral                                                         -->
  <!-- =============================================================== -->
 	
-	<pid-controller>
+	<pi-simple-controller>
 		<name>IT-FBW: ROLL</name>
 		<debug>false</debug>
 		<enable>
@@ -45,16 +45,12 @@
 			<property>/controls/flight/aileron-fbw-cmd</property>
 		</output>
 		<config>
-			<Kp>0.10</Kp>
-			<beta>1.0</beta>	
-			<alpha>0.1</alpha>	
-			<gamma>0.0</gamma>	
-			<Ti>10</Ti>        	
-			<Td>0.001</Td>     	
-			<u_min>-1</u_min>
-			<u_max>1</u_max>
+			<Kp>0.15</Kp>
+			<Ki>0.001</Ki>
+			<min>-1</min>
+			<max>1</max>
 		</config>
-	</pid-controller>
+	</pi-simple-controller>
 	
 	<filter>
 		<name>IT-FBW: ROLL OPTION</name>
@@ -131,7 +127,7 @@
  <!-- Vertical                                                        -->
  <!-- =============================================================== -->
 	
-	<pid-controller>
+	<pi-simple-controller>
 		<name>IT-FBW: PITCH</name>
 		<debug>false</debug>
 		<enable>
@@ -168,16 +164,12 @@
 			<property>/controls/flight/elevator-fbw-cmd</property>
 		</output>
 		<config>
-			<Kp>-0.12</Kp>
-			<beta>1.0</beta>	
-			<alpha>0.1</alpha>	
-			<gamma>0.0</gamma>	
-			<Ti>10</Ti>        	
-			<Td>0.0001</Td>     	
-			<u_min>-1</u_min>
-			<u_max>1</u_max>
+			<Kp>-0.10</Kp>
+			<Ki>0.001</Ki>
+			<min>-1</min>
+			<max>1</max>
 		</config>
-	</pid-controller>
+	</pi-simple-controller>
 	
 	<filter>
 		<name>IT-FBW: PITCH OPTION</name>
@@ -260,30 +252,28 @@
 						<property>/controls/flight/elevator-fbw</property>
 						<value>0.1</value>
 					</greater-than>
-					<and>
+					<equals>
+						<property>/it-autoflight/output/ap1</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/output/ap2</property>
+						<value>0</value>
+					</equals>
+					<or>
 						<equals>
-							<property>/it-autoflight/output/ap1</property>
-							<value>0</value>
+							<property>/it-fbw/law</property>
+							<value>NORMAL</value>
 						</equals>
 						<equals>
-							<property>/it-autoflight/output/ap2</property>
-							<value>0</value>
+							<property>/it-fbw/law</property>
+							<value>ALTERNATE</value>
 						</equals>
-						<or>
-							<equals>
-								<property>/it-fbw/law</property>
-								<value>NORMAL</value>
-							</equals>
-							<equals>
-								<property>/it-fbw/law</property>
-								<value>ALTERNATE</value>
-							</equals>
-						</or>
-						<greater-than-equals>
-							<property>/position/gear-agl-ft</property>
-							<value>10</value>
-						</greater-than-equals>
-					</and>
+					</or>
+					<greater-than-equals>
+						<property>/position/gear-agl-ft</property>
+						<value>50</value>
+					</greater-than-equals>
 				</and>
 			</condition>
 		</enable>
@@ -318,30 +308,28 @@
 						<property>/controls/flight/elevator-fbw</property>
 						<value>-0.1</value>
 					</less-than>
-					<and>
+					<equals>
+						<property>/it-autoflight/output/ap1</property>
+						<value>0</value>
+					</equals>
+					<equals>
+						<property>/it-autoflight/output/ap2</property>
+						<value>0</value>
+					</equals>
+					<or>
 						<equals>
-							<property>/it-autoflight/output/ap1</property>
-							<value>0</value>
+							<property>/it-fbw/law</property>
+							<value>NORMAL</value>
 						</equals>
 						<equals>
-							<property>/it-autoflight/output/ap2</property>
-							<value>0</value>
+							<property>/it-fbw/law</property>
+							<value>ALTERNATE</value>
 						</equals>
-						<or>
-							<equals>
-								<property>/it-fbw/law</property>
-								<value>NORMAL</value>
-							</equals>
-							<equals>
-								<property>/it-fbw/law</property>
-								<value>ALTERNATE</value>
-							</equals>
-						</or>
-						<greater-than-equals>
-							<property>/position/gear-agl-ft</property>
-							<value>10</value>
-						</greater-than-equals>
-					</and>
+					</or>
+					<greater-than-equals>
+						<property>/position/gear-agl-ft</property>
+						<value>50</value>
+					</greater-than-equals>
 				</and>
 			</condition>
 		</enable>
@@ -395,17 +383,17 @@
 						</or>
 						<greater-than-equals>
 							<property>/position/gear-agl-ft</property>
-							<value>10</value>
+							<value>50</value>
 						</greater-than-equals>
 					</and>
 					<or>
 						<greater-than>
 							<property>/controls/flight/elevator-fbw</property>
-							<value>0.1</value>
+							<value>0.05</value>
 						</greater-than>
 						<less-than>
 							<property>/controls/flight/elevator-fbw</property>
-							<value>-0.1</value>
+							<value>-0.05</value>
 						</less-than>
 					</or>
 				</and>

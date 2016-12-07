@@ -1,2 +1,2 @@
 # A340-600VIP
-Based on Andino's A340-600HGW.
+it0uchpods' Custom A340-600VIP, used as a testbed for IT-FBW.
