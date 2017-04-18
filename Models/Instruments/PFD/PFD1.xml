@@ -31,6 +31,18 @@
     </animation>
 	
 	<animation>
+		<type>select</type>
+		<object-name>sidestick-max</object-name>
+        <object-name>sidestick-pos</object-name>
+		<condition>
+			<or>
+				<property>/gear/gear[1]/wow</property>
+				<property>/gear/gear[2]/wow</property>
+			</or>
+		</condition>
+	</animation>
+	
+	<animation>
         <object-name>spdtrnd-up</object-name>
         <property>instrumentation/pfd/speed-trend-up</property>
         <type>textranslate</type>
@@ -799,7 +811,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>0.0326226</y-m>
-            <z-m>0.0531781</z-m>
+            <z-m>0.0581781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -823,7 +835,7 @@
         <offsets>
             <x-m>0.00091828</x-m>
             <y-m>0.0436226</y-m>
-            <z-m>0.0531781</z-m>
+            <z-m>0.0581781</z-m>
         </offsets>
         <alignment>center-center</alignment>
         <axis-alignment>yz-plane</axis-alignment>
@@ -1000,6 +1012,22 @@
 				</equals>
 				<not-equals>
 					<property>/systems/thrust/state1</property>
+					<value>MAN THR</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state2</property>
+					<value>MAN THR</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state3</property>
+					<value>MAN THR</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state4</property>
+					<value>MAN THR</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state1</property>
 					<value>MCT</value>
 				</not-equals>
 				<not-equals>
@@ -1151,7 +1179,7 @@
 					<value>1</value>
 				</equals>
 				<equals>
-					<property>/it-autoflight/output/fd2</property>
+					<property>/it-autoflight/output/fd1</property>
 					<value>1</value>
 				</equals>
 			</or>
@@ -1353,6 +1381,22 @@
 				</or>
 				<not-equals>
 					<property>/systems/thrust/state1</property>
+					<value>MAN THR</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state2</property>
+					<value>MAN THR</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state3</property>
+					<value>MAN THR</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state4</property>
+					<value>MAN THR</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state1</property>
 					<value>MCT</value>
 				</not-equals>
 				<not-equals>
@@ -1397,6 +1441,22 @@
 					<value>1</value>
 				</equals>
 				<or>
+					<equals>
+						<property>/systems/thrust/state1</property>
+						<value>MAN THR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state2</property>
+						<value>MAN THR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>MAN THR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>MAN THR</value>
+					</equals>
 					<equals>
 						<property>/systems/thrust/state1</property>
 						<value>MCT</value>
@@ -1533,6 +1593,29 @@
     </text>
 	
     <text>
+        <name>athr-thr-fma</name>
+        <offsets>
+            <x-m>0.00091828</x-m>
+            <y-m>-0.0546226</y-m>
+            <z-m>0.0630781</z-m>
+        </offsets>
+        <alignment>center-center</alignment>
+        <axis-alignment>yz-plane</axis-alignment>
+		<type type="string">text-value</type>
+		<format type="string">THR</format>
+		<property>autopilot/serviceable</property>
+        <font type="string">helvetica_medium.txf</font>
+        <draw-text type="bool">true</draw-text>
+        <draw-alignment type="bool">false</draw-alignment>
+        <draw-boundingbox type="bool">false</draw-boundingbox>
+        <character-size>0.0055</character-size>
+        <font-resolution>
+            <width type="int">32</width>
+            <height type="int">32</height>
+        </font-resolution>
+    </text>
+	
+    <text>
         <name>athr-box-fma</name>
         <offsets>
             <x-m>0.00091828</x-m>
@@ -1576,12 +1659,44 @@
 						<value>TOGA</value>
 					</equals>
 					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>TOGA</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>TOGA</value>
+					</equals>
+					<equals>
 						<property>/systems/thrust/state1</property>
 						<value>MCT</value>
 					</equals>
 					<equals>
 						<property>/systems/thrust/state2</property>
 						<value>MCT</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>MCT</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>MCT</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state1</property>
+						<value>MAN THR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state2</property>
+						<value>MAN THR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>MAN THR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>MAN THR</value>
 					</equals>
 				</or>
 			</and>
@@ -1606,6 +1721,14 @@
 						<property>/systems/thrust/state2</property>
 						<value>TOGA</value>
 					</equals>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>TOGA</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>TOGA</value>
+					</equals>
 				</or>
 			</and>
         </condition>
@@ -1628,6 +1751,14 @@
 					<property>/systems/thrust/state2</property>
 					<value>TOGA</value>
 				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state3</property>
+					<value>TOGA</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state4</property>
+					<value>TOGA</value>
+				</not-equals>
 				<or>
 					<equals>
 						<property>/systems/thrust/state1</property>
@@ -1636,6 +1767,77 @@
 					<equals>
 						<property>/systems/thrust/state2</property>
 						<value>MCT</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>MCT</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>MCT</value>
+					</equals>
+				</or>
+			</and>
+        </condition>
+    </animation>
+	
+    <animation>
+        <type>select</type>
+        <object-name>athr-thr-fma</object-name>
+        <condition>
+			<and>
+				<equals>
+					<property>/it-autoflight/output/athr</property>
+					<value>1</value>
+				</equals>
+				<not-equals>
+					<property>/systems/thrust/state1</property>
+					<value>TOGA</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state2</property>
+					<value>TOGA</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state3</property>
+					<value>TOGA</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state4</property>
+					<value>TOGA</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state1</property>
+					<value>MCT</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state2</property>
+					<value>MCT</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state3</property>
+					<value>MCT</value>
+				</not-equals>
+				<not-equals>
+					<property>/systems/thrust/state4</property>
+					<value>MCT</value>
+				</not-equals>
+				<or>
+					<equals>
+						<property>/systems/thrust/state1</property>
+						<value>MAN THR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state2</property>
+						<value>MAN THR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state3</property>
+						<value>MAN THR</value>
+					</equals>
+					<equals>
+						<property>/systems/thrust/state4</property>
+						<value>MAN THR</value>
 					</equals>
 				</or>
 			</and>
@@ -1815,6 +2017,7 @@
 		<object-name>athr-man-fma</object-name>
 		<object-name>athr-toga-fma</object-name>
 		<object-name>athr-mct-fma</object-name>
+		<object-name>athr-thr-fma</object-name>
 		<object-name>athr-box-fma</object-name>
 		<object-name>athr-lvrclb-fma</object-name>
 		<object-name>vs-num</object-name>
