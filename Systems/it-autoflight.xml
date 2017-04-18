@@ -9,10 +9,10 @@
  <!-- =============================================================== -->
 
 	<predict-simple>
-		<name>ALTITUDE 5 SECONDS AHEAD</name>
+		<name>ALTITUDE 7 SECONDS AHEAD</name>
 		<debug>false</debug>
 		<input>/instrumentation/altimeter/indicated-altitude-ft</input>
-		<output>/it-autoflight/internal/altitude-5-sec-ahead</output>
+		<output>/it-autoflight/internal/altitude-7-sec-ahead</output>
 		<seconds>7.0</seconds>
 		<filter-gain>0.1</filter-gain>
 	</predict-simple>
@@ -579,7 +579,7 @@
 			</condition>
 		</enable>
 		<input>
-			<property>/it-autoflight/internal/altitude-5-sec-ahead</property>
+			<property>/it-autoflight/internal/altitude-7-sec-ahead</property>
 		</input>
 		<reference>
 			<condition>
@@ -609,8 +609,8 @@
 			<beta>1.0</beta>       
 			<alpha>0.5</alpha>     
 			<gamma>0.0</gamma>     
-			<Ti>15.0</Ti>
-			<Td>0.00001</Td>
+			<Ti>10.0</Ti>
+			<Td>0.0001</Td>
 			<u_min>
 				<property>/it-autoflight/internal/min-pitch</property>
 			</u_min>
@@ -773,7 +773,6 @@
 				</equals>
 			</condition>
 			<property>/it-autoflight/internal/lookahead-10-sec-airspeed-kt</property>
-			<scale>1</scale>
 		</input>
 		<input>
 			<condition>
@@ -783,7 +782,7 @@
 				</equals>
 			</condition>
 			<property>/it-autoflight/internal/lookahead-10-sec-mach</property>
-			<scale>250.0</scale>
+			<scale>500.0</scale>
 		</input>
 		<reference>
 			<condition>
@@ -793,7 +792,6 @@
 				</equals>
 			</condition>
 			<property>/it-autoflight/input/spd-kts</property>
-			<scale>1</scale>
 		</reference>
 		<reference>
 			<condition>
@@ -803,7 +801,7 @@
 				</equals>
 			</condition>
 			<property>/it-autoflight/input/spd-mach</property>
-			<scale>250.0</scale>
+			<scale>500.0</scale>
 		</reference>
 		<output>
 			<property>/it-autoflight/internal/target-fps</property>
@@ -816,7 +814,7 @@
 			<alpha>0.1</alpha>  
 			<gamma>0.0</gamma>  
 			<Ti>10.0</Ti>        
-			<Td>0.00001</Td>
+			<Td>0.00001</Td>    
             <u_min>
                 <condition>
                     <greater-than>
@@ -1112,7 +1110,7 @@
 			<alpha>0.1</alpha>
 			<gamma>0.0</gamma>
 			<Ti>5.0</Ti>
-			<Td>0.000001</Td>
+			<Td>0.00001</Td>
 			<u_min>
 				<value>-10</value>
 			</u_min>
