@@ -4114,7 +4114,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>controls/engines/engine[0]/cutoff-switch</property>
+				<property>controls/engines/engine[0]/cutoff</property>
 			</binding>
 		</action>
 	</animation>
@@ -4122,7 +4122,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Lcutoff.001</object-name>
-		<property>controls/engines/engine[0]/cutoff-switch</property>
+		<property>controls/engines/engine[0]/cutoff</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>60</dep></entry>
@@ -4147,7 +4147,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>controls/engines/engine[1]/cutoff-switch</property>
+				<property>controls/engines/engine[1]/cutoff</property>
 			</binding>
 		</action>
 	</animation>
@@ -4155,7 +4155,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Lcutoff</object-name>
-		<property>controls/engines/engine[1]/cutoff-switch</property>
+		<property>controls/engines/engine[1]/cutoff</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>60</dep></entry>
@@ -4180,7 +4180,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>controls/engines/engine[2]/cutoff-switch</property>
+				<property>controls/engines/engine[2]/cutoff</property>
 			</binding>
 		</action>
 	</animation>
@@ -4188,7 +4188,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Rcutoff</object-name>
-		<property>controls/engines/engine[2]/cutoff-switch</property>
+		<property>controls/engines/engine[2]/cutoff</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>60</dep></entry>
@@ -4213,7 +4213,7 @@
 			<repeatable>false</repeatable>
 			<binding>
 				<command>property-toggle</command>
-				<property>controls/engines/engine[3]/cutoff-switch</property>
+				<property>controls/engines/engine[3]/cutoff</property>
 			</binding>
 		</action>
 	</animation>
@@ -4221,7 +4221,7 @@
 	<animation>
 		<type>rotate</type>
 		<object-name>Rcutoff.001</object-name>
-		<property>controls/engines/engine[1]/cutoff-switch</property>
+		<property>controls/engines/engine[3]/cutoff</property>
 		<interpolation>
 			<entry><ind>0</ind><dep>0</dep></entry>
 			<entry><ind>1</ind><dep>60</dep></entry>

@@ -1,4 +1,4 @@
-#A340-600HGW systems
+#A340 systems
 #Syd Adams adapted by Andino
 #
 var SndOut = props.globals.getNode("/sim/sound/Ovolume",1);
