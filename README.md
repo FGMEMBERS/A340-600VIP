@@ -4,8 +4,6 @@
 
 <a href="https://andinogonthaeler.wordpress.com/">Andino's Hangar</a>
 
-it0uchpods is now maintaining this aircraft.
-
 *Andino's webpage info:*
 
 I have been doing little changes to the A340-600HGW:
