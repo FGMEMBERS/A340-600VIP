@@ -14,7 +14,7 @@
             <w>13</w>
             <h>31</h>
             <texture>
-                <path>Aircraft/A340-600VIP/Models/Instruments/ECAM/res/page-fctl-rudder.png</path>
+                <path>Aircraft/A340-600HGW/Models/Instruments/ECAM/res/page-fctl-rudder.png</path>
                 <x1>0</x1>
                 <y1>0</y1>
                 <x2>1</x2>

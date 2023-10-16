@@ -1,15 +1,15 @@
 <PropertyList>
 
     <sim n="0">
-        <description>Airbus A340-600VIP</description>
-        <aero>A340-600VIP</aero>
+        <description>Airbus A340-600HGW</description>
+        <aero>A340-600HGW</aero>
         <max-payload type="double">122600</max-payload>
         <startup>
-            <splash-texture>Aircraft/A340-600VIP/splash.png</splash-texture>
+            <splash-texture>Aircraft/A340-600HGW/splash.png</splash-texture>
         </startup>
 
         <model n="0">
-            <path>Aircraft/A340-600VIP/Models/A340-600VIP.xml</path>
+            <path>Aircraft/A340-600HGW/Models/A340-600HGW.xml</path>
             <livery>
                 <file type="string">Airbus</file>
             </livery>
@@ -37,7 +37,7 @@
        <menubar n="0">
             <default n="0">
                 <menu n="100">
-                    <label>A340-600VIP</label>
+                    <label>A340-600HGW</label>
                 </menu>
             </default>
         </menubar>
@@ -67,7 +67,7 @@
 
 
     </sim>
-
+	
 <it-autoflight>
 	<config>
 		<altitude-dial-mode>0</altitude-dial-mode>
@@ -109,10 +109,6 @@
 		<autoland-without-ap>1</autoland-without-ap> <!-- Engage LAND and FLARE Modes even if the AP is off -->
 	</settings>
 </it-autoflight>
-	
-	<position>
-		<gear-agl-ft>0</gear-agl-ft>
-	</position>
 
     <!--consumables n="0">
         <fuel n="0">
@@ -129,8 +125,8 @@
 			</config-->
 			<display>IDENT</display>
 			<ident>
-				 <model>A340-600VIP</model>
-				<engines>RR Trent600</engines>
+				 <model>A340-600HGW</model>
+				<engines>RR Trent560</engines>
 			</ident>
 			<input type="string"/>
 			<serviceable>true</serviceable>
@@ -143,7 +139,7 @@
 
 
  <sim n="0">
-        <author>Liam Gathercole, Andino, Joshua Davidson (it0uchpods/411)</author>
+        <author>Liam Gathercole, Andino</author>
         <status>alpha</status>
         <rating>
             <FDM type="int">4</FDM>
@@ -303,9 +299,10 @@
 	      <z-offset-m archive="y"> 1.27 </z-offset-m> <!--Fdw/Back-->
 	    </config>
 	  </view>
-	  
+
+
 <help>
-    <title>A340-600VIP</title>
+    <title>A340-600HGW</title>
     <key>
         <name>w/W</name>
         <desc>Walk forwards/backwards (on interior views only)</desc>
@@ -351,7 +348,7 @@ Pre-departure:
    Taxi away from the terminal with a Pushback truck
 
 Departure:
-2. Select A340-600VIP/Autostart (or hold s)
+2. Select A340-600HGW/Autostart (or hold s)
 3. set your flaps
 4. Release the parking brakes
 5. Apply throttle gently, until at full throttle
@@ -361,7 +358,7 @@ Departure:
 
 Captain Notes:
 - Never reverse from terminal without aid from a pushback. It should be used until the aircraft is on the taxiway.
-- The A340-600VIP is a heavy aircraft, and may take some getting used to the controls.
+- The A340-600HGW is a heavy aircraft, and may take some getting used to the controls.
 - Ensure you allow enough room to manoeuvre around the airport, given that it is a long aircraft.
 - There are risks of overrunning the runway apron upon landing and takeoff, aswell as overrunning the taxiway corners in the A340. In wet conditions especially take care and ensure that the correct speed guidelines and height are maintained.
 
@@ -433,7 +430,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 		       <command>nasal</command>
 		       <script>
 			  var mal = gui.Dialog.new("/sim/gui/dialogs/announcements/menu/dialog", 
-				                                              "Aircraft/A340-600VIP/Dialogs/announcements-dialog.xml");
+				                                              "Aircraft/A340-600HGW/Dialogs/announcements-dialog.xml");
 			mal.open();
 		       </script>
 		      </binding>
@@ -445,7 +442,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 		       <command>nasal</command>
 		       <script>
 			  var mal = gui.Dialog.new("/sim/gui/dialogs/operations/menu/dialog", 
-				                                              "Aircraft/A340-600VIP/Dialogs/airportoperations-dialog.xml");
+				                                              "Aircraft/A340-600HGW/Dialogs/airportoperations-dialog.xml");
 			mal.open();
 		       </script>
 		      </binding>
@@ -456,7 +453,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 		      <binding>
 		       <command>nasal</command>
 		       <script>
-			  var mal = gui.Dialog.new("/sim/gui/dialogs/dump/menu/dialog", "Aircraft/A340-600VIP/Dialogs/fueldump-dialog.xml");
+			  var mal = gui.Dialog.new("/sim/gui/dialogs/dump/menu/dialog", "Aircraft/A340-600HGW/Dialogs/fueldump-dialog.xml");
 			mal.open();
 		       </script>
 		      </binding>
@@ -468,7 +465,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 			<binding>
 				<command>nasal</command>
 				<script>
-				 var fuel = gui.Dialog.new("sim/gui/dialogs/fuel/dialog", "Aircraft/A340-600VIP/Systems/fuel-truck.xml");
+				 var fuel = gui.Dialog.new("sim/gui/dialogs/fuel/dialog", "Aircraft/A340-600HGW/Systems/fuel-truck.xml");
 				 fuel.open();
 				</script>
 			</binding>
@@ -480,11 +477,12 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 			<binding>
 				<command>nasal</command>
 				<script>
-			 var gs = gui.Dialog.new("sim/gui/dialogs/gs/dialog", "Aircraft/A340-600VIP/Systems/de-ice.xml");
+			 var gs = gui.Dialog.new("sim/gui/dialogs/gs/dialog", "Aircraft/A340-600HGW/Systems/de-ice.xml");
 			 gs.open();
 			</script>
 			</binding>
 			</item>
+
 
 
                 </menu>
@@ -508,7 +506,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
                 <float n="1" alias="/gear/gear[1]/compression-m"/>
                 <float n="2" alias="/gear/gear[2]/compression-m"/>
                 <float n="3" alias="/gear/gear[3]/compression-m"/>
-                <!--float n="4" alias="unused"/-->
+                <!--float n="4" alias="not used"/-->
                 <float n="5" alias="/surface-positions/speedbrake-norm"/>
                 <float n="6" alias="/surface-positions/reverser-norm"/>
 				<float n="7" alias="/gear/gear[0]/rollspeed-ms"/>
@@ -526,7 +524,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
             <parkpos-offset-m type="double">0.0</parkpos-offset-m>
         </dimensions>
         <aircraft-class type="string">gate</aircraft-class>
-        <aircraft-operator>Airbus</aircraft-operator>
+        <aircraft-operator>Iberia</aircraft-operator>
        
 
         <yokes-visible type="bool">1</yokes-visible>
@@ -548,49 +546,46 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
         </flaps>
 
         <systems>
-            <path>Aircraft/A340-600VIP/Systems/systems.xml</path>
+            <path>Aircraft/A340-600HGW/Systems/systems.xml</path>
 
             <!--  fast running autopilot rules (running at FDM frequency / 120Hz) -->
             <autopilot>
-                <path>Aircraft/A340-600VIP/Systems/it-autoflight.xml</path>
+                <path>Aircraft/A340-600HGW/Systems/it-autoflight.xml</path>
             </autopilot>
 			<!-- Uses slightly modified IT-AUTOFLIGHT Thrust controller. -->
             <autopilot>
-                <path>Aircraft/A340-600VIP/Systems/custom-autothrust.xml</path>
+                <path>Aircraft/A340-600HGW/Systems/custom-autothrust.xml</path>
             </autopilot>
             <autopilot>
-                <path>Aircraft/A340-600VIP/Systems/thrust.xml</path>
+                <path>Aircraft/A340-600HGW/Systems/thrust.xml</path>
             </autopilot>
             <autopilot>
                 <name>Autobrake system</name>
-                <path>Aircraft/A340-600VIP/Systems/A340-autobrake.xml</path>
+                <path>Aircraft/A340-600HGW/Systems/A340-autobrake.xml</path>
             </autopilot>
             <autopilot>
                 <name>Custom engine values system</name>
-                <path>Aircraft/A340-600VIP/Systems/engine-timing.xml</path>
+                <path>Aircraft/A340-600HGW/Systems/engine-timing.xml</path>
             </autopilot>
 
             <!--  slow running property-rules (running at frame rate) -->
             <property-rule n="100">
-                <path>Aircraft/A340-600VIP/Systems/A340-spoiler-fcs.xml</path>
+                <path>Aircraft/A340-600HGW/Systems/A340-spoiler-fcs.xml</path>
             </property-rule>
             <property-rule n="101">
-                <path>Aircraft/A340-600VIP/Systems/A340-PFD.xml</path>
+                <path>Aircraft/A340-600HGW/Systems/A340-PFD.xml</path>
             </property-rule>
 			<property-rule n="102">	
 				<path>Systems/fl2070_sound.xml</path>
 			</property-rule>
-			<property-rule n="103">	
-				<path>Systems/pfd.xml</path>
-			</property-rule>
         </systems>
 
         <instrumentation>
-            <path>Aircraft/A340-600VIP/Systems/instrumentation.xml</path>
+            <path>Aircraft/A340-600HGW/Systems/instrumentation.xml</path>
         </instrumentation>
 
         <sound>
-            <path>Aircraft/A340-600VIP/Sounds/A340-sound.xml</path>
+            <path>Aircraft/A340-600HGW/Sounds/A340-sound.xml</path>
             <stall-horn type="bool">0</stall-horn>
             <click1 type="bool">0</click1>
             <click2 type="bool">0</click2>
@@ -679,7 +674,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
 		<dialog-name>map</dialog-name>
 		</binding>
 	</key>
-
+	
  <key n="2">
   <name>Ctrl-B</name>
   <desc>Toggle speedbrake</desc>
@@ -807,7 +802,7 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
                 </category-13>
             </configuration-module>
             <voice>
-                <file-prefix type="string">Aircraft/A340-600VIP/Sounds/GPWS/</file-prefix>
+                <file-prefix type="string">Aircraft/A340-600HGW/Sounds/GPWS/</file-prefix>
             </voice>
             <inputs>                            <!-- Module I/O -->
                 <arinc429>
@@ -976,42 +971,42 @@ During turbulant conditions, The seatbelt warning sound should be initiated by t
     <nasal n="0">
 
 		<mcdu>
-			<file>Aircraft/A340-600VIP/Nasal/mCDU/init_A.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/mCDU/init_B.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/mCDU/radios.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/mCDU/select_SID.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/mCDU/select_STAR.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/mCDU/f-pln.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/mCDU/lat_rev.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/mCDU/common.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/mCDU/perf.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/mCDU/loop.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/mCDU/parse_DB.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/mCDU/user.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/init_A.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/init_B.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/radios.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/select_SID.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/select_STAR.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/f-pln.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/lat_rev.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/common.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/perf.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/loop.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/parse_DB.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/mCDU/user.nas</file>
 		</mcdu>
         <a340>
+            <file>Aircraft/A340-600HGW/Nasal/Electrical.nas</file>
+            <file>Aircraft/A340-600HGW/Nasal/systems.nas</file>
+            <file>Aircraft/A340-600HGW/Nasal/tyresmoke.nas</file>
+            <file>Aircraft/A340-600HGW/Nasal/gpws.nas</file>
+            <file>Aircraft/A340-600HGW/Nasal/warnsystem.nas</file>
+            <file>Aircraft/A340-600HGW/Nasal/brakesystem.nas</file>
+            <file>Aircraft/A340-600HGW/Nasal/ground_steering.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/ground-services.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/fuel-dump.nas</file>
             <file>Aircraft/Generic/limits.nas</file>
-            <file>Aircraft/A340-600VIP/Nasal/Electrical.nas</file>
-            <file>Aircraft/A340-600VIP/Nasal/systems.nas</file>
-            <file>Aircraft/A340-600VIP/Nasal/tyresmoke.nas</file>
-            <file>Aircraft/A340-600VIP/Nasal/gpws.nas</file>
-            <file>Aircraft/A340-600VIP/Nasal/warnsystem.nas</file>
-            <file>Aircraft/A340-600VIP/Nasal/brakesystem.nas</file>
-            <file>Aircraft/A340-600VIP/Nasal/ground_steering.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/ground-services.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/fuel-dump.nas</file>
-			<file>Aircraft/A340-600VIP/Models/Instruments/ND/ND.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/efis.nas</file>
-			<file>Aircraft/A340-600VIP/Nasal/PFD_FMA.nas</file>
+			<file>Aircraft/A340-600HGW/Models/Instruments/ND/ND.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/efis.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/PFD_FMA.nas</file>
         </a340>
 		<itaf>
-			<file>Aircraft/A340-600VIP/Nasal/it-autoflight.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/it-autoflight.nas</file>
 		</itaf>
         <dialogs>
-            <file>Aircraft/A340-600VIP/Nasal/dialogs.nas</file>
+            <file>Aircraft/A340-600HGW/Nasal/dialogs.nas</file>
         </dialogs>
 		<thrust>
-			<file>Aircraft/A340-600VIP/Nasal/thrust.nas</file>
+			<file>Aircraft/A340-600HGW/Nasal/thrust.nas</file>
 		</thrust>
     </nasal>
 

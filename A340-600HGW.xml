@@ -1,8 +1,8 @@
-<!--A340-600VIP yasim
+<!--A340-600HGW yasim
 Liam Gathercole
 
 Specs:
-4 - 65,000lb Rolls-Royce Trent 600 Engines
+4 - 60,000lb Rolls-Royce Trent 560 Engines
 
 A346 Values Reference:
 Typical Cruise = 0.83 Mach / 35000 ft
@@ -22,6 +22,9 @@ Mach 1 = 576.6 kt @ 35,000 ft
 
 Leading edge MAC = -3.132V
 
+From the Wikipedia:
+
+The A340-600HGW (High Gross Weight) version first flew on 18 November 2005 and was certified on 14 April 2006. It has an MTOW of 380 tonnes (837,756.6 lb) and a range of up to 7,900 nautical miles (14,630.8 km), made possible by strengthened structure, increased fuel capacity, more powerful engines and new manufacturing techniques like laser beam welding. The A340-600HGW is powered by four 60,000 lbf (266.9 kN) thrust Rolls-Royce Trent 560 turbofans.
 
 -->
 
@@ -127,7 +130,7 @@ Leading edge MAC = -3.132V
        sweep="28" dihedral="7">
   <stall aoa="15" width="2" peak="1.5"/>
   <flap0 start="0" end="1" lift="1.4" drag="1.2"/>
-  <control-input axis="/controls/flight/elevator-fbw" control="FLAP0"/>
+  <control-input axis="/controls/flight/elevator" control="FLAP0"/>
   <control-input axis="/controls/flight/elevator-trim" control="FLAP0"/>
   <control-output control="FLAP0" prop="/surface-positions/elevator-pos-norm"/>
 </hstab-->
@@ -144,9 +147,8 @@ Leading edge MAC = -3.132V
 
 
 <!-- Engines -->
-<!-- Rolls Royce Trent XWB-75 :D -->
 
-<jet x="2.16" y="19.89"  z="-1.995" mass="10660" thrust="74200" spool-time="3"
+<jet x="2.16" y="19.89"  z="-1.995" mass="10660" thrust="60000" spool-time="3"
 egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[0]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[0]/mixture" control="MIXTURE"/>
@@ -157,7 +159,7 @@ egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
 </jet>
 
 
-<jet x="8.16" y="9.89"  z="-2.995" mass="10660" thrust="74200" spool-time="3"
+<jet x="8.16" y="9.89"  z="-2.995" mass="10660" thrust="60000" spool-time="3"
 egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[1]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[1]/mixture" control="MIXTURE"/>
@@ -167,7 +169,7 @@ egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
 <actionpt x="-2.7" y="9.89" z="-2.995"/>
 </jet>
 
-<jet x="8.16" y="-9.89"  z="-2.995" mass="10660" thrust="74200"  spool-time="3"
+<jet x="8.16" y="-9.89"  z="-2.995" mass="10660" thrust="60000"  spool-time="3"
 egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[2]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[2]/mixture" control="MIXTURE"/>
@@ -178,7 +180,7 @@ egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
 </jet>
 
 
-<jet x="2.16" y="-19.89"  z="-1.995" mass="10660" thrust="74200"  spool-time="3"
+<jet x="2.16" y="-19.89"  z="-1.995" mass="10660" thrust="60000"  spool-time="3"
 egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-input axis="/controls/engines/engine[3]/throttle-fdm" control="THROTTLE"/>
   <control-input axis="/controls/engines/engine[3]/mixture" control="MIXTURE"/>
@@ -221,8 +223,7 @@ egt="840" tsfc="0.235" n1-idle="23" n1-max="105" n2-idle="70" n2-max="108">
   <control-speed control="EXTEND" transition-time="7"/>
 </gear>
 
-<gear x="-3.8" y="0" z="-5.65" compression="0.8" spring="0.6">
-  <control-input axis="/controls/gear/brake-parking" control="BRAKE"/>
+<gear x="-3.8" y="0" z="-5.6" compression="3.0" spring="0.6" >
   <control-input axis="/controls/gear/gear-down" control="EXTEND"/>
   <control-output control="EXTEND" prop="/gear/gear[3]/position-norm"/>
   <control-speed control="EXTEND" transition-time="7"/>

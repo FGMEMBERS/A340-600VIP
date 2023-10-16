@@ -9,7 +9,7 @@
 	<!-- 3d light cone -->
 	<model>
 		<name>Cone</name>
-		<path>Aircraft/A340-600VIP/Models/lights/light-cone.xml</path>
+		<path>Aircraft/A340-600HGW/Models/lights/light-cone.xml</path>
 	</model>
 
 

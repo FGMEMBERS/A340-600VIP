@@ -1,10 +1,10 @@
-<!-- A340-600VIP
+<!-- A340-600HGW
 Liam Gathercole, Andino
 -->
 
 <PropertyList>
 
-    <path>A340-600VIP.ac</path>
+    <path>A340-600HGW.ac</path>
 
 
 
@@ -14,7 +14,7 @@ Liam Gathercole, Andino
 
 <model>
         <name>Cockpit</name>
-        <path>Aircraft/A340-600VIP/Models/FlightDeck/flightdeck.xml</path>
+        <path>Aircraft/A340-600HGW/Models/FlightDeck/flightdeck.xml</path>
         <offsets>
             <x-m>-35.10</x-m>
             <y-m>-0.0</y-m>
@@ -25,7 +25,7 @@ Liam Gathercole, Andino
 
   <!-- Interior -->
   <model>
-    <path>Aircraft/A340-600VIP/Models/interior/interior.xml</path>
+    <path>Aircraft/A340-600HGW/Models/interior/interior.xml</path>
     <offsets>
       <x-m> 0 </x-m>
       <y-m> 0 </y-m>
@@ -41,7 +41,7 @@ Liam Gathercole, Andino
   <!-- Particules OSG -->
  <model>
 	<name>Contrail 1</name>
-	    <path>Aircraft/A340-600VIP/Effects/contrail.xml</path>
+	    <path>Aircraft/A340-600HGW/Effects/contrail.xml</path>
 		<condition>
 		<and>
 			<greater-than>
@@ -66,7 +66,7 @@ Liam Gathercole, Andino
  
   <model>
 	<name>Contrail 2</name>
-    <path>Aircraft/A340-600VIP/Effects/contrail.xml</path>
+    <path>Aircraft/A340-600HGW/Effects/contrail.xml</path>
 	<condition>
 		<and>
 			<greater-than>
@@ -92,7 +92,7 @@ Liam Gathercole, Andino
  
   <model>
 	<name>Contrail 3</name>
-    <path>Aircraft/A340-600VIP/Effects/contrail.xml</path>
+    <path>Aircraft/A340-600HGW/Effects/contrail.xml</path>
 
 	<condition>
 		<and>
@@ -119,7 +119,7 @@ Liam Gathercole, Andino
  
   <model>
 	<name>Contrail 4</name>
-    <path>Aircraft/A340-600VIP/Effects/contrail.xml</path>
+    <path>Aircraft/A340-600HGW/Effects/contrail.xml</path>
 
 	<condition>
 		<and>
@@ -149,7 +149,7 @@ Liam Gathercole, Andino
 <!--landing-->
 
 	<model>
-	<path>Aircraft/A340-600VIP/Models/lights/landing-nose.xml</path>
+	<path>Aircraft/A340-600HGW/Models/lights/landing-nose.xml</path>
 	<name>NoseGearLandinglight</name>     
 		<condition>
 			<and>
@@ -171,7 +171,7 @@ Liam Gathercole, Andino
 	</model>
 
 	<model>
-	<path>Aircraft/A340-600VIP/Models/lights/landinglight.xml</path>
+	<path>Aircraft/A340-600HGW/Models/lights/landinglight.xml</path>
 	<name>LeftWingLandinglight</name>
 		<condition>
 		 <equals>
@@ -187,7 +187,7 @@ Liam Gathercole, Andino
 	</model>
 
 	<model>
-	<path>Aircraft/A340-600VIP/Models/lights/landinglight.xml</path>
+	<path>Aircraft/A340-600HGW/Models/lights/landinglight.xml</path>
 	<name>RightWingLandinglight</name>
 		<condition>
 			 <equals>
@@ -208,7 +208,7 @@ Liam Gathercole, Andino
 
 
     <model>
-    <path>Aircraft/A340-600VIP/Models/lights/GreenLight.xml</path>
+    <path>Aircraft/A340-600HGW/Models/lights/GreenLight.xml</path>
     <name>Greenlight</name>     
     <offsets>
    			 <x-m>8.63</x-m>
@@ -218,7 +218,7 @@ Liam Gathercole, Andino
     </model>
 
     <model>
-    <path>Aircraft/A340-600VIP/Models/lights/RedLight.xml</path>
+    <path>Aircraft/A340-600HGW/Models/lights/RedLight.xml</path>
     <name>Redlight</name>     
     <offsets>
    			 <x-m>8.63</x-m>
@@ -231,7 +231,7 @@ Liam Gathercole, Andino
     <!--Strobe-->
 
     <model>
-    <path>Aircraft/A340-600VIP/Models/lights/flash.xml</path>
+    <path>Aircraft/A340-600HGW/Models/lights/flash.xml</path>
     <name>flashright</name>     
     <offsets>
     		<x-m>8.64</x-m>
@@ -241,7 +241,7 @@ Liam Gathercole, Andino
     </model>
 
     <model>
-    <path>Aircraft/A340-600VIP/Models/lights/flash.xml</path>
+    <path>Aircraft/A340-600HGW/Models/lights/flash.xml</path>
     <name>flashleft</name>     
     <offsets>
     		<x-m>8.64</x-m>
@@ -251,7 +251,7 @@ Liam Gathercole, Andino
     </model>
 
     <model>
-    <path>Aircraft/A340-600VIP/Models/lights/flash.xml</path>
+    <path>Aircraft/A340-600HGW/Models/lights/flash.xml</path>
     <name>flashtop</name>     
     <offsets>
   			<x-m>-2.60</x-m>
@@ -266,7 +266,7 @@ Liam Gathercole, Andino
 
 
 <model>
-<path>Aircraft/A340-600VIP/Models/lights/beacon.xml</path>
+<path>Aircraft/A340-600HGW/Models/lights/beacon.xml</path>
 <name>Beacon</name>     
 <offsets>
 			<x-m>37.05</x-m>
@@ -278,7 +278,7 @@ Liam Gathercole, Andino
 <!-- Tyre Smoke -->
 
 <model>
- <path>Aircraft/A340-600VIP/Effects/tyre-smoke-nose.xml</path>
+ <path>Aircraft/A340-600HGW/Effects/tyre-smoke-nose.xml</path>
  <name>tyre-smoke-n</name>
  <offsets>
   <x-m>-11.669</x-m>
@@ -288,7 +288,7 @@ Liam Gathercole, Andino
 </model>
 
 <model>
- <path>Aircraft/A340-600VIP/Effects/tyre-smoke-port.xml</path>
+ <path>Aircraft/A340-600HGW/Effects/tyre-smoke-port.xml</path>
  <name>tyre-smoke-p</name>
  <offsets>
   <x-m>-4.962</x-m>
@@ -298,7 +298,7 @@ Liam Gathercole, Andino
 </model>
 
 <model>
- <path>Aircraft/A340-600VIP/Effects/tyre-smoke-central.xml</path>
+ <path>Aircraft/A340-600HGW/Effects/tyre-smoke-central.xml</path>
  <name>tyre-smoke-p</name>
  <offsets>
   <x-m>-4.962</x-m>
@@ -308,7 +308,7 @@ Liam Gathercole, Andino
 </model>
 
 <model>
- <path>Aircraft/A340-600VIP/Effects/tyre-smoke-stbd.xml</path>
+ <path>Aircraft/A340-600HGW/Effects/tyre-smoke-stbd.xml</path>
  <name>tyre-smoke-s</name>
  <offsets>
   <x-m>-4.962</x-m>
@@ -322,7 +322,7 @@ Liam Gathercole, Andino
 
 <model>
  <name>Fireball</name>
- <path>Aircraft/A340-600VIP/Models/fireball.xml</path>
+ <path>Aircraft/A340-600HGW/Models/fireball.xml</path>
 <condition>
 <and>
  <equals>
@@ -346,7 +346,7 @@ Liam Gathercole, Andino
 
 <model>
  <name>left engine fire</name>
- <path>Aircraft/A340-600VIP/Models/enginefire.xml</path>
+ <path>Aircraft/A340-600HGW/Models/enginefire.xml</path>
  
 <condition>
 <and>
@@ -373,7 +373,7 @@ Liam Gathercole, Andino
 
  <model>
  <name>right engine fire</name>
- <path>Aircraft/A340-600VIP/Models/enginefire.xml</path>
+ <path>Aircraft/A340-600HGW/Models/enginefire.xml</path>
  <condition>
 <and>
  <equals>
@@ -397,7 +397,7 @@ Liam Gathercole, Andino
 
 <model>
  <name>left outer engine fire</name>
- <path>Aircraft/A340-600VIP/Models/enginefire.xml</path>
+ <path>Aircraft/A340-600HGW/Models/enginefire.xml</path>
  
 <condition>
 <and>
@@ -426,7 +426,7 @@ Liam Gathercole, Andino
  
  <model>
  <name>right outer engine fire</name>
- <path>Aircraft/A340-600VIP/Models/enginefire.xml</path>
+ <path>Aircraft/A340-600HGW/Models/enginefire.xml</path>
  <condition>
 <and>
  <equals>
@@ -449,7 +449,7 @@ Liam Gathercole, Andino
 </model>
     <nasal>
         <load>
-            var livery_update = aircraft.livery_update.new("Aircraft/A340-600VIP/Models/Liveries", 10);
+            var livery_update = aircraft.livery_update.new("Aircraft/A340-600HGW/Models/Liveries", 10);
         </load>
 
         <unload>
@@ -492,7 +492,7 @@ Liam Gathercole, Andino
 
 <model>
     <name>Left</name>
-    <path>Aircraft/A340-600VIP/Effects/exhaust.xml</path>
+    <path>Aircraft/A340-600HGW/Effects/exhaust.xml</path>
      
 	 <condition>
 	 <and>
@@ -547,7 +547,7 @@ Liam Gathercole, Andino
   
  <model>
     <name>Left outer</name>
-    <path>Aircraft/A340-600VIP/Effects/exhaust.xml</path>
+    <path>Aircraft/A340-600HGW/Effects/exhaust.xml</path>
      
 	 <condition>
 	 <and>
@@ -601,7 +601,7 @@ Liam Gathercole, Andino
 
  <model>
     <name>Right</name>
-    <path>Aircraft/A340-600VIP/Effects/exhaust.xml</path>
+    <path>Aircraft/A340-600HGW/Effects/exhaust.xml</path>
      
 	 <condition>
 	 <and>
@@ -655,7 +655,7 @@ Liam Gathercole, Andino
 
 <model>
     <name>Right outer</name>
-    <path>Aircraft/A340-600VIP/Effects/exhaust.xml</path>
+    <path>Aircraft/A340-600HGW/Effects/exhaust.xml</path>
      
 	 <condition>
 	 <and>
@@ -902,7 +902,7 @@ Liam Gathercole, Andino
     <animation>
         <type>rotate</type>
         <object-name>mid_gear</object-name>
-        <property>gear/gear[3]/position-norm</property>
+        <property>gear/gear[0]/position-norm</property>
         <interpolation>
             <entry>
                 <ind>0</ind>
@@ -1350,7 +1350,7 @@ Liam Gathercole, Andino
   <!-- Particules OSG -->
 
   <model>
-    <path>Aircraft/A340-600VIP/Effects/fueldump.xml</path>
+    <path>Aircraft/A340-600HGW/Effects/fueldump.xml</path>
     <offsets>
 <x-m> 10.290</x-m>
 <y-m>-14.550</y-m>
@@ -1365,7 +1365,7 @@ Liam Gathercole, Andino
   </model>
 
   <model>
-    <path>Aircraft/A340-600VIP/Effects/fueldump.xml</path>
+    <path>Aircraft/A340-600HGW/Effects/fueldump.xml</path>
     <offsets>
 <x-m> 10.290</x-m>
 <y-m> 14.550</y-m>
@@ -2025,10 +2025,10 @@ Liam Gathercole, Andino
 	<type>rotate</type>
 		<object-name>rhaxle</object-name>
 		<property>sim/multiplay/generic/float[2]</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>25</dep></entry>
-			<entry><ind>0.0085</ind><dep>0</dep></entry>
-		</interpolation>
+		<factor>200</factor>
+		<min-deg>-35</min-deg>
+      	<max-deg>0</max-deg>
+		<offset-deg>-35</offset-deg>
 		<center>
             <x-m>-1.0322865</x-m>
             <y-m>0</y-m>
@@ -2072,10 +2072,10 @@ Liam Gathercole, Andino
 	<type>rotate</type>
 		<object-name>lhaxle</object-name>
 		<property>sim/multiplay/generic/float[1]</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>25</dep></entry>
-			<entry><ind>0.0085</ind><dep>0</dep></entry>
-		</interpolation>
+		<factor>200</factor>
+		<min-deg>-35</min-deg>
+      	<max-deg>0</max-deg>
+		<offset-deg>-35</offset-deg>
 		<center>
             <x-m>-1.0322865</x-m>
             <y-m>0</y-m>
@@ -2119,10 +2119,10 @@ Liam Gathercole, Andino
 	<type>rotate</type>
 		<object-name>mhaxle</object-name>
 		<property>sim/multiplay/generic/float[3]</property>
-		<interpolation>
-			<entry><ind>0</ind><dep>25</dep></entry>
-			<entry><ind>0.0085</ind><dep>0</dep></entry>
-		</interpolation>
+		<factor>170</factor>
+		<min-deg>-25</min-deg>
+      	<max-deg>0</max-deg>
+		<offset-deg>-25</offset-deg>
 		<center>
             <x-m>-1.0322865</x-m>
             <y-m>0</y-m>
@@ -2130,7 +2130,7 @@ Liam Gathercole, Andino
         </center>
         <axis>
             <x>0</x>
-            <y>-1</y>
+            <y>1</y>
             <z>0</z>
         </axis>
 </animation>
@@ -2238,7 +2238,7 @@ Liam Gathercole, Andino
 	
 	<object-name>_LightGr.007</object-name>
 	<object-name>_LightGr.012</object-name>
-        <property>sim/multiplay/generic/float[8]</property>
+        <property>sim/multiplay/generic/float[9]</property>
         <factor>10</factor>
         <axis>
             <x>0</x>

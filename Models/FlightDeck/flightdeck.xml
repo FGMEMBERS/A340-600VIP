@@ -7,7 +7,7 @@
 	<!-- Overhead Panel -->
 	
 	<model>
-		<path>Aircraft/A340-600VIP/Models/Instruments/OHpanel/OHpanel.xml</path>
+		<path>Aircraft/A340-600HGW/Models/Instruments/OHpanel/OHpanel.xml</path>
 		<offsets>
 			<x-m>-0.006166</x-m>
 			<y-m>0</y-m>
@@ -19,7 +19,7 @@
 	<!-- VOR Instrument -->
 	
 	<model>
-		<path>Aircraft/A340-600VIP/Models/Instruments/VOR/VOR.xml</path>
+		<path>Aircraft/A340-600HGW/Models/Instruments/VOR/VOR.xml</path>
 		<offsets>
 			<x-m>-0.5540</x-m>
 			<y-m>-0.1342</y-m>
@@ -31,7 +31,7 @@
 	<!-- Brakes Pressure Indicator -->
 	
 	<model>
-		<path>Aircraft/A340-600VIP/Models/Instruments/Brakes/Brakes.xml</path>
+		<path>Aircraft/A340-600HGW/Models/Instruments/Brakes/Brakes.xml</path>
 		<offsets>
 			<x-m>-0.5495</x-m>
 			<y-m>0.1841</y-m>
@@ -43,7 +43,7 @@
 	<!-- Multi-purpose Control and Display Units -->
 	
 	<model>
-		<path>Aircraft/A340-600VIP/Models/Instruments/mCDU/mCDU.xml</path>
+		<path>Aircraft/A340-600HGW/Models/Instruments/mCDU/mCDU.xml</path>
 		<offsets>
 			<x-m>-0.4144</x-m>
 			<y-m>-0.1633</y-m>
@@ -53,7 +53,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/A340-600VIP/Models/Instruments/mCDU/mCDU.xml</path>
+		<path>Aircraft/A340-600HGW/Models/Instruments/mCDU/mCDU.xml</path>
 		<offsets>
 			<x-m>-0.4144</x-m>
 			<y-m>0.1633</y-m>
@@ -65,7 +65,7 @@
 	<!-- Primary Flight Displays -->
 	
 	<model>
-		<path>Aircraft/A340-600VIP/Models/Instruments/PFD/PFD1.xml</path>
+		<path>Aircraft/A340-600HGW/Models/Instruments/PFD/PFD1.xml</path>
 		<offsets>
 			<x-m>-0.5807</x-m>
 			<y-m>-0.51115</y-m>
@@ -81,7 +81,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/A340-600VIP/Models/Instruments/PFD/PFD2.xml</path>
+		<path>Aircraft/A340-600HGW/Models/Instruments/PFD/PFD2.xml</path>
 		<offsets>
 			<x-m>-0.5807</x-m>
 			<y-m>0.51115</y-m>
@@ -99,7 +99,7 @@
 	<!-- Navigational Displays -->
 	
 	<model>
-		<path>Aircraft/A340-600VIP/Models/Instruments/ND/ND_L.xml</path>
+		<path>Aircraft/A340-600HGW/Models/Instruments/ND/ND_L.xml</path>
 		<offsets>
 			<x-m>-0.5807</x-m>
 			<y-m>-0.3227</y-m>
@@ -115,7 +115,7 @@
 	</model>
 	
 	<model>
-		<path>Aircraft/A340-600VIP/Models/Instruments/ND/ND_R.xml</path>
+		<path>Aircraft/A340-600HGW/Models/Instruments/ND/ND_R.xml</path>
 		<offsets>
 			<x-m>-0.5807</x-m>
 			<y-m>0.3161</y-m>
@@ -133,7 +133,7 @@
 	<!-- Engine Indications and Crew Alerting System (Upper ECAM) -->
 	
 	<model>
-		<path>Aircraft/A340-600VIP/Models/Instruments/Upper-ECAM/Upper-ECAM.xml</path>
+		<path>Aircraft/A340-600HGW/Models/Instruments/Upper-ECAM/Upper-ECAM.xml</path>
 		<offsets>
 			<x-m>-0.5807</x-m>
 			<y-m>0</y-m>
@@ -151,7 +151,7 @@
 	<!-- Lower ECAM -->
 	
 	<model>
-		<path>Aircraft/A340-600VIP/Models/Instruments/ECAM/ECAM.xml</path>
+		<path>Aircraft/A340-600HGW/Models/Instruments/ECAM/ECAM.xml</path>
 		<offsets>
 			<x-m>-0.53631</x-m>
 			<y-m>0</y-m>
